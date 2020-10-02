@@ -1,0 +1,61 @@
+{
+  "name": "tts-web-starter-kit",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "docs/index.html",
+  "description": "A web starter kit to help build web products faster.",
+  "homepage": "https://ttsftwr.github.io/tts-web-starter-kit/",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp serve",
+    "build": "gulp",
+    "bump:patch": "gulp bump:patch",
+    "bump:minor": "gulp bump:minor",
+    "bump:major": "gulp bump:major",
+    "package": "gulp build:package",
+    "set:env": "nodenv local `cat .node-version`"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "web"
+  ],
+  "author": "Thabo Titus",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "7.11.6",
+    "@babel/preset-env": "7.11.5",
+    "@popperjs/core": "2.5.2",
+    "babel-loader": "8.1.0",
+    "bootstrap": "4.5.2",
+    "browser-sync": "2.26.12",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "7.0.1",
+    "gulp-babel": "8.0.0",
+    "gulp-bump": "3.2.0",
+    "gulp-clean": "0.4.0",
+    "gulp-clean-css": "4.3.0",
+    "gulp-concat": "2.6.1",
+    "gulp-copy": "4.0.1",
+    "gulp-htmlmin": "5.0.1",
+    "gulp-imagemin": "7.1.0",
+    "gulp-notify": "3.2.0",
+    "gulp-nunjucks-render": "2.2.3",
+    "gulp-plumber": "1.2.1",
+    "gulp-sass": "4.1.0",
+    "gulp-sass-glob": "1.1.0",
+    "gulp-sourcemaps": "2.6.5",
+    "gulp-uglify": "3.0.2",
+    "gulp-zip": "5.0.2",
+    "i": "0.3.6",
+    "jquery": "3.5.1",
+    "load-json-file": "6.2.0",
+    "normalize.css": "8.0.1",
+    "uglifyjs-webpack-plugin": "2.2.0",
+    "webpack-stream": "6.1.0"
+  },
+  "dependencies": {
+    "-": "0.0.1",
+    "g": "^2.0.1"
+  }
+}
