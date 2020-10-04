@@ -17,9 +17,22 @@ gh repo clone ttsftwr/tts-web-starter-kit
 ```
 
 ### Install dependencies
+ - Use node v13+
+
+ - Get Gulp
+ ```bash
+ npm i -g gulp
+ ```
+ - Install npm deps
 
 ```bash
 npm i
+```
+
+ - Build it
+
+```bash
+npm run build
 ```
 
 ## Usage
@@ -50,13 +63,15 @@ which will bump the version of your app in these files;
 - version.json
 ```
 
+### Package it
+You can build a compressed file with the built code by running:
 
+```bash
+npm run package
 ```
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
