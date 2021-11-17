@@ -1,6 +1,7 @@
 "use strict";
 import gulp from "gulp";
-import sass from "gulp-sass";
+import sass from "sass";
+import gulpSass from "gulp-sass";
 import plumber from "gulp-plumber";
 import sourcemaps from "gulp-sourcemaps";
 import sassGlob from "gulp-sass-glob";
@@ -9,6 +10,8 @@ import autoprefixer from "gulp-autoprefixer";
 import notify from "gulp-notify";
 import browserSync from "browser-sync";
 import concat from "gulp-concat";
+
+const gSass = gulpSass(sass);
 
 const browser = browserSync.has("tts-web-starter-kit")
   ? browserSync.get("tts-web-starter-kit")
@@ -29,7 +32,7 @@ gulp.task("build:styles", function () {
     .pipe(sourcemaps.init())
     .pipe(sassGlob())
     .pipe(
-      sass({
+      gSass({
         style: "compressed",
         errLogToConsole: false,
         onError: function (error_message) {
