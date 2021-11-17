@@ -47,7 +47,7 @@
     "gulp-sourcemaps": "2.6.5",
     "gulp-uglify": "3.0.2",
     "gulp-zip": "5.0.2",
-    "i": "0.3.6",
+    "i": "0.3.7",
     "jquery": "3.5.1",
     "load-json-file": "6.2.0",
     "normalize.css": "8.0.1",
