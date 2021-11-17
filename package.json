@@ -42,7 +42,7 @@
     "gulp-notify": "3.2.0",
     "gulp-nunjucks-render": "2.2.3",
     "gulp-plumber": "1.2.1",
-    "gulp-sass": "4.1.0",
+    "gulp-sass": "5.0.0",
     "gulp-sass-glob": "1.1.0",
     "gulp-sourcemaps": "2.6.5",
     "gulp-uglify": "3.0.2",
@@ -51,6 +51,7 @@
     "jquery": "3.5.1",
     "load-json-file": "6.2.0",
     "normalize.css": "8.0.1",
+    "sass": "^1.43.4",
     "uglifyjs-webpack-plugin": "2.2.0",
     "webpack-stream": "6.1.0"
   },
