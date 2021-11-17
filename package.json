@@ -38,7 +38,7 @@
     "gulp-concat": "2.6.1",
     "gulp-copy": "^4.0.1",
     "gulp-htmlmin": "5.0.1",
-    "gulp-imagemin": "^2.4.0",
+    "gulp-imagemin": "^8.0.0",
     "gulp-notify": "^4.0.0",
     "gulp-nunjucks-render": "2.2.3",
     "gulp-plumber": "1.2.1",
