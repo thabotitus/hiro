@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Google Font - Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Google Font - Amatic SC -->
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Satisfy&display=swap" rel="stylesheet">
 
-    <!-- Typeplate - typographic starter kit -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/typeplate-starter-kit/3.0.1/css/typeplate.min.css" rel="stylesheet">
+    <!-- Icon Font - Remixicon  -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <!-- Your compiled CSS -->
     <link href="./css/app.min.css" rel="stylesheet">
@@ -22,30 +28,156 @@
 
     <!-- Content gets injected here -->
     
-  <div class="container pt-5">
-    <div class="row d-flex justify-content-center">
-      <div class="col-sm-12 col-md-6">
-        <h1 class="text-center text-uppercase">TTS Web Starter Kit</h1>
-        <p class="text-lead text-center py-5">TTS Web Starter Kit is, as the name suggests, a starter kit to get you up and running
-          with a static site generated from from Nunjucks templates and Sass. This can 
-          be use useful when you you want to build UI kits, websites or static component
-          libraries.
-        </p>
-
-        <hr />
-
-        <h5 class="text-center pt-5">Use TTS WSk to:</h5>
-        <ul>
-          <li>Build your own framework</li>
-          <li>Build a UI kit to use across your app</li>
-          <li>Build a static website that is easily deployable across technology stacks</li>
-        </ul>
+  <section class="hero-area">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-5 col-md-12 col-12">
+          <div class="hero-content">
+            <h1 class="text-cursive">
+              TTS WEB STARTER KIT
+            </h1>
+            <p class="wow fadeInLeft" data-wow-delay=".6s">
+              TTS Web Starter Kit is, as the name suggests, a starter kit to
+              get you up and running with a static site generated from from
+              Nunjucks templates and Sass. This can be use useful when you you
+              want to build UI kits, websites or static component libraries.
+            </p>
+            <div class="button wow fadeInLeft" data-wow-delay=".8s">
+              <a
+                href="https://github.com/ttsftwr/tts-web-starter-kit/archive/refs/heads/master.zip"
+                class="tts-btn tts-btn--alt"
+                ><i class="ri-download-line"></i> Free Download</a
+              >
+              <a
+                href="https://github.com/ttsftwr/tts-web-starter-kit"
+                class="tts-btn tts-btn--primary"
+                ><i class="ri-github-line"></i> Github Repo</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-12 col-12">
+          <div class="hero-image wow fadeInRight" data-wow-delay=".4s">
+            <img src="../images/hero/dev.svg" alt="#" data-attribution="https://storyset.com/work" />
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
+
+  <section class="features section py-5">
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-6 col-md-8 col-12">
+          <div class="section-title">
+            <h3 class="text-cursive">Features</h3>
+            <h2>
+              It's a small package that delivers great value
+            </h2>
+            <p class="wow fadeInUp" data-wow-delay=".6s">
+              All features come out the box without any additional configuration.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="features__item">
+            <i class="ri-fire-line"></i>
+            <h3 class="text-cursive">Hot Reloading</h3>
+            <p>
+              Make changes to your (s)css files without the need do a page reload.
+              This creates a significant time-savings when building complex designs.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="features__item">
+            <i class="ri-pencil-line"></i>
+            <h3 class="text-cursive">Live Reloading</h3>
+            <p>
+              Page automatically refreshes after you make changes to your html, eliminating the need to constantly 
+              switch tabs to refresh your page, again saving you time and effort.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="features__item">
+            <i class="ri-image-line"></i>
+            <h3 class="text-cursive">Image Optimization</h3>
+            <p>
+              Optimizes all your images on the fly, even while you continue to 
+              make changes. Useful for faster loading pages that have lots of images.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="features__item">
+            <i class="ri-folder-zip-line"></i>
+            <h3 class="text-cursive">Package &amp; Zip</h3>
+            <p>
+              Your code ready for distribution? Zip it and ship it with a simple
+              command.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="features__item">
+            <i class="ri-git-pull-request-line"></i>
+            <h3 class="text-cursive">Version Management</h3>
+            <p>
+              Easily bump your code versions with a simple command.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="features__item">
+            <i class="ri-upload-cloud-line"></i>
+            <h3 class="text-cursive">Easy Deploy</h3>
+            <p>
+              Deploy your site to <a href="https://surge.sh" target="_blank">Surge.sh</a> in seconds, for free with a simple command. A great way 
+              to get feedback on your work just by sharing a link.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section call-action py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
+          <div class="cta-content">
+            <h2 class="text-cursive wow fadeInUp" data-wow-delay=".2s">Sound Good?</h2>
+            <p class="wow fadeInUp" data-wow-delay=".4s">
+              Clone or download the code and start building something amazing! And please send feedback.
+              Would love to know what you've built with this tool 💪
+            </p>
+            <div class="wow fadeInUp" data-wow-delay=".6s">
+              <a
+                href="https://github.com/ttsftwr/tts-web-starter-kit/archive/refs/heads/master.zip"
+                class="tts-btn tts-btn--alt"
+                ><i class="ri-download-line"></i> Download Now</a
+              >
+
+              <a
+                href="mailto:hello@thabotitus.co.za"
+                class="tts-btn tts-btn--primary"
+                ><i class="ri-mail-send-line"></i> Send Feedback</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
-    <!-- Bootstrap Javascript Bundle -->
+
+    <!-- Bootstrap 5 Javascript Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
     <!-- Your compiled files -->

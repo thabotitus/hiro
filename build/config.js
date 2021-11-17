@@ -26,7 +26,9 @@ const TASKS = {
   HTML_PAGES: "build:html_pages",
   COPY_DATA: "build:copy_data",
   PACKAGE: "buil:package",
+  DEPLOY: "surge:deploy",
 };
+
 const APP_ROOT = "./";
 const BROWSER_PORT = 3000;
 const BROSWER_SYNC_NAME = "tts-web-starter-kit";
@@ -39,6 +41,7 @@ const VERSION_SOURCES = [
 const DOWNLOADS_FOLDER = "./downloads/";
 const NUNJUCKS_TEMPLATES_PATH = "src/templates";
 const STYLES_OUTPUT_NAME = "app.min.css";
+const SURGE_DOMAIN = null;
 
 export {
   APP_ROOT,
@@ -49,6 +52,7 @@ export {
   INPUT_FOLDERS,
   NUNJUCKS_TEMPLATES_PATH,
   STYLES_OUTPUT_NAME,
+  SURGE_DOMAIN,
   TASKS,
   VERSION_SOURCES,
 };

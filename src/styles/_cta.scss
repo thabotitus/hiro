@@ -1,0 +1,73 @@
+/*======================================
+    Call To Action CSS
+========================================*/
+.call-action {
+  background-color: #fff;
+}
+
+.call-action .cta-content {
+  text-align: center;
+  padding: 0px 50px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .call-action .cta-content {
+    padding: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .call-action .cta-content {
+    padding: 0;
+  }
+}
+
+.call-action .cta-content h2 {
+  line-height: 50px;
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .call-action .cta-content h2 {
+    font-size: 32px;
+    line-height: 45px;
+  }
+}
+
+@media (max-width: 767px) {
+  .call-action .cta-content h2 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+}
+
+.call-action .cta-content p {
+  padding: 0px 50px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .call-action .cta-content p {
+    padding: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .call-action .cta-content p {
+    padding: 0;
+  }
+}
+
+.call-action .cta-content .button {
+  margin-top: 40px;
+}
+
+.call-action .cta-content .button .btn {
+  background-color: #f1f1f1;
+}
+
+.call-action .cta-content .button .btn:hover {
+  color: #fff;
+  background-color: #081828;
+}
