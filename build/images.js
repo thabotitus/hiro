@@ -4,24 +4,29 @@ import plumber from "gulp-plumber";
 import browserSync from "browser-sync";
 import imageMin from "gulp-imagemin";
 
-import { DISTRIBUTION_FOLDERS, INPUT_FOLDERS } from "./config.js";
+import {
+  DISTRIBUTION_FOLDERS,
+  INPUT_FOLDERS,
+  BROSWER_SYNC_NAME,
+  TASKS,
+} from "./config.js";
 
-const browser = browserSync.has("tts-web-starter-kit")
-  ? browserSync.get("tts-web-starter-kit")
-  : browserSync.create("tts-web-starter-kit");
+const browser = browserSync.has(BROSWER_SYNC_NAME)
+  ? browserSync.get(BROSWER_SYNC_NAME)
+  : browserSync.create(BROSWER_SYNC_NAME);
 
-gulp.task("build:images", function () {
+const minifierConfig = {
+  progressive: true,
+  interlaced: true,
+  pngquant: true,
+  verbose: true,
+};
+
+gulp.task(TASKS.IMAGES, function () {
   return gulp
     .src([`${INPUT_FOLDERS.IMAGES}/**/*.+(png|jpg|jpeg|gif|svg|ico)`])
     .pipe(plumber())
-    .pipe(
-      imageMin({
-        progressive: true,
-        interlaced: true,
-        pngquant: true,
-        verbose: true,
-      })
-    )
+    .pipe(imageMin(minifierConfig))
     .pipe(
       gulp.dest(`./${DISTRIBUTION_FOLDERS.ROOT}/${DISTRIBUTION_FOLDERS.IMAGES}`)
     )

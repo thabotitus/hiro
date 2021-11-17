@@ -2,10 +2,6 @@ import gulp from "gulp";
 import clean from "gulp-clean";
 import browserSync from "browser-sync";
 
-const browser = browserSync.has("tts-web-starter-kit")
-  ? browserSync.get("tts-web-starter-kit")
-  : browserSync.create("tts-web-starter-kit");
-
 import "./build/scripts.js";
 import "./build/styles.js";
 import "./build/images.js";
@@ -14,9 +10,17 @@ import "./build/data.js";
 import "./build/bump.js";
 import "./build/package.js";
 
-import { DISTRIBUTION_FOLDERS, INPUT_FOLDERS, TASKS } from "./build/config.js";
+import {
+  DISTRIBUTION_FOLDERS,
+  INPUT_FOLDERS,
+  TASKS,
+  BROWSER_PORT,
+  BROSWER_SYNC_NAME,
+} from "./build/config.js";
 
-const BROWSER_PORT = 3000;
+const browser = browserSync.has(BROSWER_SYNC_NAME)
+  ? browserSync.get(BROSWER_SYNC_NAME)
+  : browserSync.create(BROSWER_SYNC_NAME);
 
 gulp.task(TASKS.CLEAN, function () {
   return gulp

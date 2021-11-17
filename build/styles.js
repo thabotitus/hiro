@@ -10,18 +10,21 @@ import autoprefixer from "gulp-autoprefixer";
 import notify from "gulp-notify";
 import browserSync from "browser-sync";
 import concat from "gulp-concat";
+import {
+  DISTRIBUTION_FOLDERS,
+  INPUT_FOLDERS,
+  TASKS,
+  BROSWER_SYNC_NAME,
+  STYLES_OUTPUT_NAME,
+} from "./config.js";
 
 const gSass = gulpSass(sass);
 
-const browser = browserSync.has("tts-web-starter-kit")
-  ? browserSync.get("tts-web-starter-kit")
-  : browserSync.create("tts-web-starter-kit");
+const browser = browserSync.has(BROSWER_SYNC_NAME)
+  ? browserSync.get(BROSWER_SYNC_NAME)
+  : browserSync.create(BROSWER_SYNC_NAME);
 
-const OUTPUT_FILE_NAME = "app.min.css";
-
-import { DISTRIBUTION_FOLDERS, INPUT_FOLDERS } from "./config.js";
-
-gulp.task("build:styles", function () {
+gulp.task(TASKS.STYLES, function () {
   return gulp
     .src([`${INPUT_FOLDERS.CSS}/**/*.scss`])
     .pipe(
@@ -52,7 +55,7 @@ gulp.task("build:styles", function () {
       })
     )
     .pipe(sourcemaps.write())
-    .pipe(concat(OUTPUT_FILE_NAME))
+    .pipe(concat(STYLES_OUTPUT_NAME))
     .pipe(
       gulp.dest(`./${DISTRIBUTION_FOLDERS.ROOT}/${DISTRIBUTION_FOLDERS.CSS}`)
     )

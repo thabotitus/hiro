@@ -1,27 +1,25 @@
 "use strict";
 import gulp from "gulp";
 import bump from "gulp-bump";
-
-const ROOT = "./";
-const source = ["./version.json", "./package.json", "./package-lock.json"];
+import { VERSION_SOURCES, APP_ROOT } from "./config.js";
 
 gulp.task("bump:major", function () {
   return gulp
-    .src(source)
+    .src(VERSION_SOURCES)
     .pipe(bump({ type: "major" }))
-    .pipe(gulp.dest(ROOT));
+    .pipe(gulp.dest(APP_ROOT));
 });
 
 gulp.task("bump:minor", function () {
   return gulp
-    .src(source)
+    .src(VERSION_SOURCES)
     .pipe(bump({ type: "minor" }))
-    .pipe(gulp.dest(ROOT));
+    .pipe(gulp.dest(APP_ROOT));
 });
 
 gulp.task("bump:patch", function () {
   return gulp
-    .src(source)
+    .src(VERSION_SOURCES)
     .pipe(bump({ type: "patch" }))
-    .pipe(gulp.dest(ROOT));
+    .pipe(gulp.dest(APP_ROOT));
 });
