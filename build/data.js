@@ -1,10 +1,10 @@
 "use strict";
 import gulp from "gulp";
-import { DISTRIBUTION_FOLDERS } from "./config.js";
+import { DISTRIBUTION_FOLDERS, TASKS, INPUT_FOLDERS } from "./config.js";
 
-gulp.task("build:copy_data", () => {
+gulp.task(TASKS.COPY_DATA, () => {
   return gulp
-    .src("./src/data/**/*")
+    .src(`${INPUT_FOLDERS.DATA}/**/*`)
     .pipe(
       gulp.dest(`./${DISTRIBUTION_FOLDERS.ROOT}/${DISTRIBUTION_FOLDERS.DATA}`)
     );

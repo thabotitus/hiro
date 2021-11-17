@@ -1,7 +1,7 @@
 const DISTRIBUTION_FOLDERS = {
   CSS: "css",
   IMAGES: "images",
-  ROOT: "dist",
+  ROOT: "docs",
   JS: "js",
   DATA: "data",
   PAGES: "pages",
@@ -12,6 +12,7 @@ const INPUT_FOLDERS = {
   JS: "./src/js",
   CSS: "./src/styles",
   ROOT: "./src",
+  DATA: "./src/data",
 };
 
 const TASKS = {
@@ -26,5 +27,28 @@ const TASKS = {
   COPY_DATA: "build:copy_data",
   PACKAGE: "buil:package",
 };
+const APP_ROOT = "./";
+const BROWSER_PORT = 3000;
+const BROSWER_SYNC_NAME = "tts-web-starter-kit";
+const VERSION_SOURCES = [
+  "./version.json",
+  "./package.json",
+  "./package-lock.json",
+];
 
-export { DISTRIBUTION_FOLDERS, INPUT_FOLDERS, TASKS };
+const DOWNLOADS_FOLDER = "./downloads/";
+const NUNJUCKS_TEMPLATES_PATH = "src/templates";
+const STYLES_OUTPUT_NAME = "app.min.css";
+
+export {
+  APP_ROOT,
+  BROWSER_PORT,
+  BROSWER_SYNC_NAME,
+  DISTRIBUTION_FOLDERS,
+  DOWNLOADS_FOLDER,
+  INPUT_FOLDERS,
+  NUNJUCKS_TEMPLATES_PATH,
+  STYLES_OUTPUT_NAME,
+  TASKS,
+  VERSION_SOURCES,
+};

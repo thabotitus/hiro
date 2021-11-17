@@ -5,13 +5,13 @@ import notify from "gulp-notify";
 import webpack from "webpack-stream";
 import { WEBPACK_CONFIG } from "../webpack.config.js";
 import browserSync from "browser-sync";
-import { DISTRIBUTION_FOLDERS } from "./config.js";
+import { DISTRIBUTION_FOLDERS, BROSWER_SYNC_NAME, TASKS } from "./config.js";
 
-const browser = browserSync.has("tts-web-starter-kit")
-  ? browserSync.get("tts-web-starter-kit")
-  : browserSync.create("tts-web-starter-kit");
+const browser = browserSync.has(BROSWER_SYNC_NAME)
+  ? browserSync.get(BROSWER_SYNC_NAME)
+  : browserSync.create(BROSWER_SYNC_NAME);
 
-gulp.task("build:javascript", function () {
+gulp.task(TASKS.JS, function () {
   return gulp
     .src("/")
     .pipe(
