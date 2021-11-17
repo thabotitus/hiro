@@ -9,6 +9,7 @@ import "./build/html.js";
 import "./build/data.js";
 import "./build/bump.js";
 import "./build/package.js";
+import "./build/deploy.js";
 
 import {
   DISTRIBUTION_FOLDERS,

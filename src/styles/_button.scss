@@ -1,0 +1,51 @@
+.tts-btn {
+  display: inline-flex;
+  text-transform: capitalize;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 13px 30px;
+  border: none;
+  transition: 0.2s;
+  border-radius: 4px;
+  position: relative;
+  z-index: 1;
+  margin-right: 7px;
+  overflow: hidden;
+  text-decoration: none;
+  font-weight: normal;
+  text-transform: uppercase;
+  justify-content: center;
+
+  &--primary {
+    background-color: #f64c71;
+    border: 2px solid #f64c71;
+    color: #fff;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &--alt {
+    background-color: transparent;
+    border: 2px solid #f64c71;
+    color: #f64c71;
+
+    &:hover {
+      color: #f64c71;
+    }
+  }
+
+  i {
+    display: inline-block;
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 767px) {
+  .tts-btn {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
