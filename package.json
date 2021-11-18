@@ -59,6 +59,8 @@
   },
   "dependencies": {
     "-": "0.0.1",
+    "@hotwired/stimulus": "^3.0.1",
+    "@hotwired/stimulus-webpack-helpers": "^1.0.1",
     "g": "^2.0.1"
   }
 }
