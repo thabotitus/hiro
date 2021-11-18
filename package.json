@@ -2,7 +2,7 @@
   "name": "tts-web-starter-kit",
   "version": "1.3.0",
   "type": "module",
-  "main": "dist/index.html",
+  "main": "docs/index.html",
   "description": "A web starter kit to help build web products faster.",
   "homepage": "https://ttsftwr.github.io/tts-web-starter-kit/",
   "scripts": {

@@ -13,9 +13,13 @@
   margin-right: 7px;
   overflow: hidden;
   text-decoration: none;
-  font-weight: normal;
+  font-weight: 700;
   text-transform: uppercase;
   justify-content: center;
+
+  &:hover {
+    text-decoration: none;
+  }
 
   &--primary {
     background-color: #f64c71;
@@ -24,6 +28,7 @@
 
     &:hover {
       color: #fff;
+      background-color: darken(#f64c71, 8%);
     }
   }
 
@@ -34,6 +39,7 @@
 
     &:hover {
       color: #f64c71;
+      border: 2px solid darken(#f64c71, 8%);
     }
   }
 

@@ -81,6 +81,17 @@ You can build a compressed file with the built code by running:
 npm run package
 ```
 
+### Available Commands
+
+| Command                            | Description                                                                                   |
+| ---------------------------------- | --------------------------------------------------------------------------------------------- |
+| `npm start`                        | Starts the server on your configuerd port (default 3000) and begins browsersync session       |
+| `npm run set:env`                  | Sets your node env to the one specified in `.node-version`                                    |
+| `npm run build`                    | Builds your app for production in your configured folder (default `docs`)                     |
+| `npm run package`                  | Takes contents from your built app and zips them into a folder with the configured name       |
+| `npm run deploy`                   | Takes contents from your built app and deploys it to Surge.sh with the configured domain name |
+| `npm run bump:<major/minor/patch>` | Bumps the version in the version files (`version.json`, `pacakge.json`, `package-lock.json`)  |
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
