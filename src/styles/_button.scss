@@ -1,4 +1,4 @@
-.tts-btn {
+.wsk-btn {
   display: inline-flex;
   text-transform: capitalize;
   align-items: center;
@@ -44,7 +44,7 @@
 }
 
 @media (max-width: 767px) {
-  .tts-btn {
+  .wsk-btn {
     width: 100%;
     margin-bottom: 20px;
   }
