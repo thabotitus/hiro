@@ -1,8 +1,0 @@
-.github
-./downloads
-./node_modules
-./src
-./build
-.gitignore
-gulpfile.js
-webpack.config.js

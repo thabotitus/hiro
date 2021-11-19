@@ -62,5 +62,18 @@
     "@hotwired/stimulus": "^3.0.1",
     "@hotwired/stimulus-webpack-helpers": "^1.0.1",
     "g": "^2.0.1"
-  }
+  },
+  "files": [
+    "build",
+    "src",
+    "LICENSE.MD",
+    "README.MD",
+    ".gitignore",
+    ".node-version",
+    "gulpfile.js",
+    "package.json",
+    "package-lock.json",
+    "version.json",
+    "webpack.config.js"
+  ]
 }
