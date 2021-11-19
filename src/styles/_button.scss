@@ -16,6 +16,7 @@
   font-weight: 700;
   text-transform: uppercase;
   justify-content: center;
+  margin-bottom: 20px;
 
   &:hover {
     text-decoration: none;
@@ -43,6 +44,10 @@
     }
   }
 
+  &--block {
+    width: 100%;
+  }
+
   i {
     display: inline-block;
     margin-right: 5px;
@@ -52,6 +57,5 @@
 @media (max-width: 767px) {
   .wsk-btn {
     width: 100%;
-    margin-bottom: 20px;
   }
 }
