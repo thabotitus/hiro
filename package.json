@@ -74,6 +74,7 @@
     "package.json",
     "package-lock.json",
     "version.json",
-    "webpack.config.js"
+    "webpack.config.js",
+    "sample"
   ]
 }

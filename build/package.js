@@ -1,11 +1,11 @@
 // 'use strict'
 import gulp from "gulp";
 import zip from "gulp-zip";
-import { DISTRIBUTION_FOLDERS, DOWNLOADS_FOLDER, TASKS } from "./config.js";
 import fs from "fs";
 import clean from "gulp-clean";
-const version = JSON.parse(fs.readFileSync("version.json")).version;
+import { DISTRIBUTION_FOLDERS, DOWNLOADS_FOLDER, TASKS } from "./config.js";
 
+const version = JSON.parse(fs.readFileSync("version.json")).version;
 const PACKAGE_NAME = `TTS_WEB_STARTER_KIT_v${version}.zip`;
 
 gulp.task("cleanup", () => {
