@@ -1,6 +1,6 @@
 {
   "name": "tts-web-starter-kit",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "type": "module",
   "main": "docs/index.html",
   "description": "A web starter kit to help build web products faster.",
