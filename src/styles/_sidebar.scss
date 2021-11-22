@@ -1,0 +1,33 @@
+.tts-layout {
+  &__sidebar {
+    background-color: map-get($brand, secondary);
+    display: grid;
+    grid-template-rows: $layout_topbar_height 1fr;
+    grid-template-columns: 1fr;
+    color: map-get($brand, grey);
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-height: 50px;
+    }
+
+    &-full {
+      display: none;
+    }
+
+    @include breakpoint(lg) {
+      &-min {
+        display: none;
+      }
+
+      &-full {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.tts-header {
+  background-color: map-get($brand, grey);
+  padding: 2em 1em;
+
+  h1 {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}

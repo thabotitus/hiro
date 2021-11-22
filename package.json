@@ -14,7 +14,8 @@
     "bump:major": "gulp bump:major",
     "package": "gulp build:package",
     "set:env": "nodenv local `cat .node-version`",
-    "deploy": "gulp surge:deploy"
+    "deploy": "gulp surge:deploy",
+    "scratch": "rm -rf src && cp -r sample src"
   },
   "keywords": [
     "html",

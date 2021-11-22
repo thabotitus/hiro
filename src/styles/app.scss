@@ -1,9 +1,12 @@
-@import "./base/base";
+@import "config/colours";
+@import "config/site";
+@import "config/breakpoints";
+@import "config/helpers";
+@import "config/base";
 
-@import "./hero";
-@import "./features";
-@import "./cta";
-@import "./section";
-@import "./button";
-@import "./footer";
-@import "./browsers";
+@import "layout";
+@import "topbar";
+@import "sidebar";
+@import "navigation";
+@import "header";
+@import "yield";

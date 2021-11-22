@@ -1,0 +1,16 @@
+.tts-layout {
+  &__topbar {
+    display: flex;
+    transition: all 200ms ease;
+    display: flex;
+    border-bottom: 1px solid map-get($brand, grey);
+
+
+    &-section {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      padding: 0 1em;
+    }
+  }
+}
