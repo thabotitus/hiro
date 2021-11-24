@@ -13,4 +13,15 @@
       padding: 0 1em;
     }
   }
+
+  &__dropdown-trigger {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.6rem;
+    cursor: pointer;
+
+    @include breakpoint(md) {
+      display: none;
+    }
+  }
 }

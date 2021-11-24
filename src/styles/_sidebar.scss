@@ -5,6 +5,11 @@
     grid-template-rows: $layout_topbar_height 1fr;
     grid-template-columns: 1fr;
     color: map-get($brand, grey);
+    display: none;
+    
+    @include breakpoint(md) {
+      display: grid;
+    }
   }
 
   &__logo {

@@ -2,17 +2,44 @@
   &__item {
     text-decoration: none;
     display: flex;
-    height: 50px;
+    height: 40px;
     align-items: center;
     justify-content: center;
     color: map-get($brand, grey);
-    border-top: 1px solid rgba(0,0,0,0.06);
+    position: relative;
+
+    &:hover {
+      color: darken(map-get($brand, grey), 10%);
+    }
 
     @include breakpoint(lg) {
       justify-content: flex-start;
       padding: 0 20px;
+
+      &::after {
+        content: '\02C7';
+        position: absolute;
+        right: 20px;
+        font-size: 1.6rem;
+        top: 10px;
+      }
+    }
+
+    &--sub {
+      height: 35px;
+      padding-left: 30px;
+      font-size: 0.9rem;
+
+      &::before {
+        content: '- \a0'
+      }
+
+      &::after {
+        content: '';
+      }
     }
   }
+
 
   &__icon {
     font-size: 1.3rem;
@@ -26,6 +53,7 @@
   &__title {
     display: none;
     transition: all 200ms ease;
+    margin-top: -2px;
 
     @include breakpoint(lg) {
       display: block;

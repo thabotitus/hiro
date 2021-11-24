@@ -35,22 +35,51 @@
       </div>
 
       <nav class="tts-navigation">
-        <a href="#" class="tts-navigation__item">
+        <a data-bs-toggle="collapse" href="#navPages" class="tts-navigation__item">
           <div class="tts-navigation__icon">
-            <i class="ri-home-fill"></i>
+            <i class="ri-pages-fill"></i>
           </div>
           <div class="tts-navigation__title">
-            Home
+            Pages
           </div>
         </a>
-        <a href="#" class="tts-navigation__item">
+
+        <div class="collapse" id="navPages">
+          <a  href="#" class="tts-navigation__item tts-navigation__item--sub">
+            <span class="tts-navigation__title">
+              Auth
+            </span>
+          </a>
+
+          <a  href="#" class="tts-navigation__item tts-navigation__item--sub">
+            <span class="tts-navigation__title">
+              Errors
+            </span>
+          </a>
+        </div>
+
+        <a data-bs-toggle="collapse" href="#navComponents" class="tts-navigation__item">
           <div class="tts-navigation__icon">
-            <i class="ri-store-fill"></i>
+            <i class="ri-computer-fill"></i>
           </div>
           <div class="tts-navigation__title">
-            Store
+            Components
           </div>
         </a>
+
+        <div class="collapse" id="navComponents">
+          <a  href="#" class="tts-navigation__item tts-navigation__item--sub">
+            <span class="tts-navigation__title">
+              Button
+            </span>
+          </a>
+
+          <a  href="#" class="tts-navigation__item tts-navigation__item--sub">
+            <span class="tts-navigation__title">
+              Card
+            </span>
+          </a>
+        </div>
       </nav>
     </div>
     <div class="tts-layout__main">
@@ -60,6 +89,10 @@
         </div>
         <div class="tts-layout__topbar-section tts-flex-5">
           Toolbar
+        </div>
+
+        <div class="tts-layout__topbar-section tts-layout__dropdown-trigger tts-flex-1">
+          <i class="ri-menu-5-line"></i>
         </div>
       </div>
       <div class="tts-layout__content">
@@ -77,6 +110,8 @@
     </div>
   </div>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <!-- Your compiled files -->
     <script type="text/javascript" src="./js/app.min.js"></script>
