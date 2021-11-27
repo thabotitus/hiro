@@ -41,7 +41,7 @@ const VERSION_SOURCES = [
 const DOWNLOADS_FOLDER = "./downloads/";
 const NUNJUCKS_TEMPLATES_PATH = "src/templates";
 const STYLES_OUTPUT_NAME = "app.min.css";
-const SURGE_DOMAIN = null;
+const SURGE_DOMAIN = 'https://hiro.thabotitus.co.za';
 
 export {
   APP_ROOT,

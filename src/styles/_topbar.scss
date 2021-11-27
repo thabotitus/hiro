@@ -14,14 +14,10 @@
     }
   }
 
-  &__dropdown-trigger {
+  &__offcanvas-trigger {
     display: flex;
     justify-content: flex-end;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     cursor: pointer;
-
-    @include breakpoint(md) {
-      display: none;
-    }
   }
 }

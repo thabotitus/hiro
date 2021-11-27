@@ -1,14 +1,26 @@
 {% extends "base.njk" %}
 
 {% block content %}
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvasExample" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      Content for the offcanvas goes here. You can place just about any Bootstrap component or custom elements here.
+    </div>
+  </div>
+
   <div class="tts-layout">
     <div class="tts-layout__sidebar">
       <div class="tts-layout__logo">
         <div class="tts-layout__logo-full">
-          <img src="https://res.cloudinary.com/duvwrnkqj/image/upload/v1610832431/Logos/ball_rrcp79.png" height="45px" alt="Logo" />
+          HIRO
+          <img src="https://res.cloudinary.com/duvwrnkqj/image/upload/v1638003983/Logos/HiroWhite_zngcd9.png" height="45px" alt="Logo" data-attribution="https://www.vecteezy.com/free-vector/pitbull-logo" />
+          ADMIN
         </div>
         <div class="tts-layout__logo-min">
-          <img src="https://res.cloudinary.com/duvwrnkqj/image/upload/v1610832431/Logos/ball_rrcp79.png" height="35px" alt="Logo" />
+          <img src="https://res.cloudinary.com/duvwrnkqj/image/upload/v1638003983/Logos/HiroWhite_zngcd9.png" height="45px" alt="Logo" data-attribution="https://www.vecteezy.com/free-vector/pitbull-logo" />
         </div>
       </div>
 
@@ -62,22 +74,24 @@
     </div>
     <div class="tts-layout__main">
       <div class="tts-layout__topbar">
+        <div class="tts-layout__topbar-section tts-flex-1 only-on-md">
+          <img src="https://res.cloudinary.com/duvwrnkqj/image/upload/v1638004524/Logos/HiroDark_ith1ug.png" height="45px" alt="Logo" data-attribution="https://www.vecteezy.com/free-vector/pitbull-logo" />
+        </div>
+
         <div class="tts-layout__topbar-section tts-flex-2">
           Toolbar
         </div>
+
         <div class="tts-layout__topbar-section tts-flex-5">
           Toolbar
         </div>
 
-        <div class="tts-layout__topbar-section tts-layout__dropdown-trigger tts-flex-1">
+        <div class="tts-layout__topbar-section tts-layout__offcanvas-trigger tts-flex-1 only-on-md" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" data-bs-backdrop="true">
           <i class="ri-menu-5-line"></i>
         </div>
       </div>
       <div class="tts-layout__content">
         <div class="tts-header">
-          <div class="tts-header__toggle">
-            <i class="ri-arrow-drop-down-line"></i>
-          </div>
           <h1 class="tts-header__title">Heading</h1>
           <p class="tts-header__subtitle">Sub Heading</p>
         </div>
