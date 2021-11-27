@@ -1,0 +1,18 @@
+.tts-section {
+  display: flex;
+  padding: 1rem 2rem;
+  flex-direction: column;
+  width: 100%;
+
+  &--hfull {
+    height: 100vh;
+  }
+
+  &--vcentered {
+    justify-content: center;
+  }
+
+  &--hcentered {
+    align-items: center;
+  }
+}
