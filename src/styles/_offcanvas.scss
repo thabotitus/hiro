@@ -1,0 +1,17 @@
+.tts-offcanvas {
+  background: map-get($brand, secondary);
+  border: none;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+  .offcanvas-header {
+    color: map-get($brand-dark, white);
+  }
+}
+
+.tts-dark-mode {
+  .tts-offcanvas {
+    background: map-get($brand-dark, white);
+    border-right: 1px solid darken(map-get($brand-dark, white), 4%);
+    box-shadow: none;
+  }
+}

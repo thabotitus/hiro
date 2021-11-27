@@ -41,6 +41,7 @@
   .tts-layout {
     &__sidebar {
       background-color: map-get($brand-dark, grey);
+      background-color: lighten(map-get($brand-dark, white), 2%);
       color: map-get($brand, grey);
     }
   }

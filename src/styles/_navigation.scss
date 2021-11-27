@@ -60,3 +60,20 @@
     }
   }
 }
+
+.tts-offcanvas {
+  .tts-navigation {
+    &__title {
+      display: block;
+    }
+
+    &__item {
+      justify-content: flex-start;
+    }
+
+    &__icon {
+      font-size: 1rem;
+      margin-right: 10px;
+    }
+  }
+}

@@ -1,16 +1,6 @@
 {% extends "base.njk" %}
 
 {% block content %}
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
-      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      Content for the offcanvas goes here. You can place just about any Bootstrap component or custom elements here.
-    </div>
-  </div>
-
   <div class="tts-layout">
     <div class="tts-layout__sidebar">
       <div class="tts-layout__logo">
@@ -24,7 +14,7 @@
         </div>
       </div>
 
-      <nav class="tts-navigation">
+      <nav class="tts-navigation" data-navigation-target="navigation">
         <a data-bs-toggle="collapse" href="#navPages" class="tts-navigation__item">
           <div class="tts-navigation__icon">
             <i class="ri-pages-fill"></i>
@@ -97,8 +87,8 @@
       </div>
       <div class="tts-layout__content">
         <div class="tts-header">
-          <h1 class="tts-header__title">Heading</h1>
-          <p class="tts-header__subtitle">Sub Heading</p>
+          <h1 class="tts-header__title">Home</h1>
+          <p class="tts-header__subtitle">Is where the heart is ...</p>
         </div>
         <div class="tts-yield">
           Content

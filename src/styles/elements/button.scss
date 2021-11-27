@@ -1,11 +1,24 @@
+@import "../config/colours";
+
 .tts-btn {
   text-transform: uppercase;
   padding: 0.8rem 1rem;
   font-weight: 700;
-  // background: map-get($brand, white);
+  background: map-get($brand, white);
   margin-bottom: 1rem;
+  border: 2px solid map-get($brand, white);
+
+  &:hover {
+    background: darken(map-get($brand, white), 4%);
+  }
 
   &--block {
     width: 100%;
+  }
+
+  &--secondary {
+    background: none;
+    border: 2px solid map-get($brand, white);
+    color: map-get($brand, white);
   }
 }

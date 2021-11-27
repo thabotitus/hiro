@@ -20,7 +20,16 @@
 
     <title>Hiro | HTML 5 Admin Template</title>
   </head>
-  <body data-controller="hello" data-hello-target="body">
+  <body data-controller="hello navigation" data-hello-target="body">
+    <div class="tts-offcanvas offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasLabel">HIRO | Navigation</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body" data-navigation-target="offcanvas">
+        Content for the offcanvas goes here. You can place just about any Bootstrap component or custom elements here.
+      </div>
+    </div>
     <!-- Content gets injected here -->
     {% block content %} {% endblock %}
 

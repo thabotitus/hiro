@@ -1,6 +1,6 @@
 .tts-header {
   background-color:   map-get($brand, grey);
-  padding:            2em 1em;
+  padding:            $base_vpadding $base_hpadding;
   position:           relative;
 
   &__title {
