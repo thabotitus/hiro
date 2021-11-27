@@ -50,3 +50,10 @@
     text-align:       right;
   }
 }
+
+.tts-dark-mode {
+  .tts-header {
+    background-color:   darken(map-get($brand-dark, grey), 100%);
+    background-color:   map-get($brand-dark, white);
+  }
+}

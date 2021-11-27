@@ -1,0 +1,15 @@
+html {
+  font-size: $base_font_size;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: map-get($brand, white);
+}
+
+body.tts-dark-mode {
+  background-color: map-get($brand-dark, white);
+  color: map-get($brand, white);
+}
+
+

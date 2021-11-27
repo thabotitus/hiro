@@ -24,6 +24,11 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+// .only-light-mode {
+//   display: initial;
+// }
+
+
 .only-on-lg {
   @include breakpoint(lg) {
     display: none !important;
@@ -36,5 +41,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .bg-secondary {
   background-color: map-get($brand, secondary) !important;
+}
+
+.only-dark-mode {
+  display: none;
+}
+
+.tts-dark-mode {
+  .only-light-mode {
+    display: none;
+  }
+
+  .only-dark-mode {
+    display: inline-block;
+  }
 }
 

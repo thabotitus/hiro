@@ -2,8 +2,8 @@
 @import "config/site";
 @import "config/breakpoints";
 @import "config/helpers";
-@import "config/base";
 
+@import "base";
 @import "layout";
 @import "topbar";
 @import "sidebar";
@@ -11,4 +11,5 @@
 @import "header";
 @import "yield";
 @import "section";
-@import "button";
+
+@import "elements/button.scss"

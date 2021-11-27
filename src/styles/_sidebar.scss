@@ -36,3 +36,12 @@
     }
   }
 }
+
+.tts-dark-mode {
+  .tts-layout {
+    &__sidebar {
+      background-color: map-get($brand-dark, grey);
+      color: map-get($brand, grey);
+    }
+  }
+}

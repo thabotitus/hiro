@@ -3,8 +3,6 @@
     display: flex;
     transition: all 200ms ease;
     display: flex;
-    border-bottom: 1px solid map-get($brand, grey);
-
 
     &-section {
       display: flex;
@@ -19,5 +17,14 @@
     justify-content: flex-end;
     font-size: 1.4rem;
     cursor: pointer;
+  }
+}
+
+.tts-dark-mode {
+  .tts-layout {
+    &__topbar {
+      background-color: map-get($brand-dark, white);
+      color: map-get($brand, white);
+    }
   }
 }
