@@ -33,11 +33,11 @@
 
     &--sub {
       height: 35px;
-      padding-left: 30px;
+      padding-left: 0.1rem;
       font-size: 0.9rem;
 
       &::before {
-        content: '- \a0'
+        content: '-- \a0'
       }
 
       &::after {
