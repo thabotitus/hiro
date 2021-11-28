@@ -12,6 +12,7 @@
   .tts-offcanvas {
     background: map-get($brand-dark, white);
     border-right: 1px solid darken(map-get($brand-dark, white), 4%);
-    box-shadow: none;
+    border-right: none;
+    box-shadow: $box_shadow_dark;
   }
 }

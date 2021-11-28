@@ -13,4 +13,8 @@
 @import "section";
 @import "offcanvas";
 
-@import "elements/button.scss"
+// Elements
+@import "elements/button.scss";
+
+// Components
+@import "components/toolbar";
