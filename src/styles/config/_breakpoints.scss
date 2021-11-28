@@ -2,25 +2,31 @@
 
 $breakpoints: (
   xs: 0,
-  sm: 576,
-  md: 768,
-  lg: 992,
-  xl: 1200,
-  xxl: 1400,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
 );
 
 @mixin breakpoint($bp-name) {
-  $min-width: "";
-
-  @if map-has-key($breakpoints, $bp-name) {
-    $min-width: map-get($breakpoints, $bp-name);
-  } @else if (type_of($bp-name) == number) {
-    $min-width: $bp-name;
-  }
-
-  $min-width-ems: math.div($min-width, $base_font_size) * 1em;
-
-  @media screen and (min-width: $min-width-ems) {
+  @media screen and (min-width: map-get($breakpoints, $bp-name)) {
     @content;
   }
 }
+
+// @mixin breakpoint($bp-name) {
+//   $min-width: "";
+
+//   @if map-has-key($breakpoints, $bp-name) {
+//     $min-width: map-get($breakpoints, $bp-name);
+//   } @else if (type_of($bp-name) == number) {
+//     $min-width: $bp-name;
+//   }
+
+//   $min-width-ems: math.div($min-width, $base_font_size) * 1em;
+
+//   @media screen and (min-width: $min-width-ems) {
+//     @content;
+//   }
+// }
