@@ -22,21 +22,23 @@
   </head>
   <body data-controller="hello navigation" data-hello-target="body">
     <div class="tts-offcanvas offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasLabel">HIRO | Navigation</h5>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body" >
-        <div class="d-flex">
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" data-action="change->hello#toggleDarkMode" data-hello-target="colourmodeCheckbox">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Dark Mode</label>
-          </div>
-        </div>
-
-        <div data-navigation-target="offcanvas"></div>
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">HIRO | Navigation</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="d-flex mb-5">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" data-action="change->hello#toggleDarkMode" data-hello-target="colourmodeCheckbox">
+        <label class="form-check-label" for="flexSwitchCheckDefault">Dark Mode</label>
       </div>
     </div>
+
+    <div data-navigation-target="offcanvas"></div>
+  </div>
+</div>
+
+
     <!-- Content gets injected here -->
     
   <div class="tts-section tts-section--hfull tts-section--hcentered tts-section--vcentered bg-secondary text-light">

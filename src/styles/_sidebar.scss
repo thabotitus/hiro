@@ -1,13 +1,22 @@
 .tts-layout {
   &__sidebar {
     background-color: map-get($brand, secondary);
-    grid-template-rows: $layout_topbar_height 1fr;
+    grid-template-rows: $layout_topbar_height $layout_topbar_height 1fr;
     grid-template-columns: 1fr;
     color: map-get($brand, grey);
     display: none;
     
     @include breakpoint(md) {
       display: grid;
+    }
+
+    &-oc-trigger {
+      display: flex;
+      align-items: center;
+      height: inherit;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
     }
   }
 

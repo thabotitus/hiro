@@ -22,21 +22,23 @@
   </head>
   <body data-controller="hello navigation" data-hello-target="body">
     <div class="tts-offcanvas offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasLabel">HIRO | Navigation</h5>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body" >
-        <div class="d-flex">
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" data-action="change->hello#toggleDarkMode" data-hello-target="colourmodeCheckbox">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Dark Mode</label>
-          </div>
-        </div>
-
-        <div data-navigation-target="offcanvas"></div>
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasLabel">HIRO | Navigation</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="d-flex mb-5">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" data-action="change->hello#toggleDarkMode" data-hello-target="colourmodeCheckbox">
+        <label class="form-check-label" for="flexSwitchCheckDefault">Dark Mode</label>
       </div>
     </div>
+
+    <div data-navigation-target="offcanvas"></div>
+  </div>
+</div>
+
+
     <!-- Content gets injected here -->
     
   <div class="tts-layout">
@@ -52,53 +54,58 @@
         </div>
       </div>
 
+      <div class="tts-layout__sidebar-oc-trigger d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" data-bs-backdrop="true">
+        <i class="ri-menu-fill"></i>
+      </div>
+
       <nav class="tts-navigation" data-navigation-target="navigation">
-        <a data-bs-toggle="collapse" href="#navPages" class="tts-navigation__item">
-          <div class="tts-navigation__icon">
-            <i class="ri-pages-fill"></i>
-          </div>
-          <div class="tts-navigation__title">
-            Pages
-          </div>
-        </a>
+  <a data-bs-toggle="collapse" href="#navPages" class="tts-navigation__item">
+    <div class="tts-navigation__icon">
+      <i class="ri-pages-fill"></i>
+    </div>
+    <div class="tts-navigation__title">
+      Pages
+    </div>
+  </a>
 
-        <div class="collapse" id="navPages">
-          <a  href="#" class="tts-navigation__item tts-navigation__item--sub">
-            <span class="tts-navigation__title">
-              Auth
-            </span>
-          </a>
+  <div class="collapse" id="navPages">
+    <a  href="#" class="tts-navigation__item tts-navigation__item--sub">
+      <span class="tts-navigation__title">
+        Auth
+      </span>
+    </a>
 
-          <a  href="#" class="tts-navigation__item tts-navigation__item--sub">
-            <span class="tts-navigation__title">
-              Errors
-            </span>
-          </a>
-        </div>
+    <a  href="#" class="tts-navigation__item tts-navigation__item--sub">
+      <span class="tts-navigation__title">
+        Errors
+      </span>
+    </a>
+  </div>
 
-        <a data-bs-toggle="collapse" href="#navComponents" class="tts-navigation__item">
-          <div class="tts-navigation__icon">
-            <i class="ri-computer-fill"></i>
-          </div>
-          <div class="tts-navigation__title">
-            Components
-          </div>
-        </a>
+  <a data-bs-toggle="collapse" href="#navComponents" class="tts-navigation__item">
+    <div class="tts-navigation__icon">
+      <i class="ri-computer-fill"></i>
+    </div>
+    <div class="tts-navigation__title">
+      Components
+    </div>
+  </a>
 
-        <div class="collapse" id="navComponents">
-          <a  href="#" class="tts-navigation__item tts-navigation__item--sub">
-            <span class="tts-navigation__title">
-              Button
-            </span>
-          </a>
+  <div class="collapse" id="navComponents">
+    <a  href="#" class="tts-navigation__item tts-navigation__item--sub">
+      <span class="tts-navigation__title">
+        Button
+      </span>
+    </a>
 
-          <a  href="#" class="tts-navigation__item tts-navigation__item--sub">
-            <span class="tts-navigation__title">
-              Card
-            </span>
-          </a>
-        </div>
-      </nav>
+    <a  href="#" class="tts-navigation__item tts-navigation__item--sub">
+      <span class="tts-navigation__title">
+        Card
+      </span>
+    </a>
+  </div>
+</nav>
+
     </div>
 
     <div class="tts-layout__main">
@@ -126,8 +133,8 @@
 
       <div class="tts-layout__content">
         <div class="tts-header">
-          <h1 class="tts-header__title">Home</h1>
-          <p class="tts-header__subtitle">Is where the heart is ...</p>
+          <h1 class="tts-header__title">Introduction</h1>
+          <p class="tts-header__subtitle">Getting started</p>
         </div>
         <div class="tts-yield">
           Content

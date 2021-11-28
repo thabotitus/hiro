@@ -14,7 +14,7 @@ export default class extends Controller {
   setInitialColorMode() {
     if (GET_LS_STATE(this.COLOURMODE_KEY) === 'dark') {
       this.bodyTarget.classList.add(this.DARK_MODE_CLASS);
-      this.colourmodeCheckboxTarget.checked = true;
+      this._toggleAllColourSwitches(true);
     }
   }
 
@@ -23,11 +23,17 @@ export default class extends Controller {
       case true:
         this.bodyTarget.classList.add(this.DARK_MODE_CLASS);
         SET_LS_STATE(this.COLOURMODE_KEY, 'dark');
+        this._toggleAllColourSwitches(true);
         break;
       default:
         this.bodyTarget.classList.remove(this.DARK_MODE_CLASS);
-        SET_LS_STATE(this.COLOURMODE_KEY, null)
+        SET_LS_STATE(this.COLOURMODE_KEY, null);
+        this._toggleAllColourSwitches(false);
         break;
     }
+  }
+
+  _toggleAllColourSwitches(bool) {
+    this.colourmodeCheckboxTargets.forEach(cb => cb.checked = bool);
   }
 }

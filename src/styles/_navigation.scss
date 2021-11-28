@@ -1,4 +1,10 @@
 .tts-navigation {
+  display: none;
+
+  @include breakpoint(lg) {
+    display: block;
+  }
+
   &__item {
     text-decoration: none;
     display: flex;
@@ -63,6 +69,7 @@
 
 .tts-offcanvas {
   .tts-navigation {
+    display: block;
     &__title {
       display: block;
     }
