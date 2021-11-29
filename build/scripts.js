@@ -5,7 +5,7 @@ import notify from "gulp-notify";
 import webpack from "webpack-stream";
 import { WEBPACK_CONFIG } from "../webpack.config.js";
 import browserSync from "browser-sync";
-import { DISTRIBUTION_FOLDERS, BROSWER_SYNC_NAME, TASKS } from "./config.js";
+import { DISTRIBUTION_FOLDERS, BROSWER_SYNC_NAME, TASKS, INPUT_FOLDERS } from "./config.js";
 
 const browser = browserSync.has(BROSWER_SYNC_NAME)
   ? browserSync.get(BROSWER_SYNC_NAME)
@@ -13,7 +13,7 @@ const browser = browserSync.has(BROSWER_SYNC_NAME)
 
 gulp.task(TASKS.JS, function () {
   return gulp
-    .src("/")
+    .src(INPUT_FOLDERS.JS)
     .pipe(
       plumber({
         errorHandler: notify.onError("Error: <%= error.message %>"),
