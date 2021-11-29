@@ -43,6 +43,10 @@
       &::after {
         content: '';
       }
+
+      @include breakpoint(lg) {
+        padding-left: 2rem;
+      }
     }
   }
 
