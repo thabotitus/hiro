@@ -2,9 +2,9 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  // overflow: hidden;
   transition: all 200ms ease;
 
   @include breakpoint(md) {
@@ -19,9 +19,14 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: $layout_topbar_height 1fr;
+    overflow: hidden;
   }
 
   &__content {
+    overflow-y: scroll;
+  }
+
+  &--scrollable {
     overflow-y: scroll;
   }
 }

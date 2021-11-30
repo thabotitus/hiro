@@ -1,15 +1,12 @@
 .tts-code {
   padding: 0 $base_hpadding;
-  background-color: map-get($brand-dark, white);
-
+  background-color: darken(map-get($brand-dark, white), 2%);
   color: map-get($brand, white);
-  font-family: 'Fira Code', monospace;
+  font-family: 'PT Mono', monospace;
   font-size: 0.9rem;
-  border-top: 1px solid darken(map-get($brand-dark, grey), 2%);
-  border-bottom: 1px solid darken(map-get($brand-dark, grey), 2%);
 
   xmp {
-    white-space: pre-line;
+    // white-space: pre-line;
     margin: 0;
     color: map-get($brand, white);
   }
@@ -17,16 +14,30 @@
   pre {
     margin: 0;
     padding: 0;
-    white-space: pre-line;
+    // white-space: pre-line;
     
   }
 
   .hljs,
-  .hljs-attr,
-  .hljs-name,
-  .hljs-tag {
+  .hljs-attr{
     background: none;
     color: map-get($brand, white);
+  }
+
+  .hljs-string {
+    color: #d2f0a6;
+  }
+
+  .hljs-attr {
+    color: #f5a2a9;
+  }
+
+  .hljs-name {
+    color: #f5a2a9;
+  }
+
+  .hljs-tag {
+    color: #f5a2a9;
   }
 }
 

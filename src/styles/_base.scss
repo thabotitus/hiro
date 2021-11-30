@@ -5,6 +5,7 @@ html {
 body {
   font-family: 'Outfit', sans-serif;
   background-color: map-get($brand, white);
+  overflow: hidden;
 }
 
 body.tts-dark-mode {

@@ -13,7 +13,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Outfit:wght@100;300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;700&family=PT+Mono&display=swap" rel="stylesheet"> 
 
     <!-- Your compiled CSS -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
@@ -42,7 +42,7 @@
 
     <!-- Content gets injected here -->
     
-  <div class="tts-layout">
+  <div class="tts-layout" data-controller="easter-eggs">
     <div class="tts-layout__sidebar">
       <div class="tts-layout__logo">
         <div class="tts-layout__logo-full">
@@ -75,16 +75,16 @@
       Home
     </div>
   </a>
-  <a data-bs-toggle="collapse" href="#navComponents" class="tts-navigation__item">
+  <a data-bs-toggle="collapse" href="#navElements" class="tts-navigation__item">
     <div class="tts-navigation__icon">
       <i class="ri-computer-fill"></i>
     </div>
     <div class="tts-navigation__title">
-      Components
+      Elements
     </div>
   </a>
 
-  <div class="collapse" id="navComponents">
+  <div class="collapse" id="navElements">
     <a  href="/pages/elements/button.html" class="tts-navigation__item tts-navigation__item--sub">
       <span class="tts-navigation__title">
         Button
@@ -153,30 +153,229 @@
       </div>
 
       <div class="tts-layout__content">
-        
+        <div class="tts-layout--scrollable">
+          
   <div class="tts-header">
     <h1 class="tts-header__title">Button</h1>
     <p class="tts-header__subtitle">Those clickable things every site needs</p>
   </div>
 
 
-        <div class="tts-yield">
-          <h4>Standard</h4>
-          <br />
-          <a href="#" class="tts-btn tts-btn--light btn">Enter</a>
-          <a href="#" class="tts-btn tts-btn--secondary tts-btn--light btn">Buy $ 19.95</a>
-        </div>
+          
+          <div class="tts-yield">
+            <h4>Standard</h4>
+            <br />
 
-        <div class="tts-code">
-          <pre>
-            <code class="language-html">
-              <xmp>
-                <a href="#" class="tts-btn tts-btn--light btn btn-secondary">Enter</a>
+            <button type="button" class="tts-btn btn btn-primary">Primary</button>
+            <button type="button" class="tts-btn btn btn-secondary">Secondary</button>
+            <button type="button" class="tts-btn btn btn-success">Success</button>
+            <button type="button" class="tts-btn btn btn-danger">Danger</button>
+            <button type="button" class="tts-btn btn btn-warning">Warning</button>
+            <button type="button" class="tts-btn btn btn-info">Info</button>
+            <button type="button" class="tts-btn btn btn-light">Light</button>
+            <button type="button" class="tts-btn btn btn-dark">Dark</button>
+            <button type="button" class="tts-btn btn btn-link">Link</button>
+          </div>
 
-                <a href="#" class="tts-btn tts-btn--secondary tts-btn--light btn">Buy $ 19.95</a>
-              </xmp>
-            </code>
-          </pre>
+          <div class="tts-code">
+            <pre>
+              <code class="language-html">
+  <xmp>
+    <button type="button" class="tts-btn btn btn-primary">Primary</button>
+    <button type="button" class="tts-btn btn btn-secondary">Secondary</button>
+    <button type="button" class="tts-btn btn btn-success">Success</button>
+    <button type="button" class="tts-btn btn btn-danger">Danger</button>
+    <button type="button" class="tts-btn btn btn-warning">Warning</button>
+    <button type="button" class="tts-btn btn btn-info">Info</button>
+    <button type="button" class="tts-btn btn btn-light">Light</button>
+    <button type="button" class="tts-btn btn btn-dark">Dark</button>
+    <button type="button" class="tts-btn btn btn-link">Link</button>
+  </xmp>
+              </code>
+            </pre>
+          </div>
+
+          
+          <div class="tts-yield">
+            <h4>Outline</h4>
+            <br />
+
+            <button type="button" class="tts-btn btn btn-outline-primary">Primary</button>
+            <button type="button" class="tts-btn btn btn-outline-secondary">Secondary</button>
+            <button type="button" class="tts-btn btn btn-outline-success">Success</button>
+            <button type="button" class="tts-btn btn btn-outline-danger">Danger</button>
+            <button type="button" class="tts-btn btn btn-outline-warning">Warning</button>
+            <button type="button" class="tts-btn btn btn-outline-info">Info</button>
+            <button type="button" class="tts-btn btn btn-outline-light">Light</button>
+            <button type="button" class="tts-btn btn btn-outline-dark">Dark</button>
+            <button type="button" class="tts-btn btn btn-outline-link">Link</button>
+          </div>
+
+          <div class="tts-code">
+            <pre>
+              <code class="language-html">
+  <xmp>
+    <button type="button" class="tts-btn btn btn-outline-primary">Primary</button>
+    <button type="button" class="tts-btn btn btn-outline-secondary">Secondary</button>
+    <button type="button" class="tts-btn btn btn-outline-success">Success</button>
+    <button type="button" class="tts-btn btn btn-outline-danger">Danger</button>
+    <button type="button" class="tts-btn btn btn-outline-warning">Warning</button>
+    <button type="button" class="tts-btn btn btn-outline-info">Info</button>
+    <button type="button" class="tts-btn btn btn-outline-light">Light</button>
+    <button type="button" class="tts-btn btn btn-outline-dark">Dark</button>
+    <button type="button" class="tts-btn btn btn-outline-link">Link</button>
+  </xmp>
+              </code>
+            </pre>
+          </div>
+
+          
+          <div class="tts-yield">
+            <h4>Sizes</h4>
+            <br />
+
+            <button type="button" class="tts-btn btn btn-primary btn-sm">Small button</button>
+            <button type="button" class="tts-btn btn btn-secondary btn-sm">Small button</button>
+
+            <button type="button" class="tts-btn btn btn-primary btn-lg">Big button</button>
+            <button type="button" class="tts-btn btn btn-danger btn-lg" data-action="easter-eggs#boom">
+              <i class="ri-alert-line"></i>
+              DO NOT PRESS !
+            </button>
+          </div>
+
+          <div class="tts-code">
+            <pre>
+              <code class="language-html">
+  <xmp>
+    <button type="button" class="btn btn-primary btn-sm">Small button</button>
+    <button type="button" class="btn btn-secondary btn-sm">Small button</button>
+
+    <button type="button" class="tts-btn btn btn-primary btn-lg">Large button</button>
+    <button type="button" class="tts-btn btn btn-secondary btn-lg">Large button</button>
+  </xmp>
+              </code>
+            </pre>
+          </div>
+
+          
+          <div class="tts-yield">
+            <h4>Rounded</h4>
+            <br />
+
+            <button type="button" class="tts-btn tts-btn--rounded btn btn-primary btn-sm">Small Round button</button>
+            <button type="button" class="tts-btn tts-btn--rounded btn btn-primary btn-lg">Big Round button</button>
+          </div>
+
+          
+          <div class="tts-yield">
+            <h4>Icons</h4>
+            <br />
+
+            <button type="button" class="tts-btn btn btn-primary">
+              <i class="ri-home-line"></i>
+              Home
+            </button>
+            <button type="button" class="tts-btn btn btn-secondary">
+              <i class="ri-store-2-fill"></i>
+              Store
+            </button>
+            <button type="button" class="tts-btn btn btn-success">
+              <i class="ri-send-plane-line"></i>
+              Send
+            </button>
+            <button type="button" class="tts-btn tts-btn--icon-only btn btn-danger">
+              <i class="ri-service-line"></i>
+            </button>
+            <button type="button" class="tts-btn tts-btn--icon-only tts-btn--rounded btn btn-warning">
+              <i class="ri-file-warning-line"></i>
+            </button>
+          </div>
+
+          <div class="tts-code">
+            <pre>
+              <code class="language-html">
+<xmp>
+  <button type="button" class="tts-btn btn btn-primary">
+    <i class="ri-home-line"></i>
+    Home
+  </button>
+  <button type="button" class="tts-btn btn btn-secondary">
+    <i class="ri-store-2-fill"></i>
+    Store
+  </button>
+  <button type="button" class="tts-btn btn btn-success">
+    <i class="ri-send-plane-line"></i>
+    Send
+  </button>
+  <button type="button" class="tts-btn tts-btn--icon-only btn btn-danger">
+    <i class="ri-service-line"></i>
+  </button>
+  <button type="button" class="tts-btn tts-btn--icon-only tts-btn--rounded btn btn-warning">
+    <i class="ri-file-warning-line"></i>
+  </button>
+</xmp>
+              </code>
+            </pre>
+          </div>
+
+          
+          <div class="tts-yield">
+            <h4>Button Group</h4>
+            <br />
+
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="tts-btn btn btn-primary">
+                <i class="ri-arrow-left-line"></i>
+              </button>
+              <button type="button" class="tts-btn btn btn-primary">
+                <i class="ri-arrow-up-line"></i>
+              </button>
+              <button type="button" class="tts-btn btn btn-primary">
+                <i class="ri-arrow-right-line"></i>
+              </button>
+            </div>
+          </div>
+
+                    <div class="tts-code">
+            <pre>
+              <code class="language-html">
+<xmp>
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <button type="button" class="tts-btn btn btn-primary">
+      <i class="ri-arrow-left-line"></i>
+    </button>
+    <button type="button" class="tts-btn btn btn-primary">
+      <i class="ri-arrow-up-line"></i>
+    </button>
+    <button type="button" class="tts-btn btn btn-primary">
+      <i class="ri-arrow-right-line"></i>
+    </button>
+  </div>
+</xmp>
+              </code>
+            </pre>
+          </div>
+
+          
+          <div class="tts-yield">
+            <h4>Disabled</h4>
+            <br />
+
+            <button type="button" class="tts-btn btn btn-primary" disabled>Disabled</button>
+            <button type="button" class="tts-btn btn btn-secondary" disabled>Disabled</button>
+          </div>
+
+          <div class="tts-code">
+            <pre>
+              <code class="language-html">
+<xmp>
+  <button type="button" class="tts-btn btn btn-primary" disabled>Disabled</button>
+  <button type="button" class="tts-btn btn btn-secondary" disabled>Disabled</button>
+</xmp>
+              </code>
+            </pre>
+          </div>
         </div>
       </div>
     </div>

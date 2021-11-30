@@ -2,23 +2,24 @@
 
 .tts-btn {
   text-transform: uppercase;
-  padding: 0.8rem 1rem;
+  padding-left: 1em;
+  padding-right: 1em;
   font-weight: 700;
-  background: map-get($brand, white);
-  margin-bottom: 1rem;
-  border: 2px solid map-get($brand, white);
+  border-width: 2.5px;
+  border-radius: 0.1rem;
+  display: inline-flex;
 
-  &:hover {
-    background: darken(map-get($brand, white), 4%);
+  i, &__icon {
+    margin-right: 0.3rem;
   }
 
-  &--block {
-    width: 100%;
+  &--rounded {
+    border-radius: 5rem;
   }
 
-  &--secondary {
-    background: none;
-    border: 2px solid map-get($brand, white);
-    color: map-get($brand, white);
+  &--icon-only {
+    i, .tts-btn__icon {
+      margin: 0;
+    }
   }
 }

@@ -2,7 +2,7 @@
 {% from 'macros/page_header.njk' import header %}
 
 {% block content %}
-  <div class="tts-layout">
+  <div class="tts-layout" data-controller="easter-eggs">
     <div class="tts-layout__sidebar">
       <div class="tts-layout__logo">
         <div class="tts-layout__logo-full">
@@ -64,25 +64,224 @@
       </div>
 
       <div class="tts-layout__content">
-        {{ header(title="Button", subtitle="Those clickable things every site needs") }}
+        <div class="tts-layout--scrollable">
+          {{ header(title="Button", subtitle="Those clickable things every site needs") }}
 
-        <div class="tts-yield">
-          <h4>Standard</h4>
-          <br />
-          <a href="#" class="tts-btn tts-btn--light btn">Enter</a>
-          <a href="#" class="tts-btn tts-btn--secondary tts-btn--light btn">Buy $ 19.95</a>
-        </div>
+          {# STANDARD #}
+          <div class="tts-yield">
+            <h4>Standard</h4>
+            <br />
 
-        <div class="tts-code">
-          <pre>
-            <code class="language-html">
-              <xmp>
-                <a href="#" class="tts-btn tts-btn--light btn btn-secondary">Enter</a>
+            <button type="button" class="tts-btn btn btn-primary">Primary</button>
+            <button type="button" class="tts-btn btn btn-secondary">Secondary</button>
+            <button type="button" class="tts-btn btn btn-success">Success</button>
+            <button type="button" class="tts-btn btn btn-danger">Danger</button>
+            <button type="button" class="tts-btn btn btn-warning">Warning</button>
+            <button type="button" class="tts-btn btn btn-info">Info</button>
+            <button type="button" class="tts-btn btn btn-light">Light</button>
+            <button type="button" class="tts-btn btn btn-dark">Dark</button>
+            <button type="button" class="tts-btn btn btn-link">Link</button>
+          </div>
 
-                <a href="#" class="tts-btn tts-btn--secondary tts-btn--light btn">Buy $ 19.95</a>
-              </xmp>
-            </code>
-          </pre>
+          <div class="tts-code">
+            <pre>
+              <code class="language-html">
+  <xmp>
+    <button type="button" class="tts-btn btn btn-primary">Primary</button>
+    <button type="button" class="tts-btn btn btn-secondary">Secondary</button>
+    <button type="button" class="tts-btn btn btn-success">Success</button>
+    <button type="button" class="tts-btn btn btn-danger">Danger</button>
+    <button type="button" class="tts-btn btn btn-warning">Warning</button>
+    <button type="button" class="tts-btn btn btn-info">Info</button>
+    <button type="button" class="tts-btn btn btn-light">Light</button>
+    <button type="button" class="tts-btn btn btn-dark">Dark</button>
+    <button type="button" class="tts-btn btn btn-link">Link</button>
+  </xmp>
+              </code>
+            </pre>
+          </div>
+
+          {# OUTLINE #}
+          <div class="tts-yield">
+            <h4>Outline</h4>
+            <br />
+
+            <button type="button" class="tts-btn btn btn-outline-primary">Primary</button>
+            <button type="button" class="tts-btn btn btn-outline-secondary">Secondary</button>
+            <button type="button" class="tts-btn btn btn-outline-success">Success</button>
+            <button type="button" class="tts-btn btn btn-outline-danger">Danger</button>
+            <button type="button" class="tts-btn btn btn-outline-warning">Warning</button>
+            <button type="button" class="tts-btn btn btn-outline-info">Info</button>
+            <button type="button" class="tts-btn btn btn-outline-light">Light</button>
+            <button type="button" class="tts-btn btn btn-outline-dark">Dark</button>
+            <button type="button" class="tts-btn btn btn-outline-link">Link</button>
+          </div>
+
+          <div class="tts-code">
+            <pre>
+              <code class="language-html">
+  <xmp>
+    <button type="button" class="tts-btn btn btn-outline-primary">Primary</button>
+    <button type="button" class="tts-btn btn btn-outline-secondary">Secondary</button>
+    <button type="button" class="tts-btn btn btn-outline-success">Success</button>
+    <button type="button" class="tts-btn btn btn-outline-danger">Danger</button>
+    <button type="button" class="tts-btn btn btn-outline-warning">Warning</button>
+    <button type="button" class="tts-btn btn btn-outline-info">Info</button>
+    <button type="button" class="tts-btn btn btn-outline-light">Light</button>
+    <button type="button" class="tts-btn btn btn-outline-dark">Dark</button>
+    <button type="button" class="tts-btn btn btn-outline-link">Link</button>
+  </xmp>
+              </code>
+            </pre>
+          </div>
+
+          {# SIZES #}
+          <div class="tts-yield">
+            <h4>Sizes</h4>
+            <br />
+
+            <button type="button" class="tts-btn btn btn-primary btn-sm">Small button</button>
+            <button type="button" class="tts-btn btn btn-secondary btn-sm">Small button</button>
+
+            <button type="button" class="tts-btn btn btn-primary btn-lg">Big button</button>
+            <button type="button" class="tts-btn btn btn-danger btn-lg" data-action="easter-eggs#boom">
+              <i class="ri-alert-line"></i>
+              DO NOT PRESS !
+            </button>
+          </div>
+
+          <div class="tts-code">
+            <pre>
+              <code class="language-html">
+  <xmp>
+    <button type="button" class="btn btn-primary btn-sm">Small button</button>
+    <button type="button" class="btn btn-secondary btn-sm">Small button</button>
+
+    <button type="button" class="tts-btn btn btn-primary btn-lg">Large button</button>
+    <button type="button" class="tts-btn btn btn-secondary btn-lg">Large button</button>
+  </xmp>
+              </code>
+            </pre>
+          </div>
+
+          {# Rounded #}
+          <div class="tts-yield">
+            <h4>Rounded</h4>
+            <br />
+
+            <button type="button" class="tts-btn tts-btn--rounded btn btn-primary btn-sm">Small Round button</button>
+            <button type="button" class="tts-btn tts-btn--rounded btn btn-primary btn-lg">Big Round button</button>
+          </div>
+
+          {# Icons #}
+          <div class="tts-yield">
+            <h4>Icons</h4>
+            <br />
+
+            <button type="button" class="tts-btn btn btn-primary">
+              <i class="ri-home-line"></i>
+              Home
+            </button>
+            <button type="button" class="tts-btn btn btn-secondary">
+              <i class="ri-store-2-fill"></i>
+              Store
+            </button>
+            <button type="button" class="tts-btn btn btn-success">
+              <i class="ri-send-plane-line"></i>
+              Send
+            </button>
+            <button type="button" class="tts-btn tts-btn--icon-only btn btn-danger">
+              <i class="ri-service-line"></i>
+            </button>
+            <button type="button" class="tts-btn tts-btn--icon-only tts-btn--rounded btn btn-warning">
+              <i class="ri-file-warning-line"></i>
+            </button>
+          </div>
+
+          <div class="tts-code">
+            <pre>
+              <code class="language-html">
+<xmp>
+  <button type="button" class="tts-btn btn btn-primary">
+    <i class="ri-home-line"></i>
+    Home
+  </button>
+  <button type="button" class="tts-btn btn btn-secondary">
+    <i class="ri-store-2-fill"></i>
+    Store
+  </button>
+  <button type="button" class="tts-btn btn btn-success">
+    <i class="ri-send-plane-line"></i>
+    Send
+  </button>
+  <button type="button" class="tts-btn tts-btn--icon-only btn btn-danger">
+    <i class="ri-service-line"></i>
+  </button>
+  <button type="button" class="tts-btn tts-btn--icon-only tts-btn--rounded btn btn-warning">
+    <i class="ri-file-warning-line"></i>
+  </button>
+</xmp>
+              </code>
+            </pre>
+          </div>
+
+          {# Icons #}
+          <div class="tts-yield">
+            <h4>Button Group</h4>
+            <br />
+
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="tts-btn btn btn-primary">
+                <i class="ri-arrow-left-line"></i>
+              </button>
+              <button type="button" class="tts-btn btn btn-primary">
+                <i class="ri-arrow-up-line"></i>
+              </button>
+              <button type="button" class="tts-btn btn btn-primary">
+                <i class="ri-arrow-right-line"></i>
+              </button>
+            </div>
+          </div>
+
+                    <div class="tts-code">
+            <pre>
+              <code class="language-html">
+<xmp>
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <button type="button" class="tts-btn btn btn-primary">
+      <i class="ri-arrow-left-line"></i>
+    </button>
+    <button type="button" class="tts-btn btn btn-primary">
+      <i class="ri-arrow-up-line"></i>
+    </button>
+    <button type="button" class="tts-btn btn btn-primary">
+      <i class="ri-arrow-right-line"></i>
+    </button>
+  </div>
+</xmp>
+              </code>
+            </pre>
+          </div>
+
+          {# DISABLED #}
+          <div class="tts-yield">
+            <h4>Disabled</h4>
+            <br />
+
+            <button type="button" class="tts-btn btn btn-primary" disabled>Disabled</button>
+            <button type="button" class="tts-btn btn btn-secondary" disabled>Disabled</button>
+          </div>
+
+          <div class="tts-code">
+            <pre>
+              <code class="language-html">
+<xmp>
+  <button type="button" class="tts-btn btn btn-primary" disabled>Disabled</button>
+  <button type="button" class="tts-btn btn btn-secondary" disabled>Disabled</button>
+</xmp>
+              </code>
+            </pre>
+          </div>
         </div>
       </div>
     </div>
