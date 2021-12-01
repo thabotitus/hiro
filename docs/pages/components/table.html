@@ -42,7 +42,7 @@
 
     <!-- Content gets injected here -->
     
-  <div class="tts-layout">
+  <div class="tts-layout" data-controller="easter-eggs">
     <div class="tts-layout__sidebar">
       <div class="tts-layout__logo">
         <div class="tts-layout__logo-full">
@@ -147,15 +147,60 @@
       </div>
 
       <div class="tts-layout__content">
-        
+        <div class="tts-layout--scrollable">
+          
   <div class="tts-header">
-    <h1 class="tts-header__title">Introduction</h1>
-    <p class="tts-header__subtitle">Getting started</p>
+    <h1 class="tts-header__title">Table</h1>
+    <p class="tts-header__subtitle">Those tabular things most sites need</p>
   </div>
 
 
-        <div class="tts-yield">
-          Content
+          
+          <div class="tts-yield">
+            <h4>Standard</h4>
+            <br />
+
+            <table class="hir-table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First</th>
+                  <th scope="col">Last</th>
+                  <th scope="col">Handle</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td colspan="2">Larry the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+            
+          </div>
+
+          <div class="tts-code">
+            <pre>
+              <code class="language-html">
+  <xmp>
+    
+  </xmp>
+              </code>
+            </pre>
+          </div>
         </div>
       </div>
     </div>
