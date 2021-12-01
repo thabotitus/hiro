@@ -1,10 +1,11 @@
 "use strict";
-import gulp from "gulp";
-import plumber from "gulp-plumber";
-import notify from "gulp-notify";
-import browserSync from "browser-sync";
-import { DISTRIBUTION_FOLDERS, BROSWER_SYNC_NAME, TASKS, INPUT_FOLDERS } from "./config.js";
-import gulpEsbuild from "gulp-esbuild";
+import gulp         from "gulp";
+import plumber      from "gulp-plumber";
+import notify       from "gulp-notify";
+import browserSync  from "browser-sync";
+import gulpEsbuild  from "gulp-esbuild";
+
+import { DISTRIBUTION_FOLDERS, BROSWER_SYNC_NAME, TASKS, INPUT_FOLDERS, COPYRIGHT_NOTICE } from "./config.js";
 
 const browser = browserSync.has(BROSWER_SYNC_NAME)
   ? browserSync.get(BROSWER_SYNC_NAME)
@@ -19,13 +20,13 @@ gulp.task(TASKS.JS, function () {
       })
     )
     .pipe(gulpEsbuild({
-      outfile: 'app.min.js',
-      bundle: true,
-      minify: true,
-      sourcemap: false,
-      metafile: true,
+      outfile:    'app.min.js',
+      bundle:     true,
+      minify:     true,
+      sourcemap:  false,
+      metafile:   true,
       banner: {
-        js: '// Copyright © HIRO 2021'
+        js: COPYRIGHT_NOTICE
       }
     }))
     .pipe(gulp.dest(`${DISTRIBUTION_FOLDERS.ROOT}/${DISTRIBUTION_FOLDERS.JS}`))

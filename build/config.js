@@ -1,52 +1,64 @@
 const DISTRIBUTION_FOLDERS = {
-  CSS: "css",
+  CSS:    "css",
   IMAGES: "images",
-  ROOT: "docs",
-  JS: "js",
-  DATA: "data",
-  PAGES: "pages",
+  ROOT:   "docs",
+  JS:     "js",
+  DATA:   "data",
+  PAGES:  "pages",
 };
 
 const INPUT_FOLDERS = {
-  IMAGES: "./src/images",
-  JS: "./src/js",
-  CSS: "./src/styles",
-  ROOT: "./src",
-  DATA: "./src/data",
+  IMAGES:   "./src/images",
+  JS:       "./src/js",
+  CSS:      "./src/styles",
+  ROOT:     "./src",
+  DATA:     "./src/data",
 };
 
 const TASKS = {
-  BUILD: "default",
-  SERVE: "serve",
-  CLEAN: "build:clean",
-  JS: "build:javascript",
-  STYLES: "build:styles",
-  IMAGES: "build:images",
+  BUILD:      "default",
+  SERVE:      "serve",
+  CLEAN:      "build:clean",
+  JS:         "build:javascript",
+  STYLES:     "build:styles",
+  IMAGES:     "build:images",
   HTML_INDEX: "build:html_index",
   HTML_PAGES: "build:html_pages",
-  COPY_DATA: "build:copy_data",
-  PACKAGE: "buil:package",
-  DEPLOY: "surge:deploy",
+  COPY_DATA:  "build:copy_data",
+  PACKAGE:    "buil:package",
+  DEPLOY:     "surge:deploy",
 };
 
-const APP_ROOT = "./";
-const BROWSER_PORT = 3000;
+const APP_ROOT          = "./";
+const BROWSER_PORT      = 3000;
 const BROSWER_SYNC_NAME = "tts-web-starter-kit";
-const VERSION_SOURCES = [
+const VERSION_SOURCES   = [
   "./version.json",
   "./package.json",
   "./package-lock.json",
 ];
 
-const DOWNLOADS_FOLDER = "./downloads/";
+const DOWNLOADS_FOLDER        = "./downloads/";
 const NUNJUCKS_TEMPLATES_PATH = "src/templates";
-const STYLES_OUTPUT_NAME = "app.min.css";
-const SURGE_DOMAIN = 'https://hiro.thabotitus.co.za';
+const STYLES_OUTPUT_NAME      = "app.min.css";
+const SURGE_DOMAIN            = 'https://hiro.thabotitus.co.za';
+
+const COPYRIGHT_NOTICE = `
+/*!
+ * # HIRO Multipurpose HTML 5 Template
+ * https://hiro.thabotitus.co.za
+ *
+ * Copyright 2021 Thabo Titus
+ * Instagram @thabo.titus
+ *
+ */
+`
 
 export {
   APP_ROOT,
   BROWSER_PORT,
   BROSWER_SYNC_NAME,
+  COPYRIGHT_NOTICE,
   DISTRIBUTION_FOLDERS,
   DOWNLOADS_FOLDER,
   INPUT_FOLDERS,
