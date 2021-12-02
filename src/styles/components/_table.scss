@@ -4,71 +4,49 @@
   max-width: 100%;
   border-spacing: 0;
   border-collapse: collapse;
-  border-bottom: none;
-  border-radius: 8px;
-  box-shadow: $box_shadow;
-  overflow: hidden;
-  // border: 1px solid red;
+  border-radius: 4px;
+
+  display: block;
+  overflow-x: auto;
+  // white-space: nowrap;
+  
+  tbody {
+    // display: table;
+    width: 100%;
+  }
 
   thead {
     border-collapse: collapse;
+    background-color: #f8f8f9;
+
+    tr {
+      &:hover {
+        background-color: #f8f8f9;
+      }
+    }
   }
 
   th {
     text-align: left;
-    padding: 8px 15px;
-    border-right: 1px dashed darken(map-get($brand, white), 5%);
-    // border-top: 1px dashed darken(map-get($brand, white), 5%);
-    border-bottom: 1px dashed darken(map-get($brand, white), 5%);
-    
+    padding: 1rem;    
     text-transform: uppercase;
-    // color: lighten(#2a2a2a, 20%);
     letter-spacing: 1px;
-    font-size: 0.9em;
-
-    &:first-child {
-      border-left: 1px dashed darken(map-get($brand, white), 5%);
-    }
-  }
-
-  td {
-    border-right: 1px dashed darken(map-get($brand, white), 5%);
-    border-bottom: 1px dashed darken(map-get($brand, white), 5%);
-    // font-weight: 200;
-    // min-height: 40px;
-    padding: 8px 15px;
-
-
+    font-size: 0.7rem;
   }
 
   tr {
+    border-bottom: 1px solid #f4f4f4;
+
     &:hover {
-      background: map-get($brand, grey);
+      background: #fff5e8;
+    }
+
+    td {
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
     }
   }
-
-  tfoot {
-  // background: $subtle_highlight;
-  }
 }
-
-.mm-table--striped {
-  .mm-table__tr:nth-child(odd) {
-    background: rgba(0, 0, 0, 0.04);
-  }
-}
-
-// $list: info warning success error primary;
-// @each $color in $list {
-//   .mm-table__tr--#{$color} {
-//     background-color: transparentize(map-get($colors, $color), 0.1) !important;
-//     color: $white;
-//     &:hover {
-//       background: transparentize(map-get($colors, $color), 0) !important;
-//     }
-//   }
-// }
-
 
 /* Responsive */
 
@@ -76,20 +54,38 @@
   .hir-table {
     width: 100%;
 
-    th {
-      background: rgba(0, 0, 0, 0.04);
-      border-bottom: none;
-  
-      &:last-of-type{
-        border-bottom: 1px solid darken(map-get($brand, white), 5%);
-      }
-    }
-
     th, td {
       display: flex;
       align-items: center;
       justify-content: left;
-      border-left: 1px solid darken(map-get($brand, white), 5%);
+    }
+  }
+}
+
+.tts-dark-mode {
+  .hir-table {
+    background: none;
+
+    thead {
+      background: map-get($brand-dark, grey);
+
+      tr {
+        &:hover {
+          background-color: map-get($brand-dark, grey);
+        }
+      }
+    }
+
+    tr {
+      border-bottom: map-get($brand-dark, grey);
+
+      &:hover {
+        background: map-get($brand-dark, grey);
+      }
+
+      td {
+        padding: 0.5rem 1rem;
+      }
     }
   }
 }
