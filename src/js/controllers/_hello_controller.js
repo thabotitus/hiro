@@ -1,5 +1,5 @@
 import { Controller } from "@hotwired/stimulus";
-import { GET_LS_STATE, SET_LS_STATE } from "../localstorage";
+import { GET_LS_STATE, SET_LS_STATE } from "../utils/_localstorage";
 
 export default class extends Controller {
   static targets = ["body", "colourmodeCheckbox"];
