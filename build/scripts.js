@@ -13,14 +13,15 @@ const browser = browserSync.has(BROSWER_SYNC_NAME)
 
 gulp.task(TASKS.JS, function () {
   return gulp
-    .src(`${INPUT_FOLDERS.JS}/app.js`)
+    .src([`${INPUT_FOLDERS.JS}/app.js`])
     .pipe(
       plumber({
         errorHandler: notify.onError("Error: <%= error.message %>"),
       })
     )
     .pipe(gulpEsbuild({
-      outfile:    'app.min.js',
+      outdir: `./`,
+      entryNames: './[name].min',
       bundle:     true,
       minify:     true,
       sourcemap:  false,
