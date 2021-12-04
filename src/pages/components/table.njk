@@ -85,12 +85,14 @@
                   </ul>
                 </div>
               </div>
-              <div class="hi-card__main">
+              <div class="hi-card__main" data-controller="table">
+                <div class="hi-table__meta">
+                  <div class="hi-table__meta-item" data-table-target="selectedRowCount"></div>
+                </div>
                 <div class="hi-table">
                   <table>
                     <thead>
                       <tr>
-                        <th scope="col" width="20px"></th>
                         <th scope="col">Name</th>
                         <th scope="col">Phone</th>
                         <th scope="col">Email</th>
@@ -104,12 +106,7 @@
                     </thead>
                     <tbody>
                       {% for item in table_data %}
-                        <tr>
-                          <td scope="row"  width="20px">
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            </div>
-                          </td>
+                        <tr data-table-target="tableRow" data-action="click->table#selectRow">
                           <td data-col="Name" class="fw-bold">{{ item.name }}</td>
                           <td data-col="Phone">{{ item.phone }}</td>
                           <td data-col="Email">{{ item.email }}</td>
@@ -139,7 +136,6 @@
   <table class="hi-table">
     <thead>
       <tr>
-        <th scope="col" width="20px"></th>
         <th scope="col">Name</th>
         <th scope="col">Phone</th>
         <th scope="col">Email</th>
@@ -154,11 +150,6 @@
     <tbody>
       {% for item in table_data %}
         <tr>
-          <td scope="row"  width="20px">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            </div>
-          </td>
           <td class="fw-bold">{{ item.name }}</td>
           <td data-col="Phone">{{ item.phone }}</td>
           <td data-col="Email">{{ item.email }}</td>
@@ -181,6 +172,61 @@
   </xmp>
               </code>
             </pre>
+          </div>
+
+          <div class="hi-yield">
+            <div class="row">
+              <div class="col-sm-12 col-lg-6">
+                <div class="hi-card">
+                  <div class="hi-card__header">
+                    <div class="hi-card__title">
+                      Header
+                    </div>
+                    <div class="hi-card__menu">
+                      <i class="ri-more-2-fill" class="dropdown-toggle" data-bs-toggle="dropdown"></i>
+
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Share</a></li>
+                        <li><a class="dropdown-item" href="#">Copy link</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="hi-card__main">
+                    <div class="hi-table">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td colspan="2">Larry the Bird</td>
+                            <td>@twitter</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
