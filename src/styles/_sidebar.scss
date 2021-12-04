@@ -1,4 +1,4 @@
-.tts-layout {
+.hi-layout {
   &__sidebar {
     background-color: map-get($brand, secondary);
     grid-template-rows: $layout_topbar_height $layout_topbar_height 1fr;
@@ -45,8 +45,8 @@
   }
 }
 
-.tts-dark-mode {
-  .tts-layout {
+.hi-dark-mode {
+  .hi-layout {
     &__sidebar {
       background-color: map-get($brand-dark, grey);
       background-color: lighten(map-get($brand-dark, white), 2%);

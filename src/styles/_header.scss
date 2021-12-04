@@ -1,4 +1,4 @@
-.tts-header {
+.hi-header {
   background-color:   map-get($brand, grey);
   padding:            $base_vpadding $base_hpadding;
   position:           relative;
@@ -37,7 +37,7 @@
   &--collapsed {
     padding:          1em;
 
-    .tts-header__subtitle {
+    .hi-header__subtitle {
       display:        none;
     }
   }
@@ -51,8 +51,8 @@
   }
 }
 
-.tts-dark-mode {
-  .tts-header {
+.hi-dark-mode {
+  .hi-header {
     background-color:   darken(map-get($brand-dark, grey), 100%);
     background-color:   map-get($brand-dark, white);
   }

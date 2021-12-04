@@ -1,4 +1,4 @@
-.tts-navigation {
+.hi-navigation {
   display: none;
 
   @include breakpoint(lg) {
@@ -71,8 +71,8 @@
   }
 }
 
-.tts-offcanvas {
-  .tts-navigation {
+.hi-offcanvas {
+  .hi-navigation {
     display: block;
     &__title {
       display: block;

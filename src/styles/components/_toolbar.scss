@@ -1,4 +1,4 @@
-.tts-toolbar {
+.hi-toolbar {
   display: flex;
   justify-content: flex-start;
 
@@ -60,25 +60,25 @@
   &--fluid {
     width: 100%;
 
-    .tts-toolbar-wrapper {
+    .hi-toolbar-wrapper {
       width: 100%;
     }
 
-    .tts-toolbar__item {
+    .hi-toolbar__item {
       flex: 1;
     }
   }
 
   &--slim {
-    .tts-toolbar-wrapper {
+    .hi-toolbar-wrapper {
       height: 30px;
       font-size: 0.9em;
     }
   }
 }
 
-.tts-dark-mode {
-  .tts-toolbar {
+.hi-dark-mode {
+  .hi-toolbar {
     &-wrapper {
       // box-shadow: $box_shadow_dark;
       background: lighten(map-get($brand-dark, white), 2%);

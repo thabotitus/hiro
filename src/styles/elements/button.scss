@@ -1,6 +1,6 @@
 @import "../config/colours";
 
-.tts-btn {
+.hi-btn {
   text-transform: uppercase;
   padding-left: 1em;
   padding-right: 1em;
@@ -18,7 +18,7 @@
   }
 
   &--icon-only {
-    i, .tts-btn__icon {
+    i, .hi-btn__icon {
       margin: 0;
     }
   }
