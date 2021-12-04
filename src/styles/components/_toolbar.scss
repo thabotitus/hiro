@@ -14,9 +14,9 @@
     display: flex;
     height: 45px;
     display: inline-flex;
-    box-shadow: $box_shadow;
+    // box-shadow: $box_shadow;
     background: map-get($brand, white);
-    border-radius: $border_radius;
+    // border-radius: $border_radius;
     overflow: hidden;
   }
 
@@ -25,13 +25,26 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-left: 1px solid rgba(0,0,0,0.02);
+    // border-left: 1px solid rgba(0,0,0,0.04);
     cursor: pointer;
     text-decoration: none;
     color: initial;
+    position: relative;
+
+    &::before {
+      height: 50%;
+      width: 1px;
+      background-color: rgba(0,0,0,0.04);
+      content: '';
+      position: absolute;
+      left: 0;
+    }
 
     &:first-child {
-      border-left: none;
+      &::before {
+        width: 0;
+        height: 0;
+      }
     }
 
     &:hover {
@@ -67,7 +80,7 @@
 .tts-dark-mode {
   .tts-toolbar {
     &-wrapper {
-      box-shadow: $box_shadow_dark;
+      // box-shadow: $box_shadow_dark;
       background: lighten(map-get($brand-dark, white), 2%);
       background: none;
       border-radius: 2px;
@@ -76,6 +89,15 @@
 
     &__item {
       color: map-get($brand, white);
+
+      &::before {
+        height: 50%;
+        width: 1px;
+        background-color: rgba(255,255,255,0.04);
+        content: '';
+        position: absolute;
+        left: 0;
+      }
     }
   }
 }

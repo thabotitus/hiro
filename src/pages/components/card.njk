@@ -65,7 +65,7 @@
 
       <div class="tts-layout__content">
         <div class="tts-layout--scrollable">
-          {{ header(title="Table", subtitle="Those tabular things most sites need") }}
+          {{ header(title="Card", subtitle="Useful little things for consistency") }}
 
           {# STANDARD #}
           <div class="tts-yield">
@@ -80,54 +80,16 @@
                   <i class="ri-more-2-fill" class="dropdown-toggle" data-bs-toggle="dropdown"></i>
 
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Share</a></li>
-                    <li><a class="dropdown-item" href="#">Copy link</a></li>
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Separated link</a></li>
                   </ul>
                 </div>
               </div>
               <div class="hi-card__main">
-                <div class="hi-table">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th scope="col" width="20px"></th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Phone</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Address</th>
-                        <th scope="col">Postal Zip</th>
-                        <th scope="col">Country</th>
-                        <th scope="col">Amount</th>
-                        <th scope="col">Status</th>
-                        <th scope="col"></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {% for item in table_data %}
-                        <tr>
-                          <td scope="row"  width="20px">
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            </div>
-                          </td>
-                          <td data-col="Name" class="fw-bold">{{ item.name }}</td>
-                          <td data-col="Phone">{{ item.phone }}</td>
-                          <td data-col="Email">{{ item.email }}</td>
-                          <td data-col="Address">{{ item.address }}</td>
-                          <td data-col="Postal Zip">{{ item.postalZip }}</td>
-                          <td data-col="Country">{{ item.country }}</td>
-                          <td data-col="Amount">{{ item.currency }}</td>
-                          <td data-col="Status"><span class="badge bg-primary rounded-pill">COMPLETE</span></td>
-                          <td>
-                            <button type="button" class="tts-btn tts-btn--icon btn btn-light btn-sm">
-                              <i class="ri-edit-2-line"></i>
-                            </button>
-                          </td>
-                        </tr>
-                      {% endfor %}
-                    </tbody>
-                  </table>
-                </div>
+                Content
               </div>
             </div>
           </div>
@@ -136,48 +98,27 @@
             <pre>
               <code class="language-html">
   <xmp>
-  <table class="hi-table">
-    <thead>
-      <tr>
-        <th scope="col" width="20px"></th>
-        <th scope="col">Name</th>
-        <th scope="col">Phone</th>
-        <th scope="col">Email</th>
-        <th scope="col">Address</th>
-        <th scope="col">Postal Zip</th>
-        <th scope="col">Country</th>
-        <th scope="col">Amount</th>
-        <th scope="col">Status</th>
-        <th scope="col"></th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for item in table_data %}
-        <tr>
-          <td scope="row"  width="20px">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            </div>
-          </td>
-          <td class="fw-bold">{{ item.name }}</td>
-          <td data-col="Phone">{{ item.phone }}</td>
-          <td data-col="Email">{{ item.email }}</td>
-          <td data-col="Address">{{ item.address }}</td>
-          <td data-col="Postal Zip">{{ item.postalZip }}</td>
-          <td data-col="Country">{{ item.country }}</td>
-          <td data-col="Amount">{{ item.currency }}</td>
-          <td><span class="badge bg-primary rounded-pill">COMPLETE</span></td>
-          <td>
-            <button type="button" class="tts-btn tts-btn--icon btn btn-light btn-sm">
-              <i class="ri-edit-2-line"></i>
-            </button>
-          </td>
-        </tr>
-      {% else %}
-        No Data
-      {% endfor %}
-    </tbody>
-  </table>
+<div class="hi-card">
+  <div class="hi-card__header">
+    <div class="hi-card__title">
+      Header
+    </div>
+    <div class="hi-card__menu">
+      <i class="ri-more-2-fill" class="dropdown-toggle" data-bs-toggle="dropdown"></i>
+
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="hi-card__main">
+    Content
+  </div>
+</div>
   </xmp>
               </code>
             </pre>

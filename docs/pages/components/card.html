@@ -42,7 +42,7 @@
 
     <!-- Content gets injected here -->
     
-  <div class="tts-layout">
+  <div class="tts-layout" data-controller="easter-eggs">
     <div class="tts-layout__sidebar">
       <div class="tts-layout__logo">
         <div class="tts-layout__logo-full">
@@ -152,15 +152,70 @@
       </div>
 
       <div class="tts-layout__content">
-        
+        <div class="tts-layout--scrollable">
+          
   <div class="tts-header">
-    <h1 class="tts-header__title">Introduction</h1>
-    <p class="tts-header__subtitle">Getting started</p>
+    <h1 class="tts-header__title">Card</h1>
+    <p class="tts-header__subtitle">Useful little things for consistency</p>
   </div>
 
 
-        <div class="tts-yield">
-          Content
+          
+          <div class="tts-yield">
+            <h4>Standard</h4>
+            <br />
+            <div class="hi-card">
+              <div class="hi-card__header">
+                <div class="hi-card__title">
+                  Header
+                </div>
+                <div class="hi-card__menu">
+                  <i class="ri-more-2-fill" class="dropdown-toggle" data-bs-toggle="dropdown"></i>
+
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="hi-card__main">
+                Content
+              </div>
+            </div>
+          </div>
+
+          <div class="tts-code">
+            <pre>
+              <code class="language-html">
+  <xmp>
+<div class="hi-card">
+  <div class="hi-card__header">
+    <div class="hi-card__title">
+      Header
+    </div>
+    <div class="hi-card__menu">
+      <i class="ri-more-2-fill" class="dropdown-toggle" data-bs-toggle="dropdown"></i>
+
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="hi-card__main">
+    Content
+  </div>
+</div>
+  </xmp>
+              </code>
+            </pre>
+          </div>
         </div>
       </div>
     </div>

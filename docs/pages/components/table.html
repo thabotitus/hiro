@@ -107,6 +107,11 @@
         Table
       </span>
     </a>
+    <a  href="/pages/components/card.html" class="tts-navigation__item tts-navigation__item--sub">
+      <span class="tts-navigation__title">
+        Card
+      </span>
+    </a>
   </div>
 </nav>
 
@@ -159,44 +164,321 @@
           <div class="tts-yield">
             <h4>Standard</h4>
             <br />
+            <div class="hi-card">
+              <div class="hi-card__header">
+                <div class="hi-card__title">
+                  Header
+                </div>
+                <div class="hi-card__menu">
+                  <i class="ri-more-2-fill" class="dropdown-toggle" data-bs-toggle="dropdown"></i>
 
-            <table class="hir-table">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">First</th>
-                  <th scope="col">Last</th>
-                  <th scope="col">Handle</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td colspan="2">Larry the Bird</td>
-                  <td>@twitter</td>
-                </tr>
-              </tbody>
-            </table>
-            
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Share</a></li>
+                    <li><a class="dropdown-item" href="#">Copy link</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="hi-card__main">
+                <div class="hi-table">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th scope="col" width="20px"></th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Postal Zip</th>
+                        <th scope="col">Country</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Status</th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      
+                        <tr>
+                          <td scope="row"  width="20px">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                          </td>
+                          <td data-col="Name" class="fw-bold">Macaulay Harris</td>
+                          <td data-col="Phone">(183) 334-3713</td>
+                          <td data-col="Email">aliquam.enim@protonmail.ca</td>
+                          <td data-col="Address">P.O. Box 637, 8474 Luctus Av.</td>
+                          <td data-col="Postal Zip">45456</td>
+                          <td data-col="Country">Spain</td>
+                          <td data-col="Amount">$57.35</td>
+                          <td data-col="Status"><span class="badge bg-primary rounded-pill">COMPLETE</span></td>
+                          <td>
+                            <button type="button" class="tts-btn tts-btn--icon btn btn-light btn-sm">
+                              <i class="ri-edit-2-line"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      
+                        <tr>
+                          <td scope="row"  width="20px">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                          </td>
+                          <td data-col="Name" class="fw-bold">Lance Harris</td>
+                          <td data-col="Phone">(232) 773-7613</td>
+                          <td data-col="Email">elit@hotmail.org</td>
+                          <td data-col="Address">739-8020 Non, Rd.</td>
+                          <td data-col="Postal Zip">34324</td>
+                          <td data-col="Country">Austria</td>
+                          <td data-col="Amount">$77.59</td>
+                          <td data-col="Status"><span class="badge bg-primary rounded-pill">COMPLETE</span></td>
+                          <td>
+                            <button type="button" class="tts-btn tts-btn--icon btn btn-light btn-sm">
+                              <i class="ri-edit-2-line"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      
+                        <tr>
+                          <td scope="row"  width="20px">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                          </td>
+                          <td data-col="Name" class="fw-bold">Lysandra Craft</td>
+                          <td data-col="Phone">1-316-902-6104</td>
+                          <td data-col="Email">vestibulum.nec@hotmail.couk</td>
+                          <td data-col="Address">791-8169 Dignissim. Ave</td>
+                          <td data-col="Postal Zip">24819</td>
+                          <td data-col="Country">New Zealand</td>
+                          <td data-col="Amount">$15.61</td>
+                          <td data-col="Status"><span class="badge bg-primary rounded-pill">COMPLETE</span></td>
+                          <td>
+                            <button type="button" class="tts-btn tts-btn--icon btn btn-light btn-sm">
+                              <i class="ri-edit-2-line"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      
+                        <tr>
+                          <td scope="row"  width="20px">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                          </td>
+                          <td data-col="Name" class="fw-bold">Guinevere Rios</td>
+                          <td data-col="Phone">1-679-328-4014</td>
+                          <td data-col="Email">tempus.risus@yahoo.com</td>
+                          <td data-col="Address">Ap #409-5659 Et Ave</td>
+                          <td data-col="Postal Zip">556452</td>
+                          <td data-col="Country">Colombia</td>
+                          <td data-col="Amount">$89.74</td>
+                          <td data-col="Status"><span class="badge bg-primary rounded-pill">COMPLETE</span></td>
+                          <td>
+                            <button type="button" class="tts-btn tts-btn--icon btn btn-light btn-sm">
+                              <i class="ri-edit-2-line"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      
+                        <tr>
+                          <td scope="row"  width="20px">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                          </td>
+                          <td data-col="Name" class="fw-bold">Madeline Gibbs</td>
+                          <td data-col="Phone">(900) 217-5994</td>
+                          <td data-col="Email">tristique@icloud.ca</td>
+                          <td data-col="Address">172-6633 Tincidunt Rd.</td>
+                          <td data-col="Postal Zip">8923</td>
+                          <td data-col="Country">Brazil</td>
+                          <td data-col="Amount">$70.42</td>
+                          <td data-col="Status"><span class="badge bg-primary rounded-pill">COMPLETE</span></td>
+                          <td>
+                            <button type="button" class="tts-btn tts-btn--icon btn btn-light btn-sm">
+                              <i class="ri-edit-2-line"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      
+                        <tr>
+                          <td scope="row"  width="20px">
+                            <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            </div>
+                          </td>
+                          <td data-col="Name" class="fw-bold">Idona Monroe</td>
+                          <td data-col="Phone">(237) 726-4405</td>
+                          <td data-col="Email">aliquam.gravida.mauris@outlook.ca</td>
+                          <td data-col="Address">802-3978 Quam Ave</td>
+                          <td data-col="Postal Zip">4749</td>
+                          <td data-col="Country">Sweden</td>
+                          <td data-col="Amount">$53.53</td>
+                          <td data-col="Status"><span class="badge bg-primary rounded-pill">COMPLETE</span></td>
+                          <td>
+                            <button type="button" class="tts-btn tts-btn--icon btn btn-light btn-sm">
+                              <i class="ri-edit-2-line"></i>
+                            </button>
+                          </td>
+                        </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="tts-code">
             <pre>
               <code class="language-html">
   <xmp>
-    
+  <table class="hi-table">
+    <thead>
+      <tr>
+        <th scope="col" width="20px"></th>
+        <th scope="col">Name</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Email</th>
+        <th scope="col">Address</th>
+        <th scope="col">Postal Zip</th>
+        <th scope="col">Country</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Status</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr>
+          <td scope="row"  width="20px">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            </div>
+          </td>
+          <td class="fw-bold">Macaulay Harris</td>
+          <td data-col="Phone">(183) 334-3713</td>
+          <td data-col="Email">aliquam.enim@protonmail.ca</td>
+          <td data-col="Address">P.O. Box 637, 8474 Luctus Av.</td>
+          <td data-col="Postal Zip">45456</td>
+          <td data-col="Country">Spain</td>
+          <td data-col="Amount">$57.35</td>
+          <td><span class="badge bg-primary rounded-pill">COMPLETE</span></td>
+          <td>
+            <button type="button" class="tts-btn tts-btn--icon btn btn-light btn-sm">
+              <i class="ri-edit-2-line"></i>
+            </button>
+          </td>
+        </tr>
+      
+        <tr>
+          <td scope="row"  width="20px">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            </div>
+          </td>
+          <td class="fw-bold">Lance Harris</td>
+          <td data-col="Phone">(232) 773-7613</td>
+          <td data-col="Email">elit@hotmail.org</td>
+          <td data-col="Address">739-8020 Non, Rd.</td>
+          <td data-col="Postal Zip">34324</td>
+          <td data-col="Country">Austria</td>
+          <td data-col="Amount">$77.59</td>
+          <td><span class="badge bg-primary rounded-pill">COMPLETE</span></td>
+          <td>
+            <button type="button" class="tts-btn tts-btn--icon btn btn-light btn-sm">
+              <i class="ri-edit-2-line"></i>
+            </button>
+          </td>
+        </tr>
+      
+        <tr>
+          <td scope="row"  width="20px">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            </div>
+          </td>
+          <td class="fw-bold">Lysandra Craft</td>
+          <td data-col="Phone">1-316-902-6104</td>
+          <td data-col="Email">vestibulum.nec@hotmail.couk</td>
+          <td data-col="Address">791-8169 Dignissim. Ave</td>
+          <td data-col="Postal Zip">24819</td>
+          <td data-col="Country">New Zealand</td>
+          <td data-col="Amount">$15.61</td>
+          <td><span class="badge bg-primary rounded-pill">COMPLETE</span></td>
+          <td>
+            <button type="button" class="tts-btn tts-btn--icon btn btn-light btn-sm">
+              <i class="ri-edit-2-line"></i>
+            </button>
+          </td>
+        </tr>
+      
+        <tr>
+          <td scope="row"  width="20px">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            </div>
+          </td>
+          <td class="fw-bold">Guinevere Rios</td>
+          <td data-col="Phone">1-679-328-4014</td>
+          <td data-col="Email">tempus.risus@yahoo.com</td>
+          <td data-col="Address">Ap #409-5659 Et Ave</td>
+          <td data-col="Postal Zip">556452</td>
+          <td data-col="Country">Colombia</td>
+          <td data-col="Amount">$89.74</td>
+          <td><span class="badge bg-primary rounded-pill">COMPLETE</span></td>
+          <td>
+            <button type="button" class="tts-btn tts-btn--icon btn btn-light btn-sm">
+              <i class="ri-edit-2-line"></i>
+            </button>
+          </td>
+        </tr>
+      
+        <tr>
+          <td scope="row"  width="20px">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            </div>
+          </td>
+          <td class="fw-bold">Madeline Gibbs</td>
+          <td data-col="Phone">(900) 217-5994</td>
+          <td data-col="Email">tristique@icloud.ca</td>
+          <td data-col="Address">172-6633 Tincidunt Rd.</td>
+          <td data-col="Postal Zip">8923</td>
+          <td data-col="Country">Brazil</td>
+          <td data-col="Amount">$70.42</td>
+          <td><span class="badge bg-primary rounded-pill">COMPLETE</span></td>
+          <td>
+            <button type="button" class="tts-btn tts-btn--icon btn btn-light btn-sm">
+              <i class="ri-edit-2-line"></i>
+            </button>
+          </td>
+        </tr>
+      
+        <tr>
+          <td scope="row"  width="20px">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            </div>
+          </td>
+          <td class="fw-bold">Idona Monroe</td>
+          <td data-col="Phone">(237) 726-4405</td>
+          <td data-col="Email">aliquam.gravida.mauris@outlook.ca</td>
+          <td data-col="Address">802-3978 Quam Ave</td>
+          <td data-col="Postal Zip">4749</td>
+          <td data-col="Country">Sweden</td>
+          <td data-col="Amount">$53.53</td>
+          <td><span class="badge bg-primary rounded-pill">COMPLETE</span></td>
+          <td>
+            <button type="button" class="tts-btn tts-btn--icon btn btn-light btn-sm">
+              <i class="ri-edit-2-line"></i>
+            </button>
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
   </xmp>
               </code>
             </pre>
