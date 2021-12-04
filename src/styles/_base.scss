@@ -9,7 +9,7 @@ body {
   transition: display ease 200ms;
 }
 
-body.tts-dark-mode {
+body.hi-dark-mode {
   background-color: map-get($brand-dark, white);
   color: map-get($brand, white);
 }

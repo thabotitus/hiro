@@ -1,4 +1,4 @@
-.tts-layout {
+.hi-layout {
   &__topbar {
     display: flex;
     transition: all 200ms ease;
@@ -20,8 +20,8 @@
   }
 }
 
-.tts-dark-mode {
-  .tts-layout {
+.hi-dark-mode {
+  .hi-layout {
     &__topbar {
       background-color: map-get($brand-dark, white);
       color: map-get($brand, white);

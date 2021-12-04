@@ -4,8 +4,8 @@ import { GET_LS_STATE, SET_LS_STATE } from "../utils/_localstorage";
 export default class extends Controller {
   static targets = ["body", "colourmodeCheckbox"];
 
-  COLOURMODE_KEY  = 'tts-colourmode';
-  DARK_MODE_CLASS = 'tts-dark-mode';
+  COLOURMODE_KEY  = 'hi-colourmode';
+  DARK_MODE_CLASS = 'hi-dark-mode';
 
   connect() {
     this.setInitialColorMode();
