@@ -1,18 +1,16 @@
-.hir-table {
+.hi-table {
   background: white;
   width: 100%;
-  max-width: 100%;
-  border-spacing: 0;
-  border-collapse: collapse;
   border-radius: 4px;
+  overflow-x: scroll;
+  white-space: nowrap;
+  padding-bottom: 1rem;
 
-  display: block;
-  overflow-x: auto;
-  // white-space: nowrap;
-  
-  tbody {
-    // display: table;
+  table {
+    border-spacing: 0;
+    border-collapse: collapse;
     width: 100%;
+    max-width: 100%;
   }
 
   thead {
@@ -28,17 +26,27 @@
 
   th {
     text-align: left;
-    padding: 1rem;    
+    padding: 0.9rem 1rem;    
     text-transform: uppercase;
-    letter-spacing: 1px;
     font-size: 0.7rem;
+    white-space: nowrap;
   }
 
   tr {
     border-bottom: 1px solid #f4f4f4;
 
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:nth-child(even) {
+      background-color: map-get($brand, grey);
+    }
+
     &:hover {
       background: #fff5e8;
+      color: #222;
+      cursor: pointer;
     }
 
     td {
@@ -48,26 +56,12 @@
   }
 }
 
-/* Responsive */
-
-@media only screen and (max-width: 767px) {
-  .hir-table {
-    width: 100%;
-
-    th, td {
-      display: flex;
-      align-items: center;
-      justify-content: left;
-    }
-  }
-}
-
 .tts-dark-mode {
-  .hir-table {
+  .hi-table {
     background: none;
 
     thead {
-      background: map-get($brand-dark, grey);
+      background: darken(map-get($brand-dark, grey), 4%);
 
       tr {
         &:hover {
@@ -79,8 +73,15 @@
     tr {
       border-bottom: map-get($brand-dark, grey);
 
+      &:nth-child(even) {
+        background-color: map-get($brand-dark, grey);
+      }
+
       &:hover {
         background: map-get($brand-dark, grey);
+        background: #fff5e8;
+        color: #222;
+        cursor: pointer;
       }
 
       td {
@@ -89,4 +90,52 @@
     }
   }
 }
+
+/* Responsive */
+
+@media only screen and (max-width: 767px) {
+  .hi-table {
+    width: 100%;
+
+    thead {
+      display: none;
+    }
+
+    th, td {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+    }
+
+    tr {
+      &:first-child {
+        border-top: 1px solid #f4f4f4;
+        border-top: none;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &:nth-child(even) {
+        background: map-get($brand, grey);
+      }
+    }
+
+    td {
+      &::before {
+        content: attr(data-col);
+        width: 100%;
+        font-weight: 700;
+      }
+
+      font-weight: 400 !important;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+
+
 

@@ -1,0 +1,56 @@
+.hi-card {
+  border-radius: $border-radius;
+  box-shadow: $box_shadow;
+  border: 1px solid map-get($brand, grey);
+  background: map-get($brand, white);
+
+  &__main {
+    padding: 1rem;
+    // overflow-x: scroll;
+  }
+
+  &__header {
+    padding: 1rem;
+    display: flex;
+    border-bottom: 1px solid map-get($brand, grey);
+  }
+
+  &__title {
+    flex: 1;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+  }
+
+  &__menu {
+    flex: 1;
+    max-width: 60px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    .dropdown-menu,
+    .dropdown-divider {
+      border-color: map-get($brand, grey);
+    }
+
+    .dropdown-item {
+      &:hover {
+        background-color: #fff5e8;
+      }
+    }
+  }
+}
+
+.tts-dark-mode {
+  .hi-card {
+    background-color: map-get($brand-dark, white);
+    box-shadow: $box_shadow_dark;
+    border: none;
+
+    &__header {
+      border-bottom: 1px solid darken(map-get($brand-dark, white), 2%);
+    }
+  }
+}
