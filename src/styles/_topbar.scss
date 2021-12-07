@@ -36,3 +36,13 @@
     }
   }
 }
+
+@media (prefers-color-scheme: light) {
+  .hi-dark-mode {
+    .hi-layout {
+      &__topbar {
+        background-color: map-get($brand-dark, white);
+      }
+    }
+  }
+}

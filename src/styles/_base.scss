@@ -22,4 +22,11 @@ body {
   }
 }
 
+@media (prefers-color-scheme: light) {
+  body.hi-dark-mode {
+    background-color: map-get($brand-dark, white);
+    color: map-get($brand-dark, text);
+  }
+}
+
 

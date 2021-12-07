@@ -39,3 +39,11 @@
     }
   }
 }
+
+@media (prefers-color-scheme: light) {  
+  .hi-dark-mode {
+    .hi-header {
+      background-color: map-get($brand-dark, white);
+    }
+  }
+}

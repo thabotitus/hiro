@@ -54,3 +54,17 @@
     }
   }
 }
+
+@media (prefers-color-scheme: light) {
+  .hi-dark-mode {
+    .hi-card {
+      background-color: lighten(map-get($brand-dark, white), 0%);
+      box-shadow: none;
+      border: 1px solid lighten(map-get($brand-dark, white), 3%);
+
+      &__header {
+        border-bottom: 1px solid lighten(map-get($brand-dark, white), 3%);
+      }
+    }
+  }
+}
