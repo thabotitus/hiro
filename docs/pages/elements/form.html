@@ -43,7 +43,7 @@
 
     <!-- Content gets injected here -->
     
-  <div class="hi-layout">
+  <div class="hi-layout" data-controller="easter-eggs">
     <div class="hi-layout__sidebar">
   <div class="hi-layout__logo">
     <div class="hi-layout__logo-full">
@@ -232,8 +232,8 @@
         <div class="hi-layout--scrollable">
           
   <div class="hi-header">
-    <h1 class="hi-header__title">Card</h1>
-    <p class="hi-header__subtitle">Useful little things for consistency</p>
+    <h1 class="hi-header__title">Form</h1>
+    <p class="hi-header__subtitle">Get that information</p>
   </div>
 
 
@@ -241,54 +241,26 @@
           <div class="hi-yield">
             <h4>Standard</h4>
             <br />
-            <div class="hi-card">
-              <div class="hi-card__header">
-                <div class="hi-card__title">
-                  Header
-                </div>
-                <div class="hi-card__menu">
-                  <i class="ri-more-2-fill" class="dropdown-toggle" data-bs-toggle="dropdown"></i>
 
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Separated link</a></li>
-                  </ul>
-                </div>
-              </div>
+            <div class="hi-card">
               <div class="hi-card__main">
-                Content
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="hi-code">
+          <div class="hi-code d-none">
             <pre>
               <code class="language-html">
   <xmp>
-<div class="hi-card">
-  <div class="hi-card__header">
-    <div class="hi-card__title">
-      Header
-    </div>
-    <div class="hi-card__menu">
-      <i class="ri-more-2-fill" class="dropdown-toggle" data-bs-toggle="dropdown"></i>
 
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Separated link</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="hi-card__main">
-    Content
-  </div>
-</div>
   </xmp>
               </code>
             </pre>
@@ -297,6 +269,7 @@
       </div>
     </div>
   </div>
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

@@ -3,65 +3,10 @@
 
 {% block content %}
   <div class="hi-layout" data-controller="easter-eggs">
-    <div class="hi-layout__sidebar">
-      <div class="hi-layout__logo">
-        <div class="hi-layout__logo-full">
-          HIRO
-          <a href="/"><img src="https://res.cloudinary.com/duvwrnkqj/image/upload/v1638010336/Logos/HiroLight_nxobf5.png" height="45px" alt="Logo" data-attribution="https://www.vecteezy.com/free-vector/pitbull-logo" /></a>
-          ADMIN
-        </div>
-        <div class="hi-layout__logo-min">
-          <a href="/"><img src="https://res.cloudinary.com/duvwrnkqj/image/upload/v1638010336/Logos/HiroLight_nxobf5.png" height="45px" alt="Logo" data-attribution="https://www.vecteezy.com/free-vector/pitbull-logo" /></a>
-        </div>
-      </div>
-
-      <div class="d-lg-flex d-md-none justify-content-center mt-3">
-        <div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" data-action="change->hello#toggleDarkMode" data-hello-target="colourmodeCheckbox">
-          <label class="form-check-label text-light" for="flexSwitchCheckDefault">Dark Mode</label>
-        </div>
-      </div>
-
-      <div class="hi-layout__sidebar-oc-trigger d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" data-bs-backdrop="true">
-        <i class="ri-menu-fill"></i>
-      </div>
-
-      {% include "partials/navigation.njk" %}
-    </div>
+    {% include "partials/sidebar.njk" %}
 
     <div class="hi-layout__main">
-      <div class="hi-layout__topbar">
-        <div class="d-md-none hi-layout__topbar-section hi-flex-1">
-          <a class="only-light-mode" href="/"><img src="https://res.cloudinary.com/duvwrnkqj/image/upload/v1638004524/Logos/HiroDark_ith1ug.png" height="45px" alt="Logo" data-attribution="https://www.vecteezy.com/free-vector/pitbull-logo" /></a>
-          <a class="only-dark-mode" href="/"><img src="https://res.cloudinary.com/duvwrnkqj/image/upload/v1638010336/Logos/HiroLight_nxobf5.png" height="45px" alt="Logo" data-attribution="https://www.vecteezy.com/free-vector/pitbull-logo" /></a>
-        </div>
-
-        <div class="d-none d-md-flex hi-layout__topbar-section hi-flex-1 justify-content-end">
-          <div class="hi-toolbar hi-toolbar--right">
-            <div class="hi-toolbar-wrapper">
-              <div class="hi-toolbar__item">
-                <i class="ri-home-line"></i> 
-              </div>
-              <div class="hi-toolbar__item">
-                <i class="ri-qr-code-line"></i> 
-              </div>
-              <div class="hi-toolbar__item">
-                <i class="ri-honour-line"></i> 
-              </div>
-              <div class="hi-toolbar__item">
-                <i class="ri-settings-line"></i> 
-              </div>
-              <div class="hi-toolbar__item">
-                <i class="ri-user-3-line"></i> 
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="d-md-none hi-layout__topbar-section hi-layout__offcanvas-trigger hi-flex-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" data-bs-backdrop="true">
-          <i class="ri-menu-fill"></i>
-        </div>
-      </div>
+      {% include "partials/topbar.njk" %}
 
       <div class="hi-layout__content">
         <div class="hi-layout--scrollable">
@@ -80,17 +25,26 @@
                   <i class="ri-more-2-fill" class="dropdown-toggle" data-bs-toggle="dropdown"></i>
 
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Share</a></li>
-                    <li><a class="dropdown-item" href="#">Copy link</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i class="bi bi-share-fill"></i>
+                        Share
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i class="bi bi-clipboard"></i>
+                        Copy link
+                      </a>
+                    </li>
                   </ul>
                 </div>
               </div>
-              <div class="hi-card__main">
+              <div class="hi-card__main" data-controller="table">
                 <div class="hi-table">
                   <table>
                     <thead>
                       <tr>
-                        <th scope="col" width="20px"></th>
                         <th scope="col">Name</th>
                         <th scope="col">Phone</th>
                         <th scope="col">Email</th>
@@ -104,12 +58,7 @@
                     </thead>
                     <tbody>
                       {% for item in table_data %}
-                        <tr>
-                          <td scope="row"  width="20px">
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            </div>
-                          </td>
+                        <tr data-table-target="tableRow" data-action="click->table#selectRow">
                           <td data-col="Name" class="fw-bold">{{ item.name }}</td>
                           <td data-col="Phone">{{ item.phone }}</td>
                           <td data-col="Email">{{ item.email }}</td>
@@ -139,7 +88,6 @@
   <table class="hi-table">
     <thead>
       <tr>
-        <th scope="col" width="20px"></th>
         <th scope="col">Name</th>
         <th scope="col">Phone</th>
         <th scope="col">Email</th>
@@ -152,30 +100,21 @@
       </tr>
     </thead>
     <tbody>
-      {% for item in table_data %}
-        <tr>
-          <td scope="row"  width="20px">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            </div>
-          </td>
-          <td class="fw-bold">{{ item.name }}</td>
-          <td data-col="Phone">{{ item.phone }}</td>
-          <td data-col="Email">{{ item.email }}</td>
-          <td data-col="Address">{{ item.address }}</td>
-          <td data-col="Postal Zip">{{ item.postalZip }}</td>
-          <td data-col="Country">{{ item.country }}</td>
-          <td data-col="Amount">{{ item.currency }}</td>
-          <td><span class="badge bg-primary rounded-pill">COMPLETE</span></td>
-          <td>
-            <button type="button" class="hi-btn hi-btn--icon btn btn-light btn-sm">
-              <i class="ri-edit-2-line"></i>
-            </button>
-          </td>
-        </tr>
-      {% else %}
-        No Data
-      {% endfor %}
+      <tr>
+        <td class="fw-bold">...</td>
+        <td data-col="Phone">...</td>
+        <td data-col="Email">...</td>
+        <td data-col="Address">...</td>
+        <td data-col="Postal Zip">...</td>
+        <td data-col="Country">...</td>
+        <td data-col="Amount">...</td>
+        <td><span class="badge bg-primary rounded-pill">COMPLETE</span></td>
+        <td>
+          <button type="button" class="hi-btn hi-btn--icon btn btn-light btn-sm">
+            <i class="ri-edit-2-line"></i>
+          </button>
+        </td>
+      </tr>
     </tbody>
   </table>
   </xmp>

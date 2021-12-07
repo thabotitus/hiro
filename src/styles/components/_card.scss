@@ -6,7 +6,6 @@
 
   &__main {
     padding: 1rem;
-    // overflow-x: scroll;
   }
 
   &__header {
@@ -29,28 +28,20 @@
     justify-content: flex-end;
     font-size: 1.5rem;
     cursor: pointer;
-
-    .dropdown-menu,
-    .dropdown-divider {
-      border-color: map-get($brand, grey);
-    }
-
-    .dropdown-item {
-      &:hover {
-        background-color: #fff5e8;
-      }
-    }
   }
 }
 
 .hi-dark-mode {
   .hi-card {
-    background-color: map-get($brand-dark, white);
-    box-shadow: $box_shadow_dark;
+    background-color: lighten(map-get($brand-dark, white), 0%);
+    // box-shadow: $box_shadow_dark;
+    box-shadow: none;
     border: none;
+    border: 1px solid lighten(map-get($brand-dark, white), 3%);
 
     &__header {
       border-bottom: 1px solid darken(map-get($brand-dark, white), 2%);
+      border-bottom: 1px solid lighten(map-get($brand-dark, white), 3%);
     }
   }
 }

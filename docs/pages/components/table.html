@@ -10,6 +10,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,40 +45,40 @@
     
   <div class="hi-layout" data-controller="easter-eggs">
     <div class="hi-layout__sidebar">
-      <div class="hi-layout__logo">
-        <div class="hi-layout__logo-full">
-          HIRO
-          <a href="/"><img src="https://res.cloudinary.com/duvwrnkqj/image/upload/v1638010336/Logos/HiroLight_nxobf5.png" height="45px" alt="Logo" data-attribution="https://www.vecteezy.com/free-vector/pitbull-logo" /></a>
-          ADMIN
-        </div>
-        <div class="hi-layout__logo-min">
-          <a href="/"><img src="https://res.cloudinary.com/duvwrnkqj/image/upload/v1638010336/Logos/HiroLight_nxobf5.png" height="45px" alt="Logo" data-attribution="https://www.vecteezy.com/free-vector/pitbull-logo" /></a>
-        </div>
-      </div>
+  <div class="hi-layout__logo">
+    <div class="hi-layout__logo-full">
+      HIRO
+      <a href="/"><img src="https://res.cloudinary.com/duvwrnkqj/image/upload/v1638010336/Logos/HiroLight_nxobf5.png" height="45px" alt="Logo" data-attribution="https://www.vecteezy.com/free-vector/pitbull-logo" /></a>
+      ADMIN
+    </div>
+    <div class="hi-layout__logo-min">
+      <a href="/"><img src="https://res.cloudinary.com/duvwrnkqj/image/upload/v1638010336/Logos/HiroLight_nxobf5.png" height="45px" alt="Logo" data-attribution="https://www.vecteezy.com/free-vector/pitbull-logo" /></a>
+    </div>
+  </div>
 
-      <div class="d-lg-flex d-md-none justify-content-center mt-3">
-        <div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" data-action="change->hello#toggleDarkMode" data-hello-target="colourmodeCheckbox">
-          <label class="form-check-label text-light" for="flexSwitchCheckDefault">Dark Mode</label>
-        </div>
-      </div>
+  <div class="d-lg-flex d-md-none justify-content-center mt-3">
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" data-action="change->hello#toggleDarkMode" data-hello-target="colourmodeCheckbox">
+      <label class="form-check-label text-light" for="flexSwitchCheckDefault">Dark Mode</label>
+    </div>
+  </div>
 
-      <div class="hi-layout__sidebar-oc-trigger d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" data-bs-backdrop="true">
-        <i class="ri-menu-fill"></i>
-      </div>
+  <div class="hi-layout__sidebar-oc-trigger d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" data-bs-backdrop="true">
+    <i class="ri-menu-fill"></i>
+  </div>
 
-      <nav class="hi-navigation" data-navigation-target="navigation">
+  <nav class="hi-navigation" data-navigation-target="navigation">
   <a href="/pages/home.html" class="hi-navigation__item">
     <div class="hi-navigation__icon">
-      <i class="ri-home-fill"></i>
+      <i class="bi bi-house-fill"></i>
     </div>
     <div class="hi-navigation__title">
       Home
     </div>
   </a>
-  <a data-bs-toggle="collapse" href="#navElements" class="hi-navigation__item">
+  <a data-bs-toggle="collapse" href="#navElements" class="hi-navigation__item collapsed">
     <div class="hi-navigation__icon">
-      <i class="ri-computer-fill"></i>
+      <i class="bi bi-menu-button-wide"></i>
     </div>
     <div class="hi-navigation__title">
       Elements
@@ -90,11 +91,17 @@
         Button
       </span>
     </a>
+
+    <a  href="/pages/elements/form.html" class="hi-navigation__item hi-navigation__item--sub">
+      <span class="hi-navigation__title">
+        Form
+      </span>
+    </a>
   </div>
 
-  <a data-bs-toggle="collapse" href="#navComponents" class="hi-navigation__item">
+  <a data-bs-toggle="collapse" href="#navComponents" class="hi-navigation__item collapsed">
     <div class="hi-navigation__icon">
-      <i class="ri-apps-fill"></i>
+      <i class="bi bi-bricks"></i>
     </div>
     <div class="hi-navigation__title">
       Components
@@ -113,43 +120,113 @@
       </span>
     </a>
   </div>
+
+  <a data-bs-toggle="collapse" href="#navLayout" class="hi-navigation__item collapsed">
+    <div class="hi-navigation__icon">
+      <i class="bi bi-layout-text-window-reverse"></i>
+    </div>
+    <div class="hi-navigation__title">
+      Pages
+    </div>
+  </a>
+
+  <div class="collapse" id="navLayout">
+    <a  href="/pages/errors/404.html" class="hi-navigation__item hi-navigation__item--sub">
+      <span class="hi-navigation__title">
+        Errors - 404
+      </span>
+    </a>
+    <a  href="/pages/errors/500.html" class="hi-navigation__item hi-navigation__item--sub">
+      <span class="hi-navigation__title">
+        Errors - 500
+      </span>
+    </a>
+  </div>
 </nav>
 
-    </div>
+</div>
+
 
     <div class="hi-layout__main">
       <div class="hi-layout__topbar">
-        <div class="d-md-none hi-layout__topbar-section hi-flex-1">
-          <a class="only-light-mode" href="/"><img src="https://res.cloudinary.com/duvwrnkqj/image/upload/v1638004524/Logos/HiroDark_ith1ug.png" height="45px" alt="Logo" data-attribution="https://www.vecteezy.com/free-vector/pitbull-logo" /></a>
-          <a class="only-dark-mode" href="/"><img src="https://res.cloudinary.com/duvwrnkqj/image/upload/v1638010336/Logos/HiroLight_nxobf5.png" height="45px" alt="Logo" data-attribution="https://www.vecteezy.com/free-vector/pitbull-logo" /></a>
-        </div>
+  <div class="d-md-none hi-layout__topbar-section hi-flex-1">
+    <a class="only-light-mode" href="/"><img src="https://res.cloudinary.com/duvwrnkqj/image/upload/v1638004524/Logos/HiroDark_ith1ug.png" height="45px" alt="Logo" data-attribution="https://www.vecteezy.com/free-vector/pitbull-logo" /></a>
+    <a class="only-dark-mode" href="/"><img src="https://res.cloudinary.com/duvwrnkqj/image/upload/v1638010336/Logos/HiroLight_nxobf5.png" height="45px" alt="Logo" data-attribution="https://www.vecteezy.com/free-vector/pitbull-logo" /></a>
+  </div>
 
-        <div class="d-none d-md-flex hi-layout__topbar-section hi-flex-1 justify-content-end">
-          <div class="hi-toolbar hi-toolbar--right">
-            <div class="hi-toolbar-wrapper">
-              <div class="hi-toolbar__item">
-                <i class="ri-home-line"></i> 
-              </div>
-              <div class="hi-toolbar__item">
-                <i class="ri-qr-code-line"></i> 
-              </div>
-              <div class="hi-toolbar__item">
-                <i class="ri-honour-line"></i> 
-              </div>
-              <div class="hi-toolbar__item">
-                <i class="ri-settings-line"></i> 
-              </div>
-              <div class="hi-toolbar__item">
-                <i class="ri-user-3-line"></i> 
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="d-md-none hi-layout__topbar-section hi-layout__offcanvas-trigger hi-flex-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" data-bs-backdrop="true">
-          <i class="ri-menu-fill"></i>
+  <div class="d-none d-md-flex hi-layout__topbar-section hi-flex-1 justify-content-end">
+    <div class="hi-toolbar hi-toolbar--right">
+    <div class="hi-toolbar-wrapper">
+      <div class="hi-toolbar__item" data-bs-toggle="dropdown">
+        <i class="bi bi-activity"></i>
+      </div>
+      <div class="dropdown-menu">
+        <div style="padding: 20px; width: 50vw;" class="p3">
+          <h3>Some Mega Menu</h3>
         </div>
       </div>
+
+      <div class="hi-toolbar__item" data-bs-toggle="dropdown">
+        <i class="bi bi-alarm-fill"></i>
+      </div>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+
+      <div class="hi-toolbar__item" data-bs-toggle="dropdown">
+        <i class="bi bi-archive-fill"></i> 
+      </div>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+
+      <div class="hi-toolbar__item" data-bs-toggle="dropdown">
+        <i class="bi bi-bag-fill"></i> 
+      </div>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Separated link</a></li>
+      </ul>
+
+      <div class="hi-toolbar__item" data-bs-toggle="dropdown">
+        <i class="bi bi-person-circle"></i>
+      </div>
+      <ul class="dropdown-menu">
+        <li>
+          <a class="dropdown-item" href="#">
+            <i class="bi bi-gear-fill"></i>
+            Settings
+          </a>
+        </li>
+        <li><hr class="dropdown-divider"></li>
+        <li>
+          <a class="dropdown-item" href="#">
+            <i class="bi bi-box-arrow-right"></i>
+            Logout
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  </div>
+
+  <div class="d-md-none hi-layout__topbar-section hi-layout__offcanvas-trigger hi-flex-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" data-bs-backdrop="true">
+    <i class="ri-menu-fill"></i>
+  </div>
+</div>
+
 
       <div class="hi-layout__content">
         <div class="hi-layout--scrollable">
@@ -173,17 +250,26 @@
                   <i class="ri-more-2-fill" class="dropdown-toggle" data-bs-toggle="dropdown"></i>
 
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Share</a></li>
-                    <li><a class="dropdown-item" href="#">Copy link</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i class="bi bi-share-fill"></i>
+                        Share
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i class="bi bi-clipboard"></i>
+                        Copy link
+                      </a>
+                    </li>
                   </ul>
                 </div>
               </div>
-              <div class="hi-card__main">
+              <div class="hi-card__main" data-controller="table">
                 <div class="hi-table">
                   <table>
                     <thead>
                       <tr>
-                        <th scope="col" width="20px"></th>
                         <th scope="col">Name</th>
                         <th scope="col">Phone</th>
                         <th scope="col">Email</th>
@@ -197,12 +283,7 @@
                     </thead>
                     <tbody>
                       
-                        <tr>
-                          <td scope="row"  width="20px">
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            </div>
-                          </td>
+                        <tr data-table-target="tableRow" data-action="click->table#selectRow">
                           <td data-col="Name" class="fw-bold">Macaulay Harris</td>
                           <td data-col="Phone">(183) 334-3713</td>
                           <td data-col="Email">aliquam.enim@protonmail.ca</td>
@@ -218,12 +299,7 @@
                           </td>
                         </tr>
                       
-                        <tr>
-                          <td scope="row"  width="20px">
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            </div>
-                          </td>
+                        <tr data-table-target="tableRow" data-action="click->table#selectRow">
                           <td data-col="Name" class="fw-bold">Lance Harris</td>
                           <td data-col="Phone">(232) 773-7613</td>
                           <td data-col="Email">elit@hotmail.org</td>
@@ -239,12 +315,7 @@
                           </td>
                         </tr>
                       
-                        <tr>
-                          <td scope="row"  width="20px">
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            </div>
-                          </td>
+                        <tr data-table-target="tableRow" data-action="click->table#selectRow">
                           <td data-col="Name" class="fw-bold">Lysandra Craft</td>
                           <td data-col="Phone">1-316-902-6104</td>
                           <td data-col="Email">vestibulum.nec@hotmail.couk</td>
@@ -260,12 +331,7 @@
                           </td>
                         </tr>
                       
-                        <tr>
-                          <td scope="row"  width="20px">
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            </div>
-                          </td>
+                        <tr data-table-target="tableRow" data-action="click->table#selectRow">
                           <td data-col="Name" class="fw-bold">Guinevere Rios</td>
                           <td data-col="Phone">1-679-328-4014</td>
                           <td data-col="Email">tempus.risus@yahoo.com</td>
@@ -281,12 +347,7 @@
                           </td>
                         </tr>
                       
-                        <tr>
-                          <td scope="row"  width="20px">
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            </div>
-                          </td>
+                        <tr data-table-target="tableRow" data-action="click->table#selectRow">
                           <td data-col="Name" class="fw-bold">Madeline Gibbs</td>
                           <td data-col="Phone">(900) 217-5994</td>
                           <td data-col="Email">tristique@icloud.ca</td>
@@ -302,12 +363,7 @@
                           </td>
                         </tr>
                       
-                        <tr>
-                          <td scope="row"  width="20px">
-                            <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            </div>
-                          </td>
+                        <tr data-table-target="tableRow" data-action="click->table#selectRow">
                           <td data-col="Name" class="fw-bold">Idona Monroe</td>
                           <td data-col="Phone">(237) 726-4405</td>
                           <td data-col="Email">aliquam.gravida.mauris@outlook.ca</td>
@@ -337,7 +393,6 @@
   <table class="hi-table">
     <thead>
       <tr>
-        <th scope="col" width="20px"></th>
         <th scope="col">Name</th>
         <th scope="col">Phone</th>
         <th scope="col">Email</th>
@@ -350,133 +405,21 @@
       </tr>
     </thead>
     <tbody>
-      
-        <tr>
-          <td scope="row"  width="20px">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            </div>
-          </td>
-          <td class="fw-bold">Macaulay Harris</td>
-          <td data-col="Phone">(183) 334-3713</td>
-          <td data-col="Email">aliquam.enim@protonmail.ca</td>
-          <td data-col="Address">P.O. Box 637, 8474 Luctus Av.</td>
-          <td data-col="Postal Zip">45456</td>
-          <td data-col="Country">Spain</td>
-          <td data-col="Amount">$57.35</td>
-          <td><span class="badge bg-primary rounded-pill">COMPLETE</span></td>
-          <td>
-            <button type="button" class="hi-btn hi-btn--icon btn btn-light btn-sm">
-              <i class="ri-edit-2-line"></i>
-            </button>
-          </td>
-        </tr>
-      
-        <tr>
-          <td scope="row"  width="20px">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            </div>
-          </td>
-          <td class="fw-bold">Lance Harris</td>
-          <td data-col="Phone">(232) 773-7613</td>
-          <td data-col="Email">elit@hotmail.org</td>
-          <td data-col="Address">739-8020 Non, Rd.</td>
-          <td data-col="Postal Zip">34324</td>
-          <td data-col="Country">Austria</td>
-          <td data-col="Amount">$77.59</td>
-          <td><span class="badge bg-primary rounded-pill">COMPLETE</span></td>
-          <td>
-            <button type="button" class="hi-btn hi-btn--icon btn btn-light btn-sm">
-              <i class="ri-edit-2-line"></i>
-            </button>
-          </td>
-        </tr>
-      
-        <tr>
-          <td scope="row"  width="20px">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            </div>
-          </td>
-          <td class="fw-bold">Lysandra Craft</td>
-          <td data-col="Phone">1-316-902-6104</td>
-          <td data-col="Email">vestibulum.nec@hotmail.couk</td>
-          <td data-col="Address">791-8169 Dignissim. Ave</td>
-          <td data-col="Postal Zip">24819</td>
-          <td data-col="Country">New Zealand</td>
-          <td data-col="Amount">$15.61</td>
-          <td><span class="badge bg-primary rounded-pill">COMPLETE</span></td>
-          <td>
-            <button type="button" class="hi-btn hi-btn--icon btn btn-light btn-sm">
-              <i class="ri-edit-2-line"></i>
-            </button>
-          </td>
-        </tr>
-      
-        <tr>
-          <td scope="row"  width="20px">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            </div>
-          </td>
-          <td class="fw-bold">Guinevere Rios</td>
-          <td data-col="Phone">1-679-328-4014</td>
-          <td data-col="Email">tempus.risus@yahoo.com</td>
-          <td data-col="Address">Ap #409-5659 Et Ave</td>
-          <td data-col="Postal Zip">556452</td>
-          <td data-col="Country">Colombia</td>
-          <td data-col="Amount">$89.74</td>
-          <td><span class="badge bg-primary rounded-pill">COMPLETE</span></td>
-          <td>
-            <button type="button" class="hi-btn hi-btn--icon btn btn-light btn-sm">
-              <i class="ri-edit-2-line"></i>
-            </button>
-          </td>
-        </tr>
-      
-        <tr>
-          <td scope="row"  width="20px">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            </div>
-          </td>
-          <td class="fw-bold">Madeline Gibbs</td>
-          <td data-col="Phone">(900) 217-5994</td>
-          <td data-col="Email">tristique@icloud.ca</td>
-          <td data-col="Address">172-6633 Tincidunt Rd.</td>
-          <td data-col="Postal Zip">8923</td>
-          <td data-col="Country">Brazil</td>
-          <td data-col="Amount">$70.42</td>
-          <td><span class="badge bg-primary rounded-pill">COMPLETE</span></td>
-          <td>
-            <button type="button" class="hi-btn hi-btn--icon btn btn-light btn-sm">
-              <i class="ri-edit-2-line"></i>
-            </button>
-          </td>
-        </tr>
-      
-        <tr>
-          <td scope="row"  width="20px">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            </div>
-          </td>
-          <td class="fw-bold">Idona Monroe</td>
-          <td data-col="Phone">(237) 726-4405</td>
-          <td data-col="Email">aliquam.gravida.mauris@outlook.ca</td>
-          <td data-col="Address">802-3978 Quam Ave</td>
-          <td data-col="Postal Zip">4749</td>
-          <td data-col="Country">Sweden</td>
-          <td data-col="Amount">$53.53</td>
-          <td><span class="badge bg-primary rounded-pill">COMPLETE</span></td>
-          <td>
-            <button type="button" class="hi-btn hi-btn--icon btn btn-light btn-sm">
-              <i class="ri-edit-2-line"></i>
-            </button>
-          </td>
-        </tr>
-      
+      <tr>
+        <td class="fw-bold">...</td>
+        <td data-col="Phone">...</td>
+        <td data-col="Email">...</td>
+        <td data-col="Address">...</td>
+        <td data-col="Postal Zip">...</td>
+        <td data-col="Country">...</td>
+        <td data-col="Amount">...</td>
+        <td><span class="badge bg-primary rounded-pill">COMPLETE</span></td>
+        <td>
+          <button type="button" class="hi-btn hi-btn--icon btn btn-light btn-sm">
+            <i class="ri-edit-2-line"></i>
+          </button>
+        </td>
+      </tr>
     </tbody>
   </table>
   </xmp>

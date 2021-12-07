@@ -8,10 +8,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-.row {
-  width: 100%;
-}
-
 .only-on-sm {
   @include breakpoint(sm) {
     display: none !important;

@@ -32,7 +32,8 @@
     white-space: nowrap;
   }
 
-  tr {
+  tr,
+  &__tr {
     border-bottom: 1px solid #f4f4f4;
 
     &:last-child {
@@ -49,10 +50,25 @@
       cursor: pointer;
     }
 
+    &--selected {
+      background: darken(#fff5e8, 3%) !important;
+      color: #222;
+      cursor: pointer;
+    }
+
     td {
       padding: 0.5rem 1rem;
       font-size: 0.85rem;
     }
+  }
+
+  &__meta {
+    display: flex;
+    height: 40px;
+    align-items: center;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+    justify-content: flex-end;
   }
 }
 
@@ -61,11 +77,12 @@
     background: none;
 
     thead {
-      background: darken(map-get($brand-dark, grey), 4%);
+      background-color: lighten(map-get($brand-dark, white), 2%);
 
       tr {
         &:hover {
-          background-color: map-get($brand-dark, grey);
+          background-color: lighten(map-get($brand-dark, white), 2%);
+          color: map-get($brand, white);
         }
       }
     }
@@ -74,7 +91,7 @@
       border-bottom: map-get($brand-dark, grey);
 
       &:nth-child(even) {
-        background-color: map-get($brand-dark, grey);
+        background-color: lighten(map-get($brand-dark, white), 2%);
       }
 
       &:hover {

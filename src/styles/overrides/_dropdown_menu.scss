@@ -1,0 +1,52 @@
+.dropdown-menu,
+.dropdown-divider {
+  border-color: map-get($brand, grey);
+}
+
+.dropdown-menu {
+  border: none;
+  box-shadow: $box_shadow;
+}
+
+.dropdown-item {
+  &:hover {
+    background-color: #fff5e8;
+  }
+
+  i {
+    margin-right: 0.5rem;
+  }
+
+  &:focus,
+  &:active {
+    background-color: darken(#fff5e8, 3%);
+    color: #222;
+  }
+}
+
+.hi-dark-mode {
+  .dropdown-menu {
+    box-shadow: $box_shadow_dark;
+    color: map-get($brand, white);
+    background: lighten(map-get($brand-dark, white), 2%);
+  }
+
+  .dropdown-item {
+    color: map-get($brand, white);
+
+    &:hover {
+      color: #222;
+      background-color: #fff5e8;
+    }
+
+    &:focus,
+    &:active {
+      background-color: darken(#fff5e8, 3%);
+      color: #222;
+    }
+  }
+
+  .dropdown-divider {
+    border-color: map-get($brand-dark, grey);
+  }
+}

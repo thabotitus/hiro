@@ -1,0 +1,48 @@
+{% extends "base.njk" %}
+{% from 'macros/page_header.njk' import header %}
+
+{% block content %}
+  <div class="hi-layout" data-controller="easter-eggs">
+    {% include "partials/sidebar.njk" %}
+
+    <div class="hi-layout__main">
+      {% include "partials/topbar.njk" %}
+
+      <div class="hi-layout__content">
+        <div class="hi-layout--scrollable">
+          {{ header(title="Form", subtitle="Get that information") }}
+
+          {# STANDARD #}
+          <div class="hi-yield">
+            <h4>Standard</h4>
+            <br />
+
+            <div class="hi-card">
+              <div class="hi-card__main">
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hi-code d-none">
+            <pre>
+              <code class="language-html">
+  <xmp>
+
+  </xmp>
+              </code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
