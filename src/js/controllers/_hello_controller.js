@@ -4,8 +4,9 @@ import { GET_LS_STATE, SET_LS_STATE } from "../utils/_localstorage";
 export default class extends Controller {
   static targets = ["body", "colourmodeCheckbox"];
 
-  COLOURMODE_KEY  = 'hi-colourmode';
-  DARK_MODE_CLASS = 'hi-dark-mode';
+  COLOURMODE_KEY    = 'hi-colourmode';
+  DARK_MODE_CLASS   = 'hi-dark-mode';
+  LIGHT_MODE_CLASS  = 'hi-light-mode';
 
   connect() {
     this.setInitialColorMode();
@@ -14,7 +15,12 @@ export default class extends Controller {
   setInitialColorMode() {
     if (GET_LS_STATE(this.COLOURMODE_KEY) === 'dark') {
       this.bodyTarget.classList.add(this.DARK_MODE_CLASS);
+      this.bodyTarget.classList.remove(this.LIGHT_MODE_CLASS);
       this._toggleAllColourSwitches(true);
+    } else {
+      this.bodyTarget.classList.add(this.LIGHT_MODE_CLASS);
+      this.bodyTarget.classList.remove(this.DARK_MODE_CLASS);
+      this._toggleAllColourSwitches(false);
     }
   }
 
@@ -22,12 +28,16 @@ export default class extends Controller {
     switch (evt.target.checked) {
       case true:
         this.bodyTarget.classList.add(this.DARK_MODE_CLASS);
+        this.bodyTarget.classList.remove(this.LIGHT_MODE_CLASS);
+
         SET_LS_STATE(this.COLOURMODE_KEY, 'dark');
         this._toggleAllColourSwitches(true);
         break;
       default:
         this.bodyTarget.classList.remove(this.DARK_MODE_CLASS);
-        SET_LS_STATE(this.COLOURMODE_KEY, null);
+        this.bodyTarget.classList.add(this.LIGHT_MODE_CLASS);
+
+        SET_LS_STATE(this.COLOURMODE_KEY, 'light');
         this._toggleAllColourSwitches(false);
         break;
     }

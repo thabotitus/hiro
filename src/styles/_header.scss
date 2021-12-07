@@ -1,59 +1,49 @@
 .hi-header {
-  background-color:   map-get($brand, grey);
-  padding:            $base_vpadding $base_hpadding;
-  position:           relative;
+  background-color: map-get($brand, grey);
+  padding:  $base_vpadding $base_hpadding;
+  position: relative;
 
   &__title {
-    margin-bottom:    0;
+    margin-bottom:  0;
   }
 
   &__subtitle {
-    margin:           0;
-  }
-
-  &__toggle {
-    position:         absolute;
-    right:            20px;
-    border-radius:    50%;
-    width:            30px;
-    height:           30px;
-    background:       map-get($brand, white);
-    color:            map-get($brand, secondary);
-    top:              50%;
-    display:          flex;
-    align-items:      center;
-    justify-content:  center;
-    transform:        translateY(-50%);
-    cursor:           pointer;
-    transition:       all 200ms ease;
-    font-size:        1.6rem;
-
-    &:hover {
-      background-color: map-get($brand, secondary);
-      color:            map-get($brand, grey)
-    }
+    margin: 0;
   }
 
   &--collapsed {
-    padding:          1em;
+    padding:  1em;
 
     .hi-header__subtitle {
-      display:        none;
+      display:  none;
     }
   }
 
   &--centered {
-    text-align:       center;
+    text-align: center;
   }
 
   &--right {
-    text-align:       right;
+    text-align: right;
   }
 }
 
-.hi-dark-mode {
+@media (prefers-color-scheme: dark) {
   .hi-header {
-    background-color:   darken(map-get($brand-dark, grey), 100%);
-    background-color:   map-get($brand-dark, white);
+    background-color: map-get($brand-dark, white);
+  }
+  
+  .hi-light-mode {
+    .hi-header {
+      background-color: map-get($brand, grey);
+    }
+  }
+}
+
+@media (prefers-color-scheme: light) {  
+  .hi-dark-mode {
+    .hi-header {
+      background-color: map-get($brand-dark, white);
+    }
   }
 }

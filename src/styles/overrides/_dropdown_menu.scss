@@ -6,6 +6,7 @@
 .dropdown-menu {
   border: none;
   box-shadow: $box_shadow;
+  color: map-get($brand, text);
 }
 
 .dropdown-item {
@@ -20,33 +21,71 @@
   &:focus,
   &:active {
     background-color: darken(#fff5e8, 3%);
-    color: #222;
+    color: map-get($brand, text);
   }
 }
 
-.hi-dark-mode {
+@media (prefers-color-scheme: dark) {
   .dropdown-menu {
     box-shadow: $box_shadow_dark;
-    color: map-get($brand, white);
+    color: map-get($brand-dark, text);
     background: lighten(map-get($brand-dark, white), 2%);
   }
 
   .dropdown-item {
-    color: map-get($brand, white);
+    color: map-get($brand-dark, text);
 
     &:hover {
-      color: #222;
+      color: map-get($brand, text);
       background-color: #fff5e8;
-    }
-
-    &:focus,
-    &:active {
-      background-color: darken(#fff5e8, 3%);
-      color: #222;
     }
   }
 
   .dropdown-divider {
     border-color: map-get($brand-dark, grey);
+  }
+
+  .hi-light-mode {
+    .dropdown-menu {
+      box-shadow: $box_shadow;
+      color: map-get($brand, text);
+      background: map-get($brand, white);
+    }
+
+    .dropdown-item {
+      color: map-get($brand, text);
+
+      &:hover {
+        color: map-get($brand, text);
+        background-color: #fff5e8;
+      }
+    }
+
+    .dropdown-divider {
+      border-color: map-get($brand, grey);
+    }
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .hi-dark-mode {
+    .dropdown-menu {
+      box-shadow: $box_shadow_dark;
+      color: map-get($brand-dark, text);
+      background: lighten(map-get($brand-dark, white), 2%);
+    }
+
+    .dropdown-item {
+      color: map-get($brand-dark, text);
+
+      &:hover {
+        color: map-get($brand, text);
+        background-color: #fff5e8;
+      }
+    }
+
+    .dropdown-divider {
+      border-color: map-get($brand-dark, grey);
+    }
   }
 }

@@ -3,7 +3,6 @@
     background-color: map-get($brand, secondary);
     grid-template-rows: $layout_topbar_height $layout_topbar_height 1fr;
     grid-template-columns: 1fr;
-    color: map-get($brand, grey);
     display: none;
     
     @include breakpoint(md) {
@@ -32,25 +31,32 @@
     &-full {
       display: none;
     }
-
-    // @include breakpoint(lg) {
-    //   &-min {
-    //     display: none;
-    //   }
-
-    //   &-full {
-    //     display: block;
-    //   }
-    // }
   }
 }
 
-.hi-dark-mode {
+
+@media (prefers-color-scheme: dark) {
   .hi-layout {
     &__sidebar {
-      background-color: map-get($brand-dark, grey);
       background-color: lighten(map-get($brand-dark, white), 2%);
-      color: map-get($brand, grey);
+    }
+  }
+
+  .hi-light-mode {
+    .hi-layout {
+      &__sidebar {
+        background-color: map-get($brand, secondary);
+      }
+    }
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .hi-dark-mode {
+    .hi-layout {
+      &__sidebar {
+        background-color: lighten(map-get($brand-dark, white), 2%);
+      }
     }
   }
 }

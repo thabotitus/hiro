@@ -3,6 +3,7 @@
     display: flex;
     transition: all 200ms ease;
     display: flex;
+    background-color: map-get($brand, white);
 
     &-section {
       display: flex;
@@ -20,11 +21,28 @@
   }
 }
 
-.hi-dark-mode {
+@media (prefers-color-scheme: dark) {
   .hi-layout {
     &__topbar {
       background-color: map-get($brand-dark, white);
-      color: map-get($brand, white);
+    }
+  }
+
+  .hi-light-mode {
+    .hi-layout {
+      &__topbar {
+        background-color: map-get($brand, white);
+      }
+    }
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .hi-dark-mode {
+    .hi-layout {
+      &__topbar {
+        background-color: map-get($brand-dark, white);
+      }
     }
   }
 }

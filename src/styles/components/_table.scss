@@ -46,13 +46,13 @@
 
     &:hover {
       background: #fff5e8;
-      color: #222;
+      color: map-get($brand, text);
       cursor: pointer;
     }
 
     &--selected {
       background: darken(#fff5e8, 3%) !important;
-      color: #222;
+      color: map-get($brand, text);
       cursor: pointer;
     }
 
@@ -72,7 +72,8 @@
   }
 }
 
-.hi-dark-mode {
+
+@media (prefers-color-scheme: dark) {
   .hi-table {
     background: none;
 
@@ -82,7 +83,7 @@
       tr {
         &:hover {
           background-color: lighten(map-get($brand-dark, white), 2%);
-          color: map-get($brand, white);
+          color: map-get($brand-dark, text);
         }
       }
     }
@@ -97,12 +98,77 @@
       &:hover {
         background: map-get($brand-dark, grey);
         background: #fff5e8;
-        color: #222;
         cursor: pointer;
       }
 
       td {
         padding: 0.5rem 1rem;
+      }
+    }
+  }
+
+  .hi-light-mode {
+    .hi-table {
+      background: map-get($brand, white);
+
+      thead {
+        background-color: #f8f8f9;
+
+        tr {
+          &:hover {
+            background-color: #f8f8f9;
+            color: map-get($brand, text);
+          }
+        }
+      }
+
+      tr {
+        border-bottom: 1px solid #f4f4f4;
+
+        &:nth-child(even) {
+          background-color: map-get($brand, grey);
+        }
+
+        &:hover {
+          background: #fff5e8;
+        }
+      }
+    }
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .hi-dark-mode {
+    .hi-table {
+      background: none;
+
+      thead {
+        background-color: lighten(map-get($brand-dark, white), 2%);
+
+        tr {
+          &:hover {
+            background-color: lighten(map-get($brand-dark, white), 2%);
+            color: map-get($brand-dark, text);
+          }
+        }
+      }
+
+      tr {
+        border-bottom: map-get($brand-dark, grey);
+
+        &:nth-child(even) {
+          background-color: lighten(map-get($brand-dark, white), 2%);
+        }
+
+        &:hover {
+          background: map-get($brand-dark, grey);
+          background: #fff5e8;
+          cursor: pointer;
+        }
+
+        td {
+          padding: 0.5rem 1rem;
+        }
       }
     }
   }

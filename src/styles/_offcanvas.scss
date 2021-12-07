@@ -4,15 +4,32 @@
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
   .offcanvas-header {
-    color: map-get($brand, white);
+    color: map-get($brand-dark, text);
   }
 }
 
-.hi-dark-mode {
+@media (prefers-color-scheme: dark) {
   .hi-offcanvas {
     background: map-get($brand-dark, white);
     border-right: 1px solid darken(map-get($brand-dark, white), 4%);
-    border-right: none;
     box-shadow: $box_shadow_dark;
+  }
+
+  .hi-light-mode {
+    .hi-offcanvas {
+      background: map-get($brand, secondary);
+      border: none;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .hi-dark-mode {
+    .hi-offcanvas {
+      background: map-get($brand-dark, white);
+      border-right: 1px solid darken(map-get($brand-dark, white), 4%);
+      box-shadow: $box_shadow_dark;
+    }
   }
 }
