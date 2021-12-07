@@ -1,5 +1,4 @@
 // Vendor
-// @import "vendor/_bootstrap-theme";
 
 @import "config/colours";
 @import "config/site";
@@ -24,4 +23,7 @@
 @import "components/toolbar";
 @import "components/table";
 @import "components/card";
+
+// Overrides
+@import "overrides/dropdown_menu";
 

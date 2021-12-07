@@ -77,11 +77,11 @@
     background: none;
 
     thead {
-      background: darken(map-get($brand-dark, grey), 4%);
+      background-color: lighten(map-get($brand-dark, white), 2%);
 
       tr {
         &:hover {
-          background-color: map-get($brand-dark, grey);
+          background-color: lighten(map-get($brand-dark, white), 2%);
           color: map-get($brand, white);
         }
       }
@@ -91,7 +91,7 @@
       border-bottom: map-get($brand-dark, grey);
 
       &:nth-child(even) {
-        background-color: map-get($brand-dark, grey);
+        background-color: lighten(map-get($brand-dark, white), 2%);
       }
 
       &:hover {

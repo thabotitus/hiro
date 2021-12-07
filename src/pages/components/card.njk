@@ -2,66 +2,11 @@
 {% from 'macros/page_header.njk' import header %}
 
 {% block content %}
-  <div class="hi-layout" data-controller="easter-eggs">
-    <div class="hi-layout__sidebar">
-      <div class="hi-layout__logo">
-        <div class="hi-layout__logo-full">
-          HIRO
-          <a href="/"><img src="https://res.cloudinary.com/duvwrnkqj/image/upload/v1638010336/Logos/HiroLight_nxobf5.png" height="45px" alt="Logo" data-attribution="https://www.vecteezy.com/free-vector/pitbull-logo" /></a>
-          ADMIN
-        </div>
-        <div class="hi-layout__logo-min">
-          <a href="/"><img src="https://res.cloudinary.com/duvwrnkqj/image/upload/v1638010336/Logos/HiroLight_nxobf5.png" height="45px" alt="Logo" data-attribution="https://www.vecteezy.com/free-vector/pitbull-logo" /></a>
-        </div>
-      </div>
-
-      <div class="d-lg-flex d-md-none justify-content-center mt-3">
-        <div class="form-check form-switch">
-          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" data-action="change->hello#toggleDarkMode" data-hello-target="colourmodeCheckbox">
-          <label class="form-check-label text-light" for="flexSwitchCheckDefault">Dark Mode</label>
-        </div>
-      </div>
-
-      <div class="hi-layout__sidebar-oc-trigger d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" data-bs-backdrop="true">
-        <i class="ri-menu-fill"></i>
-      </div>
-
-      {% include "partials/navigation.njk" %}
-    </div>
+  <div class="hi-layout">
+    {% include "partials/sidebar.njk" %}
 
     <div class="hi-layout__main">
-      <div class="hi-layout__topbar">
-        <div class="d-md-none hi-layout__topbar-section hi-flex-1">
-          <a class="only-light-mode" href="/"><img src="https://res.cloudinary.com/duvwrnkqj/image/upload/v1638004524/Logos/HiroDark_ith1ug.png" height="45px" alt="Logo" data-attribution="https://www.vecteezy.com/free-vector/pitbull-logo" /></a>
-          <a class="only-dark-mode" href="/"><img src="https://res.cloudinary.com/duvwrnkqj/image/upload/v1638010336/Logos/HiroLight_nxobf5.png" height="45px" alt="Logo" data-attribution="https://www.vecteezy.com/free-vector/pitbull-logo" /></a>
-        </div>
-
-        <div class="d-none d-md-flex hi-layout__topbar-section hi-flex-1 justify-content-end">
-          <div class="hi-toolbar hi-toolbar--right">
-            <div class="hi-toolbar-wrapper">
-              <div class="hi-toolbar__item">
-                <i class="ri-home-line"></i> 
-              </div>
-              <div class="hi-toolbar__item">
-                <i class="ri-qr-code-line"></i> 
-              </div>
-              <div class="hi-toolbar__item">
-                <i class="ri-honour-line"></i> 
-              </div>
-              <div class="hi-toolbar__item">
-                <i class="ri-settings-line"></i> 
-              </div>
-              <div class="hi-toolbar__item">
-                <i class="ri-user-3-line"></i> 
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="d-md-none hi-layout__topbar-section hi-layout__offcanvas-trigger hi-flex-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" data-bs-backdrop="true">
-          <i class="ri-menu-fill"></i>
-        </div>
-      </div>
+      {% include "partials/topbar.njk" %}
 
       <div class="hi-layout__content">
         <div class="hi-layout--scrollable">

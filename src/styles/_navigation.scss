@@ -18,17 +18,28 @@
       color: darken(map-get($brand, grey), 10%);
     }
 
+    &[data-bs-toggle="collapse"] {
+      &::after {
+        font-family: bootstrap-icons !important;
+        content: "\f282";
+        position: absolute;
+        right: 20px;
+        font-size: 0.7rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &:not(.collapsed) {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+
     @include breakpoint(lg) {
       justify-content: flex-start;
       padding: 0 20px;
-
-      &::after {
-        content: '\02C7';
-        position: absolute;
-        right: 20px;
-        font-size: 1.6rem;
-        top: 10px;
-      }
     }
 
     &--sub {
@@ -37,7 +48,7 @@
       font-size: 0.9rem;
 
       &::before {
-        content: '-- \a0'
+        content: '• \a0'
       }
 
       &::after {
