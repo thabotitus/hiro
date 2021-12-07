@@ -7,11 +7,19 @@ body {
   background-color: map-get($brand, white);
   overflow: hidden;
   transition: display ease 200ms;
+  color: map-get($brand, text);
 }
 
-body.hi-dark-mode {
-  background-color: map-get($brand-dark, white);
-  color: map-get($brand, white);
+@media (prefers-color-scheme: dark) {
+  body{
+    background-color: map-get($brand-dark, white);
+    color: map-get($brand-dark, text);
+  }
+
+  body.hi-light-mode {
+    background-color: map-get($brand, white);
+    color: map-get($brand, text);
+  }
 }
 
 

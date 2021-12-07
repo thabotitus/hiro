@@ -31,17 +31,26 @@
   }
 }
 
-.hi-dark-mode {
+@media (prefers-color-scheme: dark) {
   .hi-card {
     background-color: lighten(map-get($brand-dark, white), 0%);
-    // box-shadow: $box_shadow_dark;
     box-shadow: none;
-    border: none;
     border: 1px solid lighten(map-get($brand-dark, white), 3%);
 
     &__header {
-      border-bottom: 1px solid darken(map-get($brand-dark, white), 2%);
       border-bottom: 1px solid lighten(map-get($brand-dark, white), 3%);
+    }
+  }
+
+  .hi-light-mode {
+    .hi-card {
+      box-shadow: $box_shadow;
+      border: 1px solid map-get($brand, grey);
+      background: map-get($brand, white);
+
+      &__header {
+        border-bottom: 1px solid map-get($brand, grey);
+      }
     }
   }
 }

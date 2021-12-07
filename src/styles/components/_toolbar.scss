@@ -14,10 +14,9 @@
     display: flex;
     height: 45px;
     display: inline-flex;
-    // box-shadow: $box_shadow;
-    background: map-get($brand, white);
-    // border-radius: $border_radius;
+    background: none;
     overflow: hidden;
+    border-radius: 4px;
   }
 
   &__item {
@@ -25,10 +24,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    // border-left: 1px solid rgba(0,0,0,0.04);
     cursor: pointer;
     text-decoration: none;
-    color: initial;
     position: relative;
 
     &::before {
@@ -53,7 +50,7 @@
 
     &--active {
       background: map-get($brand, secondary);
-      color: map-get($brand, white);
+      color: map-get($brand, text);
     }
   }
 
@@ -77,30 +74,29 @@
   }
 }
 
-.hi-dark-mode {
+@media (prefers-color-scheme: dark) {
   .hi-toolbar {
-    &-wrapper {
-      // box-shadow: $box_shadow_dark;
-      background: lighten(map-get($brand-dark, white), 2%);
-      background: none;
-      border-radius: 2px;
-      // border: 1px solid lighten(map-get($brand-dark, white), 2%);
-    }
-
     &__item {
-      color: map-get($brand, white);
-
       &::before {
-        height: 50%;
-        width: 1px;
         background-color: rgba(255,255,255,0.04);
-        content: '';
-        position: absolute;
-        left: 0;
       }
 
       &:hover {
         background: rgba(255, 255, 255, 0.02);
+      }
+    }
+  }
+
+  .hi-light-mode {
+    .hi-toolbar {
+      &__item {
+        &::before {
+          background-color: rgba(0,0,0,0.04);
+        }
+
+        &:hover {
+          background: rgba(0,0,0,0.02);
+        }
       }
     }
   }

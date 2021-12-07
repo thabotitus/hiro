@@ -8,29 +8,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-.only-on-sm {
-  @include breakpoint(sm) {
-    display: none !important;
-  }
-}
-
-.only-on-md {
-  @include breakpoint(md) {
-    display: none !important;
-  }
-}
-
-// .only-light-mode {
-//   display: initial;
-// }
-
-
-.only-on-lg {
-  @include breakpoint(lg) {
-    display: none !important;
-  }
-}
-
 .bg-primary {
   background-color: map-get($brand, primary) !important;
 }
@@ -43,7 +20,7 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
-.tts-dark-mode {
+.hi-dark-mode {
   .only-light-mode {
     display: none;
   }
