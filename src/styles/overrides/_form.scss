@@ -1,0 +1,36 @@
+@media (prefers-color-scheme: dark) {
+  .form-control {
+    background: none;
+    border-color: rgba(255, 255, 255, 0.09);
+    color: map-get($brand-dark, text);
+
+    &:focus {
+      background: none;
+      color: map-get($brand-dark, text);
+    }
+  }
+  
+  .hi-light-mode {
+    .form-control {
+      background: map-get($brand, white);
+      color: map-get($brand, text);
+      border-color: rgba(0, 0, 0, 0.09);
+    }
+  }
+}
+
+@media (prefers-color-scheme: light) {  
+  .hi-dark-mode {
+    .form-control {
+      background: none;
+      border-color: rgba(255, 255, 255, 0.09);
+      color: map-get($brand-dark, text);
+
+      &:focus {
+        background: none;
+        color: map-get($brand-dark, text);
+      }
+    }
+  }
+}
+
