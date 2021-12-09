@@ -32,6 +32,7 @@ export default class extends Controller {
 
     if (baseUrl.match('github.io')) {
       destinationUrl = new URL(targetUrl, baseUrl + ghPath);
+      console.log('NEW DEST', destinationUrl);
     }
 
     window.location = destinationUrl;
