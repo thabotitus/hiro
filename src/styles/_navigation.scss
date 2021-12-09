@@ -13,6 +13,7 @@
     justify-content: center;
     color: map-get($brand, grey);
     position: relative;
+    cursor: pointer !important;
 
     &:hover {
       color: darken(map-get($brand, grey), 10%);
