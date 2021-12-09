@@ -10,9 +10,6 @@ export default class extends Controller {
 
   connect() {
     this.routeableTargets.forEach(element => {
-      console.log('BASE URL', this.BASE_URL);
-      console.log('IS GH', this.BASE_URL.match('github.io'));
-
       element.addEventListener('click', (e) => {
         e.preventDefault();
         const targetUrl = e.target.closest('a').getAttribute('data-url');
@@ -28,6 +25,7 @@ export default class extends Controller {
     if (baseUrl.match('github.io')) {
       const newHost = baseUrl + ghPath
       const ghUrl = newHost + targetUrl;
+      console.log(ghUrl);
       destinationUrl = new URL(ghUrl);
     }
 
