@@ -6,7 +6,7 @@ export default class extends Controller {
   HOST     = window.location.host;
   PROTOCOL = window.location.protocol.concat('//');
   BASE_URL = this.PROTOCOL + this.HOST;
-  GH_PATH  = '/hiro';
+  GH_PATH  = '/hiro/';
 
   connect() {
     this.routeableTargets.forEach(element => {
@@ -25,17 +25,10 @@ export default class extends Controller {
   routeTo(targetUrl, baseUrl, ghPath) {
     let destinationUrl = new URL(targetUrl, baseUrl);
 
-    console.log('DESTINATION', destinationUrl);
-    console.log('BASE URL', baseUrl);
-    console.log('TARGET URL', targetUrl);
-
-
     if (baseUrl.match('github.io')) {
       const newHost = baseUrl + ghPath
       const ghUrl = newHost + targetUrl;
       destinationUrl = new URL(ghUrl);
-
-      console.log('NEW DEST', destinationUrl);
     }
 
     window.location = destinationUrl;
