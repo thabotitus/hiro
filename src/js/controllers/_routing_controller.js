@@ -6,18 +6,32 @@ export default class extends Controller {
   HOST     = window.location.host;
   PROTOCOL = window.location.protocol.concat('//');
   BASE_URL = this.PROTOCOL + this.HOST;
+  GH_PATH  = '/hiro';
 
   connect() {
     this.routeableTargets.forEach(element => {
       element.addEventListener('click', (e) => {
         e.preventDefault();
         const targetUrl = e.target.closest('a').getAttribute('data-url');
-        this.routeTo(targetUrl, this.BASE_URL);
+
+        this.routeTo(targetUrl, this.BASE_URL, this.GH_PATH);
       });
     });
   }
 
-  routeTo(targetUrl, baseUrl) {
-    window.location = new URL(targetUrl, baseUrl);
+  routeTo(targetUrl, baseUrl, ghPath) {
+    let destinationUrl = new URL(targetUrl, baseUrl);
+
+    if (baseUrl.match('github.io')) {
+      destinationUrl = new URL(targetUrl, baseUrl + ghPath);
+    }
+
+    window.location = destinationUrl;
+  }
+
+  disconnect() {
+    this.routeableTargets.forEach(element => {
+      element.removeEventListener('click');
+    });
   }
 }
