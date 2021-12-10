@@ -28,14 +28,21 @@
 
             <div class="hi-card">
               <div class="hi-card__main">
-                <div class="mb-3">
-                  <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                </div>
-                <div class="mb-3">
-                  <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+
+                <br />
+
+                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+                <br />
+
+                <input class="form-control" type="text" placeholder="Disabled input" aria-label="Disabled input example" disabled>
+
+                <br />
+
+                <input class="form-control" type="text" value="Disabled readonly input" aria-label="Disabled input example" disabled readonly>
               </div>
             </div>
           </div>
@@ -45,6 +52,118 @@
               <code class="language-html">
   <xmp>
 
+  </xmp>
+              </code>
+            </pre>
+          </div>
+
+          {# FILE FIELD #}
+          <div class="hi-yield">
+            <h4>File Field</h4>
+            <br />
+
+            <div class="hi-card">
+              <div class="hi-card__main">
+                <div class="mb-3">
+                  <label for="formFile" class="form-label">Default file input example</label>
+                  <input class="form-control" type="file" id="formFile">
+                </div>
+                <div class="mb-3">
+                  <label for="formFileMultiple" class="form-label">Multiple files input example</label>
+                  <input class="form-control" type="file" id="formFileMultiple" multiple>
+                </div>
+                <div class="mb-3">
+                  <label for="formFileDisabled" class="form-label">Disabled file input example</label>
+                  <input class="form-control" type="file" id="formFileDisabled" disabled>
+                </div>
+                <div class="mb-3">
+                  <label for="formFileSm" class="form-label">Small file input example</label>
+                  <input class="form-control form-control-sm" id="formFileSm" type="file">
+                </div>
+                <div>
+                  <label for="formFileLg" class="form-label">Large file input example</label>
+                  <input class="form-control form-control-lg" id="formFileLg" type="file">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hi-code">
+            <pre>
+              <code class="language-html">
+  <xmp>
+<div class="mb-3">
+  <label for="formFile" class="form-label">Default file input example</label>
+  <input class="form-control" type="file" id="formFile">
+</div>
+<div class="mb-3">
+  <label for="formFileMultiple" class="form-label">Multiple files input example</label>
+  <input class="form-control" type="file" id="formFileMultiple" multiple>
+</div>
+<div class="mb-3">
+  <label for="formFileDisabled" class="form-label">Disabled file input example</label>
+  <input class="form-control" type="file" id="formFileDisabled" disabled>
+</div>
+<div class="mb-3">
+  <label for="formFileSm" class="form-label">Small file input example</label>
+  <input class="form-control form-control-sm" id="formFileSm" type="file">
+</div>
+<div>
+  <label for="formFileLg" class="form-label">Large file input example</label>
+  <input class="form-control form-control-lg" id="formFileLg" type="file">
+</div>
+  </xmp>
+              </code>
+            </pre>
+          </div>
+
+          {# SWITCHES #}
+          <div class="hi-yield">
+            <h4>Switches</h4>
+            <br />
+
+            <div class="hi-card">
+              <div class="hi-card__main">
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                  <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+                </div>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                  <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+                </div>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled>
+                  <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch checkbox input</label>
+                </div>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" checked disabled>
+                  <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Disabled checked switch checkbox input</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hi-code">
+            <pre>
+              <code class="language-html">
+  <xmp>
+<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+  <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+</div>
+<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+  <label class="form-check-label" for="flexSwitchCheckChecked">Checked switch checkbox input</label>
+</div>
+<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDisabled" disabled>
+  <label class="form-check-label" for="flexSwitchCheckDisabled">Disabled switch checkbox input</label>
+</div>
+<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckCheckedDisabled" checked disabled>
+  <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">Disabled checked switch checkbox input</label>
+</div>
   </xmp>
               </code>
             </pre>

@@ -51,7 +51,7 @@ gulp.task(TASKS.SERVE, function () {
     port: BROWSER_PORT,
     open: true,
   });
-  gulp.watch(`${INPUT_FOLDERS.JS}/**/*.js`, gulp.series([TASKS.JS]));
+  gulp.watch([`${INPUT_FOLDERS.JS}/**/*.js`, `${INPUT_FOLDERS.JS}/**/*.ts`], gulp.series([TASKS.JS]));
   gulp.watch(
     `${INPUT_FOLDERS.CSS}/**/*.+(scss|css)`,
     gulp.series([TASKS.STYLES])

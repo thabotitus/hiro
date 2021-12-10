@@ -1,3 +1,13 @@
+.form-control {
+    background: map-get($brand, white);
+    color: map-get($brand, text);
+    border-color: rgba(0, 0, 0, 0.09);
+
+    &:disabled {
+      background:rgba(0, 0, 0, 0.04);
+    }
+  }
+
 @media (prefers-color-scheme: dark) {
   .form-control {
     background: none;
@@ -8,6 +18,19 @@
       background: none;
       color: map-get($brand-dark, text);
     }
+
+    &:disabled {
+      background:rgba(255, 255, 255, 0.08);
+    }
+
+    // &::file-selector-button {
+    //   background: map-get($brand-dark, grey);
+    //   color: map-get($brand-dark, text);
+    // }
+
+    // &:hover::file-selector-button {
+    //   background: map-get($brand-dark, grey);
+    // }
   }
   
   .hi-light-mode {
@@ -15,6 +38,10 @@
       background: map-get($brand, white);
       color: map-get($brand, text);
       border-color: rgba(0, 0, 0, 0.09);
+
+      &:disabled {
+        background:rgba(0, 0, 0, 0.04);
+      }
     }
   }
 }
@@ -29,6 +56,10 @@
       &:focus {
         background: none;
         color: map-get($brand-dark, text);
+      }
+
+      &:disabled {
+        background:rgba(255, 255, 255, 0.08);
       }
     }
   }
