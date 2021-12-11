@@ -6,6 +6,20 @@
   .offcanvas-header {
     color: map-get($brand-dark, text);
   }
+
+  &__close {
+    color: white;
+    background: none;
+    text-decoration: none;
+
+    &::before {
+      font-family: "bootstrap-icons";
+      content: "\f62a";
+      width: 10px;
+      height: 10px;
+      cursor: pointer;
+    }
+  }
 }
 
 @media (prefers-color-scheme: dark) {
