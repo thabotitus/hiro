@@ -22,15 +22,6 @@
     &:disabled {
       background:rgba(255, 255, 255, 0.08);
     }
-
-    // &::file-selector-button {
-    //   background: map-get($brand-dark, grey);
-    //   color: map-get($brand-dark, text);
-    // }
-
-    // &:hover::file-selector-button {
-    //   background: map-get($brand-dark, grey);
-    // }
   }
   
   .hi-light-mode {

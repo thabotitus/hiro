@@ -1,0 +1,36 @@
+.list-group {  
+  .list-group-item {
+    border-color: rgba(0, 0, 0, 0.09);
+    background: none;
+    color: map-get($brand, text);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .list-group {
+    .list-group-item {
+      border-color: lighten(map-get($brand-dark, white), 3%);
+      color: map-get($brand-dark, text);
+    }
+  }
+
+  .hi-light-mode {
+    .list-group {
+      .list-group-item {
+        border-color: rgba(0, 0, 0, 0.09);
+        color: map-get($brand, text);
+      }
+    }
+  }
+
+}
+@media (prefers-color-scheme: light) {
+  .hi-dark-mode {
+    .list-group {
+      .list-group-item {
+        border-color: lighten(map-get($brand-dark, white), 3%);
+        color: map-get($brand-dark, text);
+      }
+    }
+  }
+}

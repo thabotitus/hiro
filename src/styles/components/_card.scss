@@ -1,12 +1,60 @@
-.hi-card {
+@mixin card {
   border-radius: $border-radius;
   box-shadow: $box_shadow;
   border: 1px solid map-get($brand, grey);
   background: map-get($brand, white);
+  overflow: hidden;
 
   &__main {
     padding: 1rem;
   }
+}
+
+@mixin card_dark($card-name) {
+  @media (prefers-color-scheme: dark) {
+    .#{$card-name} {
+      background-color: lighten(map-get($brand-dark, white), 0%);
+      box-shadow: none;
+      border: 1px solid lighten(map-get($brand-dark, white), 3%);
+
+      &__header {
+        border-bottom: 1px solid lighten(map-get($brand-dark, white), 3%);
+      }
+    }
+
+    .hi-light-mode {
+      .#{$card-name} {
+        box-shadow: $box_shadow;
+        border: 1px solid map-get($brand, grey);
+        background: map-get($brand, white);
+
+        &__header {
+          border-bottom: 1px solid map-get($brand, grey);
+        }
+      }
+    }
+  }
+}
+
+@mixin card_light($card-name) {
+  @media (prefers-color-scheme: light) {
+    .hi-dark-mode {
+      .#{$card-name} {
+        background-color: lighten(map-get($brand-dark, white), 0%);
+        box-shadow: none;
+        border: 1px solid lighten(map-get($brand-dark, white), 3%);
+  
+        &__header {
+          border-bottom: 1px solid lighten(map-get($brand-dark, white), 3%);
+        }
+      }
+    }
+  }
+}
+
+
+.hi-card {
+  @include card;
 
   &__header {
     padding: 1rem;
@@ -31,40 +79,6 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .hi-card {
-    background-color: lighten(map-get($brand-dark, white), 0%);
-    box-shadow: none;
-    border: 1px solid lighten(map-get($brand-dark, white), 3%);
+@include card_dark("hi-card");
+@include card_light("hi-card");
 
-    &__header {
-      border-bottom: 1px solid lighten(map-get($brand-dark, white), 3%);
-    }
-  }
-
-  .hi-light-mode {
-    .hi-card {
-      box-shadow: $box_shadow;
-      border: 1px solid map-get($brand, grey);
-      background: map-get($brand, white);
-
-      &__header {
-        border-bottom: 1px solid map-get($brand, grey);
-      }
-    }
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  .hi-dark-mode {
-    .hi-card {
-      background-color: lighten(map-get($brand-dark, white), 0%);
-      box-shadow: none;
-      border: 1px solid lighten(map-get($brand-dark, white), 3%);
-
-      &__header {
-        border-bottom: 1px solid lighten(map-get($brand-dark, white), 3%);
-      }
-    }
-  }
-}
