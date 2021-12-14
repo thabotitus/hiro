@@ -23,10 +23,10 @@
   }
 
   &__content {
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
   &--scrollable {
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 }

@@ -69,6 +69,10 @@
         padding-left: 2rem;
       }
     }
+
+    &--active {
+      font-weight: 700 !important;
+    }
   }
 
   &__icon {
