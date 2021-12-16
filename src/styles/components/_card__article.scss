@@ -4,17 +4,28 @@
   &__main {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 200px 1fr;
+    grid-template-rows: minmax(200px, auto) 1fr;
     padding: 0;
   }
 
   &--horizontal {
     .hi-card-article__main {
       grid-template-rows: 1fr;
-      grid-template-columns: 35% 1fr;
+      grid-template-columns: 1fr;
+
+      @include breakpoint(lg) {
+        grid-template-columns: minmax(auto, 35%) 1fr;
+        
+      }
     }
 
     .hi-card-article__image {
+      display: none;
+
+      @include breakpoint(lg) {
+        display: block;
+      }
+
       img {
         height: 100%;
         width: auto;
@@ -93,27 +104,27 @@
 @include card_light("hi-card-article");
 
 @media (prefers-color-scheme: dark) {
+  .hi-card-article {
+    &__subtitle {
+      color: #6c757d;
+    }
+  }
+
+  .hi-light-mode {
     .hi-card-article {
       &__subtitle {
-        color: darken(map-get($brand-dark, text), 15%);
-      }
-    }
-
-    .hi-light-mode {
-      .hi-card-article {
-        &__subtitle {
-          color: lighten(map-get($brand, text), 40%);
-        }
+        color: lighten(map-get($brand, text), 40%);
       }
     }
   }
+}
 
-  @media (prefers-color-scheme: light) {
-    .hi-dark-mode {
-      .hi-card-article {
-        &__subtitle {
-          color: dark(map-get($brand-dark, text), 15%);
-        }
+@media (prefers-color-scheme: light) {
+  .hi-dark-mode {
+    .hi-card-article {
+      &__subtitle {
+        color: #6c757d;
       }
     }
   }
+}
