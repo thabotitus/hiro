@@ -10,6 +10,7 @@ import "./build/data.js";
 import "./build/bump.js";
 import "./build/package.js";
 import "./build/deploy.js";
+import "./build/sw.js";
 
 import {
   DISTRIBUTION_FOLDERS,
@@ -42,6 +43,7 @@ gulp.task(
     TASKS.HTML_PAGES,
     TASKS.HTML_INDEX,
     TASKS.COPY_DATA,
+    TASKS.SW
   ])
 );
 

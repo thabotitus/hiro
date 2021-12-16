@@ -10,10 +10,11 @@
     display: flex;
     height: 40px;
     align-items: center;
-    justify-content: center;
     color: map-get($brand, white);
     position: relative;
     cursor: pointer !important;
+    padding: 0 20px;
+    justify-content: flex-start;
 
     &:hover {
       color: darken(map-get($brand, white), 10%);
@@ -42,15 +43,11 @@
       }
     }
 
-    @include breakpoint(lg) {
-      justify-content: flex-start;
-      padding: 0 20px;
-    }
-
     &--sub {
       height: 35px;
       padding-left: 0.1rem;
       font-size: 0.9rem;
+      padding-left: 2rem;
 
       &::before {
         content: '• \a0'
@@ -63,10 +60,6 @@
       &:hover {
         background: none;
         font-weight: 700;
-      }
-
-      @include breakpoint(lg) {
-        padding-left: 2rem;
       }
     }
 
