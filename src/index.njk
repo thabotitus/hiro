@@ -8,6 +8,10 @@
   <script type="text/javascript" src="./js/app.min.js"></script>
 {% endblock %}
 
+{% block manifest %}
+  <link rel="manifest" href="./manifest.json" />
+{% endblock %}
+
 {% block content %}
   <div class="hi-section hi-section--hfull hi-section--hcentered hi-section--vcentered bg-secondary text-light">
     <img src="https://res.cloudinary.com/duvwrnkqj/image/upload/v1638010336/Logos/HiroLight_nxobf5.png" height="200px" alt="Logo" data-attribution="https://www.vecteezy.com/free-vector/pitbull-logo" />
@@ -18,10 +22,12 @@
       <div class="row justify-content-center">
         <div class="col-sm-12 col-md-4 col-lg-2">
           <a data-url="/pages/home.html" class="hi-btn btn btn-light d-block" data-routes-target="routeable">Enter</a>
+          <br />
         </div>
 
         <div class="col-sm-12 col-md-4 col-lg-2">
           <a data-url="/pages/home.html" class="hi-btn btn btn-outline-light d-block" data-routes-target="routeable">Buy $ 19.95</a>
+          <br />
         </div>
       </div>
     </div>

@@ -7,6 +7,10 @@
     color: map-get($brand-dark, text);
   }
 
+  .offcanvas-body {
+    padding: 0;
+  }
+
   &__close {
     color: white;
     background: none;

@@ -5,6 +5,7 @@ import EasterEggsController from "./_easter_eggs_controller";
 import NavigationController from "./_navigation_controller";
 import TableController      from "./_table_controller";
 import RoutingController    from "./_routing_controller";
+import NetworkController    from "./network_controller"
 
 const controllers = {
   "routes":       RoutingController,
@@ -12,6 +13,7 @@ const controllers = {
   "easter-eggs":  EasterEggsController,
   "navigation":   NavigationController,
   "table":        TableController,
+  "network":      NetworkController
 }
 
 const app = new Application();

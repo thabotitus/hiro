@@ -24,9 +24,13 @@
 
   &__content {
     overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;  
   }
 
   &--scrollable {
     overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;  
   }
 }

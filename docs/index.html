@@ -8,6 +8,9 @@
     <meta name="author"                content="" />
     <meta name="description"           content="">
     <meta name="color-scheme"          content="dark light">
+    
+  <link rel="manifest" href="./manifest.json" />
+
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" >
@@ -26,14 +29,17 @@
 
     <title>Hiro | HTML 5 Multipurpose Template</title>
   </head>
-  <body data-controller="hello navigation routes" data-hello-target="body">
+  <body data-controller="hello navigation routes network" data-hello-target="body">
+    <div class="hi-network-status" data-network-target="indicator">
+      <span class="hi-network-status__indicator"></span>
+    </div>
     <div class="hi-offcanvas offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasLabel">HIRO | Navigation</h5>
     <a class="hi-offcanvas__close btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></a>
   </div>
   <div class="offcanvas-body">
-    <div class="d-flex mb-5">
+    <div class="d-flex mb-2 px-3">
       <div class="form-check form-switch">
         <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" data-action="change->hello#toggleDarkMode" data-hello-target="colourmodeCheckbox">
         <label class="form-check-label text-light" for="flexSwitchCheckDefault">Dark Mode</label>
@@ -56,10 +62,12 @@
       <div class="row justify-content-center">
         <div class="col-sm-12 col-md-4 col-lg-2">
           <a data-url="/pages/home.html" class="hi-btn btn btn-light d-block" data-routes-target="routeable">Enter</a>
+          <br />
         </div>
 
         <div class="col-sm-12 col-md-4 col-lg-2">
           <a data-url="/pages/home.html" class="hi-btn btn btn-outline-light d-block" data-routes-target="routeable">Buy $ 19.95</a>
+          <br />
         </div>
       </div>
     </div>
@@ -73,7 +81,6 @@
     
   <script type="text/javascript" src="./js/app.min.js"></script>
 
-    
     <script>hljs.highlightAll();</script>
   </body>
 </html>

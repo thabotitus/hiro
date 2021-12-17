@@ -27,6 +27,7 @@ const TASKS = {
   COPY_DATA:  "build:copy_data",
   PACKAGE:    "buil:package",
   DEPLOY:     "surge:deploy",
+  SW:         "build:service_worker"
 };
 
 const APP_ROOT          = "./";

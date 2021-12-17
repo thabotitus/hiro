@@ -10,6 +10,7 @@ import "./build/data.js";
 import "./build/bump.js";
 import "./build/package.js";
 import "./build/deploy.js";
+import "./build/sw.js";
 
 import {
   DISTRIBUTION_FOLDERS,
@@ -42,6 +43,7 @@ gulp.task(
     TASKS.HTML_PAGES,
     TASKS.HTML_INDEX,
     TASKS.COPY_DATA,
+    TASKS.SW
   ])
 );
 
@@ -51,7 +53,11 @@ gulp.task(TASKS.SERVE, function () {
     port: BROWSER_PORT,
     open: true,
   });
-  gulp.watch([`${INPUT_FOLDERS.JS}/**/*.js`, `${INPUT_FOLDERS.JS}/**/*.ts`], gulp.series([TASKS.JS]));
+  gulp.watch([
+      `${INPUT_FOLDERS.JS}/**/*.js`,
+      `${INPUT_FOLDERS.JS}/**/*.ts`,
+      `${INPUT_FOLDERS.ROOT}/service-worker.js`
+    ], gulp.series([TASKS.JS]));
   gulp.watch(
     `${INPUT_FOLDERS.CSS}/**/*.+(scss|css)`,
     gulp.series([TASKS.STYLES])
@@ -60,8 +66,10 @@ gulp.task(TASKS.SERVE, function () {
     `${INPUT_FOLDERS.IMAGES}/**/*.+(png|jpg|jpeg|gif|svg|ico)`,
     gulp.series([TASKS.IMAGES])
   );
-  gulp.watch(
+  gulp.watch([
     `${INPUT_FOLDERS.ROOT}/**/*.njk`,
+    `${INPUT_FOLDERS.ROOT}/manifest.json`
+    ],
     gulp.series([TASKS.HTML_INDEX, TASKS.HTML_PAGES])
   );
 });

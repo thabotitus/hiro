@@ -8,6 +8,10 @@
   <script type="text/javascript" src="../../js/app.min.js"></script>
 {% endblock %}
 
+{% block manifest %}
+  <link rel="manifest" href="../../manifest.json" />
+{% endblock %}
+
 {% from 'macros/page_header.njk' import header %}
 
 {% block content %}
