@@ -25,7 +25,10 @@
 
     <title>Hiro | HTML 5 Multipurpose Template</title>
   </head>
-  <body data-controller="hello navigation routes" data-hello-target="body">
+  <body data-controller="hello navigation routes network" data-hello-target="body">
+    <div class="hi-network-status" data-network-target="indicator">
+      <span class="hi-network-status__indicator"></span>
+    </div>
     {% include "partials/offcanvas.njk" %}
 
     <!-- Content gets injected here -->
@@ -36,7 +39,6 @@
     <!-- Your compiled files -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
     {% block js %} {% endblock %}
-    {# <script type="text/javascript" src="./js/app.min.js"></script> #}
     <script>hljs.highlightAll();</script>
   </body>
 </html>

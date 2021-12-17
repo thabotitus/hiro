@@ -1,5 +1,5 @@
 "use strict";
-import gulp           from "gulp";
+import gulp from "gulp";
 
 import {
   DISTRIBUTION_FOLDERS,
@@ -10,7 +10,11 @@ import {
 
 gulp.task(TASKS.SW, () => {
   return gulp
-    .src([`${INPUT_FOLDERS.ROOT}/manifest.json`, `${INPUT_FOLDERS.ROOT}/service-worker.js`])
+    .src([
+      `${INPUT_FOLDERS.ROOT}/manifest.json`,
+      `${INPUT_FOLDERS.ROOT}/service-worker.js`,
+      `${INPUT_FOLDERS.ROOT}/favicon.ico`
+    ])
     .pipe(
       gulp.dest(`./${DISTRIBUTION_FOLDERS.ROOT}`)
     );
