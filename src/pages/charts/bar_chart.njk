@@ -1,0 +1,75 @@
+{% extends "base.njk" %}
+
+{% block css %}
+  <link href="../../css/app.min.css" rel="stylesheet">
+{% endblock %}
+
+{% block js %}
+  <script type="text/javascript" src="../../js/app.min.js"></script>
+{% endblock %}
+
+{% block manifest %}
+  <link rel="manifest" href="../../manifest.json" />
+{% endblock %}
+
+{% from 'macros/page_header.njk' import header %}
+
+{% block content %}
+  <div class="hi-layout" data-controller="chart">
+    {% include "partials/sidebar.njk" %}
+
+    <div class="hi-layout__main">
+      {% include "partials/topbar.njk" %}
+
+      <div class="hi-layout__content">
+        <div class="hi-layout--scrollable">
+          {{ header(title="Bar Chart", subtitle="Mans got bars 🔥") }}
+
+          {# STANDARD #}
+          <div class="hi-yield">
+            <h4>Standard</h4>
+            <br />
+            <div class="hi-card">
+              <div class="hi-card__header">
+                <div class="hi-card__title">
+                  Header
+                </div>
+                <div class="hi-card__menu">
+                  <i class="ri-more-2-fill" class="dropdown-toggle" data-bs-toggle="dropdown"></i>
+
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i class="bi bi-share-fill"></i>
+                        Share
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i class="bi bi-clipboard"></i>
+                        Copy link
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="hi-card__main">
+                <canvas id="myChart" data-chart-target="bar" data-chart-id="bar-chart-x"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <div class="hi-code">
+            <pre>
+              <code class="language-html">
+  <xmp>
+
+  </xmp>
+              </code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
