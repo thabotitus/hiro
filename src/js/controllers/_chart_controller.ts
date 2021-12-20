@@ -13,7 +13,6 @@ export default class extends Controller {
   static targets: string[] = ['barChart', 'bar'];
 
   connect = (): void => {
-
     this.barTargets.forEach(chartCanvas => {
       this.renderBarChart(chartCanvas as HTMLCanvasElement);
     });
