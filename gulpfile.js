@@ -56,7 +56,8 @@ gulp.task(TASKS.SERVE, function () {
   gulp.watch([
       `${INPUT_FOLDERS.JS}/**/*.js`,
       `${INPUT_FOLDERS.JS}/**/*.ts`,
-      `${INPUT_FOLDERS.ROOT}/service-worker.js`
+      `${INPUT_FOLDERS.ROOT}/service-worker.js`,
+      `${INPUT_FOLDERS.DATA}/**/*`
     ], gulp.series([TASKS.JS]));
   gulp.watch(
     `${INPUT_FOLDERS.CSS}/**/*.+(scss|css)`,

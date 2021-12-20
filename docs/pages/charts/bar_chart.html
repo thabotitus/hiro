@@ -53,7 +53,7 @@
 
     <!-- Content gets injected here -->
     
-  <div class="hi-layout" data-controller="easter-eggs">
+  <div class="hi-layout" data-controller="chart">
     <div class="hi-layout__sidebar">
   <div class="hi-layout__logo">
     <div class="hi-layout__logo-full">
@@ -248,8 +248,8 @@
         <div class="hi-layout--scrollable">
           
   <div class="hi-header">
-    <h1 class="hi-header__title">Button</h1>
-    <p class="hi-header__subtitle">Those clickable things every site needs</p>
+    <h1 class="hi-header__title">Bar Chart</h1>
+    <p class="hi-header__subtitle">Mans got bars 🔥</p>
   </div>
 
 
@@ -257,214 +257,42 @@
           <div class="hi-yield">
             <h4>Standard</h4>
             <br />
+            <div class="hi-card">
+              <div class="hi-card__header">
+                <div class="hi-card__title">
+                  Header
+                </div>
+                <div class="hi-card__menu">
+                  <i class="ri-more-2-fill" class="dropdown-toggle" data-bs-toggle="dropdown"></i>
 
-            <button type="button" class="hi-btn btn btn-primary">Primary</button>
-            <button type="button" class="hi-btn btn btn-secondary">Secondary</button>
-            <button type="button" class="hi-btn btn btn-success">Success</button>
-            <button type="button" class="hi-btn btn btn-danger">Danger</button>
-            <button type="button" class="hi-btn btn btn-warning">Warning</button>
-            <button type="button" class="hi-btn btn btn-info">Info</button>
-            <button type="button" class="hi-btn btn btn-light">Light</button>
-            <button type="button" class="hi-btn btn btn-dark">Dark</button>
-            <button type="button" class="hi-btn btn btn-link">Link</button>
-          </div>
-
-          <div class="hi-code">
-            <pre>
-              <code class="language-html">
-  <xmp>
-    <button type="button" class="hi-btn btn btn-primary">Primary</button>
-    <button type="button" class="hi-btn btn btn-secondary">Secondary</button>
-    <button type="button" class="hi-btn btn btn-success">Success</button>
-    <button type="button" class="hi-btn btn btn-danger">Danger</button>
-    <button type="button" class="hi-btn btn btn-warning">Warning</button>
-    <button type="button" class="hi-btn btn btn-info">Info</button>
-    <button type="button" class="hi-btn btn btn-light">Light</button>
-    <button type="button" class="hi-btn btn btn-dark">Dark</button>
-    <button type="button" class="hi-btn btn btn-link">Link</button>
-  </xmp>
-              </code>
-            </pre>
-          </div>
-
-          
-          <div class="hi-yield">
-            <h4>Outline</h4>
-            <br />
-
-            <button type="button" class="hi-btn btn btn-outline-primary">Primary</button>
-            <button type="button" class="hi-btn btn btn-outline-secondary">Secondary</button>
-            <button type="button" class="hi-btn btn btn-outline-success">Success</button>
-            <button type="button" class="hi-btn btn btn-outline-danger">Danger</button>
-            <button type="button" class="hi-btn btn btn-outline-warning">Warning</button>
-            <button type="button" class="hi-btn btn btn-outline-info">Info</button>
-            <button type="button" class="hi-btn btn btn-outline-light">Light</button>
-            <button type="button" class="hi-btn btn btn-outline-dark">Dark</button>
-            <button type="button" class="hi-btn btn btn-outline-link">Link</button>
-          </div>
-
-          <div class="hi-code">
-            <pre>
-              <code class="language-html">
-  <xmp>
-    <button type="button" class="hi-btn btn btn-outline-primary">Primary</button>
-    <button type="button" class="hi-btn btn btn-outline-secondary">Secondary</button>
-    <button type="button" class="hi-btn btn btn-outline-success">Success</button>
-    <button type="button" class="hi-btn btn btn-outline-danger">Danger</button>
-    <button type="button" class="hi-btn btn btn-outline-warning">Warning</button>
-    <button type="button" class="hi-btn btn btn-outline-info">Info</button>
-    <button type="button" class="hi-btn btn btn-outline-light">Light</button>
-    <button type="button" class="hi-btn btn btn-outline-dark">Dark</button>
-    <button type="button" class="hi-btn btn btn-outline-link">Link</button>
-  </xmp>
-              </code>
-            </pre>
-          </div>
-
-          
-          <div class="hi-yield">
-            <h4>Sizes</h4>
-            <br />
-
-            <button type="button" class="hi-btn btn btn-primary btn-sm">Small button</button>
-            <button type="button" class="hi-btn btn btn-secondary btn-sm">Small button</button>
-
-            <button type="button" class="hi-btn btn btn-primary btn-lg">Big button</button>
-            <button type="button" class="hi-btn btn btn-danger btn-lg" data-action="easter-eggs#boom">
-              <i class="ri-alert-line"></i>
-              DO NOT PRESS !
-            </button>
-          </div>
-
-          <div class="hi-code">
-            <pre>
-              <code class="language-html">
-  <xmp>
-    <button type="button" class="btn btn-primary btn-sm">Small button</button>
-    <button type="button" class="btn btn-secondary btn-sm">Small button</button>
-
-    <button type="button" class="hi-btn btn btn-primary btn-lg">Large button</button>
-    <button type="button" class="hi-btn btn btn-secondary btn-lg">Large button</button>
-  </xmp>
-              </code>
-            </pre>
-          </div>
-
-          
-          <div class="hi-yield">
-            <h4>Rounded</h4>
-            <br />
-
-            <button type="button" class="hi-btn hi-btn--rounded btn btn-primary btn-sm">Small Round button</button>
-            <button type="button" class="hi-btn hi-btn--rounded btn btn-primary btn-lg">Big Round button</button>
-          </div>
-
-          
-          <div class="hi-yield">
-            <h4>Icons</h4>
-            <br />
-
-            <button type="button" class="hi-btn btn btn-primary">
-              <i class="ri-home-line"></i>
-              Home
-            </button>
-            <button type="button" class="hi-btn btn btn-secondary">
-              <i class="ri-store-2-fill"></i>
-              Store
-            </button>
-            <button type="button" class="hi-btn btn btn-success">
-              <i class="ri-send-plane-line"></i>
-              Send
-            </button>
-            <button type="button" class="hi-btn hi-btn--icon-only btn btn-danger">
-              <i class="ri-service-line"></i>
-            </button>
-            <button type="button" class="hi-btn hi-btn--icon-only hi-btn--rounded btn btn-warning">
-              <i class="ri-file-warning-line"></i>
-            </button>
-          </div>
-
-          <div class="hi-code">
-            <pre>
-              <code class="language-html">
-<xmp>
-  <button type="button" class="hi-btn btn btn-primary">
-    <i class="ri-home-line"></i>
-    Home
-  </button>
-  <button type="button" class="hi-btn btn btn-secondary">
-    <i class="ri-store-2-fill"></i>
-    Store
-  </button>
-  <button type="button" class="hi-btn btn btn-success">
-    <i class="ri-send-plane-line"></i>
-    Send
-  </button>
-  <button type="button" class="hi-btn hi-btn--icon-only btn btn-danger">
-    <i class="ri-service-line"></i>
-  </button>
-  <button type="button" class="hi-btn hi-btn--icon-only hi-btn--rounded btn btn-warning">
-    <i class="ri-file-warning-line"></i>
-  </button>
-</xmp>
-              </code>
-            </pre>
-          </div>
-
-          
-          <div class="hi-yield">
-            <h4>Button Group</h4>
-            <br />
-
-            <div class="btn-group" role="group" aria-label="Basic example">
-              <button type="button" class="hi-btn btn btn-primary">
-                <i class="ri-arrow-left-line"></i>
-              </button>
-              <button type="button" class="hi-btn btn btn-primary">
-                <i class="ri-arrow-up-line"></i>
-              </button>
-              <button type="button" class="hi-btn btn btn-primary">
-                <i class="ri-arrow-right-line"></i>
-              </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i class="bi bi-share-fill"></i>
+                        Share
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">
+                        <i class="bi bi-clipboard"></i>
+                        Copy link
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="hi-card__main">
+                <canvas id="myChart" data-chart-target="bar" data-chart-id="bar-chart-x"></canvas>
+              </div>
             </div>
           </div>
 
-                    <div class="hi-code">
-            <pre>
-              <code class="language-html">
-<xmp>
-  <div class="btn-group" role="group" aria-label="Basic example">
-    <button type="button" class="hi-btn btn btn-primary">
-      <i class="ri-arrow-left-line"></i>
-    </button>
-    <button type="button" class="hi-btn btn btn-primary">
-      <i class="ri-arrow-up-line"></i>
-    </button>
-    <button type="button" class="hi-btn btn btn-primary">
-      <i class="ri-arrow-right-line"></i>
-    </button>
-  </div>
-</xmp>
-              </code>
-            </pre>
-          </div>
-
-          
-          <div class="hi-yield">
-            <h4>Disabled</h4>
-            <br />
-
-            <button type="button" class="hi-btn btn btn-primary" disabled>Disabled</button>
-            <button type="button" class="hi-btn btn btn-secondary" disabled>Disabled</button>
-          </div>
-
           <div class="hi-code">
             <pre>
               <code class="language-html">
-<xmp>
-  <button type="button" class="hi-btn btn btn-primary" disabled>Disabled</button>
-  <button type="button" class="hi-btn btn btn-secondary" disabled>Disabled</button>
-</xmp>
+  <xmp>
+
+  </xmp>
               </code>
             </pre>
           </div>
@@ -472,7 +300,6 @@
       </div>
     </div>
   </div>
-
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous" defer></script>
