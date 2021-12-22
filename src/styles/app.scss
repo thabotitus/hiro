@@ -24,9 +24,11 @@
 @import "components/table";
 @import "components/card";
 @import "components/card__article";
+@import "components/card__stat";
 
 // Overrides
 @import "overrides/dropdown_menu";
 @import "overrides/form";
 @import "overrides/list_group";
+@import "overrides/progress";
 

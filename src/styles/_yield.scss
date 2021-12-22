@@ -1,3 +1,8 @@
 .hi-yield {
-  padding: $base_vpadding $base_hpadding;
+  padding: $base_vpadding ($base_hpadding * 0.5);
+  // padding: $base_vpadding 0;
+
+  @include breakpoint(md) {
+    padding: $base_vpadding $base_hpadding;
+  }
 }

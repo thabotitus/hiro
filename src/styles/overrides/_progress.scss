@@ -1,0 +1,38 @@
+.progress {
+  border-radius: 2rem;
+
+  .progress-bar {
+    border-radius: 2rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .progress {
+    background-color: rgba(0,0,0,0.2);
+
+    .progress-bar {
+      mix-blend-mode: luminosity;
+    }
+  }
+  .hi-light-mode {
+    .progress {
+      background-color: #e9ecef;
+
+      .progress-bar {
+        mix-blend-mode: normal;
+      }
+    }
+  }
+
+}
+@media (prefers-color-scheme: light) {
+  .hi-dark-mode {
+    .progress {
+      background-color: rgba(0,0,0,0.2);
+
+      .progress-bar {
+        mix-blend-mode: luminosity;
+      }
+    }
+  }
+}

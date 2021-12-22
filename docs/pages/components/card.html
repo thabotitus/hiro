@@ -35,11 +35,16 @@
     </div>
     <div class="hi-offcanvas offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasLabel">HIRO | Navigation</h5>
+    <div class="offcanvas-title text-center" id="offcanvasLabel">
+      
+    </div>
     <a class="hi-offcanvas__close btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></a>
   </div>
   <div class="offcanvas-body">
-    <div class="d-flex mb-2 px-3">
+    <a data-url="/" data-routes-target="routeable" style="d-flex justify-content-center">
+      <img src="https://res.cloudinary.com/duvwrnkqj/image/upload/v1638010336/Logos/HiroLight_nxobf5.png" height="45px" alt="Logo" data-attribution="https://www.vecteezy.com/free-vector/pitbull-logo" />
+    </a>
+    <div class="d-flex mb-2 px-3 justify-content-center">
       <div class="form-check form-switch">
         <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" data-action="change->hello#toggleDarkMode" data-hello-target="colourmodeCheckbox">
         <label class="form-check-label text-light" for="flexSwitchCheckDefault">Dark Mode</label>
@@ -260,7 +265,7 @@
                 <div class="col-sm-12">
                   <h4>Basic</h4>
                   <br />
-                  <div class="hi-card-article">
+                  <div class="hi-card">
                     <div class="hi-card__header">
                       <div class="hi-card__title">
                         Header
@@ -286,10 +291,83 @@
             </div>
           </div>
 
-          <div class="hi-code">
-            <pre>
-              <code class="language-html">
-  <xmp>
+          <div class="hi-yield">
+            <div class="container-fluid">
+              <h4>Stat</h4>
+              <br />
+              <div class="row">
+                <div class="col-sm-12 col-lg-4">
+                  <div class="hi-card">
+                    <div class="hi-card__menu">
+                      <i class="ri-more-2-fill" class="dropdown-toggle" data-bs-toggle="dropdown"></i>
+
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                      </ul>
+                    </div>
+                    
+                    <div class="hi-card__main">                      
+                      <div class="hi-card__stat-title">100</div>
+                      <div class="hi-card__stat-subtitle">Subscribers</div>
+                    </div>
+                    <div class="hi-card__footer">
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <br />
+                </div>
+
+                <div class="col-sm-12 col-lg-4">
+                  <div class="hi-card">
+                    <div class="hi-card__header">
+                      <ul class="nav nav-pills nav-fill">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">Today</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Tomorrow</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="hi-card__main">
+                      <div class="hi-card__stat-title">4K</div>
+                      <div class="hi-card__stat-subtitle">Views</div>
+                    </div>
+                  </div>
+
+                  <br />
+                </div>
+
+                <div class="col-sm-12 col-lg-4">
+                  <div class="hi-card">
+                    <div class="hi-card__main">
+                      <div class="hi-card__stat-title">1M</div>
+                      <div class="hi-card__stat-subtitle">Generated</div>
+                    </div>
+
+                    <div class="hi-card__footer">
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <br />
+                </div>
+              </div>
+            </div>
+          </div>
+
+<div class="hi-code">
+<pre>
+<code class="language-html">
+<xmp>
 <div class="hi-card">
   <div class="hi-card__header">
     <div class="hi-card__title">
@@ -311,10 +389,10 @@
     Content
   </div>
 </div>
-  </xmp>
-              </code>
-            </pre>
-          </div>
+</xmp>
+</code>
+</pre>
+</div>
 
           <div class="hi-yield">
             <div class="container-fluid">
@@ -323,6 +401,16 @@
               <div class="row">
                 <div class="col-sm-12 col-md-6 col-lg-4">
                   <div class="hi-card-article">
+                    <div class="hi-card__menu">
+                      <i class="ri-more-2-fill text-light" class="dropdown-toggle" data-bs-toggle="dropdown"></i>
+
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                      </ul>
+                    </div>
                     <div class="hi-card-article__main">
                       <div class="hi-card-article__image">
                         <img src="https://placeimg.com/640/480/animals" />
@@ -351,6 +439,16 @@
                 <div class="col-sm-12 col-md-6 col-lg-4">
                   <div class="hi-card-article">
                     <div class="hi-card-article__main">
+                      <div class="hi-card__menu">
+                        <i class="ri-more-2-fill" class="dropdown-toggle" data-bs-toggle="dropdown"></i>
+
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Separated link</a></li>
+                        </ul>
+                      </div>
                       <div class="hi-card-article__image">
                         <img src="https://placeimg.com/641/480/nature" />
                       </div>
@@ -399,10 +497,10 @@
             </div>
           </div>
 
-          <div class="hi-code">
-            <pre>
-              <code class="language-html">
-  <xmp>
+<div class="hi-code">
+<pre>
+<code class="language-html">
+<xmp>
 <div class="row">
   <div class="col-sm-12 col-md-6 col-lg-4">
     <div class="hi-card-article">
@@ -430,10 +528,10 @@
     </div>
   </div>
 </div>
-  </xmp>
-              </code>
-            </pre>
-          </div>
+</xmp>
+</code>
+</pre>
+</div>
 
 
           <div class="hi-yield">
@@ -507,7 +605,7 @@
           <div class="hi-code">
             <pre>
               <code class="language-html">
-  <xmp>
+<xmp>
 <div class="col-sm-12 col-md-6 col-lg-4">
   <div class="hi-card-article">
     <div class="hi-card-article__main">
@@ -540,6 +638,16 @@
               <div class="row">
                 <div class="col-sm-12 col-lg-8">
                   <div class="hi-card-article hi-card-article--horizontal">
+                    <div class="hi-card__menu">
+                      <i class="ri-more-2-fill" class="dropdown-toggle" data-bs-toggle="dropdown"></i>
+
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                      </ul>
+                    </div>
                     <div class="hi-card-article__main">
                       <div class="hi-card-article__image">
                         <img src="https://placeimg.com/480/320/nature" />

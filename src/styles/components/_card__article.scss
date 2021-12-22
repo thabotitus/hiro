@@ -21,6 +21,13 @@
 
     .hi-card-article__image {
       display: none;
+      overflow: hidden;
+      border-bottom-left-radius: $border-radius;
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+
+
 
       @include breakpoint(lg) {
         display: block;
@@ -35,6 +42,8 @@
 
   &__image {
     overflow: hidden;
+    border-top-right-radius: $border-radius;
+    border-top-left-radius: $border-radius;
 
     img {
       width: 100%;

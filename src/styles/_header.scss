@@ -1,7 +1,11 @@
 .hi-header {
   background-color: map-get($brand, grey);
-  padding:  $base_vpadding $base_hpadding;
+  padding:  $base_vpadding ($base_hpadding * 0.5);
   position: relative;
+
+  @include breakpoint(md) {
+    padding: $base_vpadding $base_hpadding;
+  }
 
   &__title {
     margin-bottom:  0;
