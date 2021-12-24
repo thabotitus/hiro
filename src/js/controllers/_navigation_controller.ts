@@ -26,16 +26,17 @@ export default class extends Controller {
   }
 
   setActiveNavigationItems = (): void => {
-    const currentUrl: string = window.location.href;
+    const currentUrl: Location = window.location;
     const navItems: NodeListOf<HTMLElement> = document.querySelectorAll('[data-url]');
-
-    const activeItem: HTMLElement = [...navItems].find((el: HTMLElement): boolean => {
-      return currentUrl.match(el.dataset.url) !== null;
+    
+    const activeItems: HTMLElement[] = [...navItems].filter((el: HTMLElement): boolean => {
+      return currentUrl.pathname === el.dataset.url;
     });
 
-    const parentId: string = activeItem.parentElement.id;
-    const toggleableParents: NodeListOf<HTMLElement> = document.querySelectorAll(`a[href='#${parentId}']`);
-
-    [...toggleableParents].forEach((item: HTMLElement) => item.click());
+    activeItems.forEach(ai => {
+      const parentId: string = ai.parentElement.id;
+      const toggleableParents: NodeListOf<HTMLElement> = document.querySelectorAll(`a[href='#${parentId}']`);
+      [...toggleableParents].forEach((item: HTMLElement) => item.click());
+    });
   }
 }

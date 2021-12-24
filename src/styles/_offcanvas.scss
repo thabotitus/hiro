@@ -12,17 +12,23 @@
   }
 
   &__close {
-    color: white;
-    background: none;
-    text-decoration: none;
+    // color: white;
+    // background: none;
+    // text-decoration: none;
+    // background-color: blue;
+    // padding: 0 !important;
+    // font-size: 2rem;
+    // margin: 0 !important;
 
-    &::before {
-      font-family: "bootstrap-icons";
-      content: "\f62a";
-      width: 10px;
-      height: 10px;
-      cursor: pointer;
-    }
+    // &::before {
+    //   font-family: "bootstrap-icons";
+    //   content: "\f62a";
+    //   cursor: pointer;
+    //   background-color: orange;
+    //   margin: 0 !important;
+    //   padding: 0 !important;
+    //   top: 0 !important;
+    // }
   }
 }
 
