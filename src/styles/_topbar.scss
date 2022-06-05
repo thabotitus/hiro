@@ -9,7 +9,11 @@
       display: flex;
       flex: 1;
       align-items: center;
-      padding: 0 $base_hpadding;
+      padding: 0 ($base_hpadding * 0.5);
+
+      @include breakpoint(md) {
+        padding: 0 $base_hpadding;
+      }
     }
   }
 
@@ -18,6 +22,7 @@
     justify-content: flex-end;
     font-size: 1.4rem;
     cursor: pointer;
+    padding-right: 30px;
   }
 }
 

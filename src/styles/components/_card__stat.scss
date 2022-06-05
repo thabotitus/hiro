@@ -1,0 +1,19 @@
+.hi-card {
+  &__stat-title {
+    font-weight: 700;
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-size: 2rem;
+  }
+
+  &__stat-subtitle {
+    text-align: center;
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    color: #6c757d;
+    font-weight: 200;
+    font-size: 0.9rem;
+  }
+}

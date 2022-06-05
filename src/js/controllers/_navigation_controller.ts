@@ -26,16 +26,33 @@ export default class extends Controller {
   }
 
   setActiveNavigationItems = (): void => {
-    const currentUrl: string = window.location.href;
-    const navItems: NodeListOf<HTMLElement> = document.querySelectorAll('[data-url]');
+    let parentId: string;
+    let navItems: NodeListOf<HTMLElement> = document.querySelectorAll('[data-url]');
 
-    const activeItem: HTMLElement = [...navItems].find((el: HTMLElement): boolean => {
-      return currentUrl.match(el.dataset.url) !== null;
+    this.resetNavItems(navItems);
+
+    this.getActiveNavitems(navItems).forEach(currentItem => {
+      this.setActiveNavItem(currentItem, 'hi-navigation__item--active');
+
+      // Yes, overwriting the value, but they should be the same
+      parentId = currentItem.parentElement.id;
     });
 
-    const parentId: string = activeItem.parentElement.id;
-    const toggleableParents: NodeListOf<HTMLElement> = document.querySelectorAll(`a[href='#${parentId}']`);
+    this.toggleActiveParents(parentId);
+  }
 
-    [...toggleableParents].forEach((item: HTMLElement) => item.click());
+  private getActiveNavitems = (items: NodeListOf<HTMLElement>): HTMLElement[] => {
+    return [...items].filter((el: HTMLElement): boolean => window.location.pathname === el.dataset.url);
+  }
+
+  private resetNavItems = (items: NodeListOf<HTMLElement>): void => {
+    items.forEach(item => item.classList.remove('hi-navigation__item--active'));
+  }
+
+  private setActiveNavItem = (item, activeNavItemClass): void => item.classList.add(activeNavItemClass);
+
+  private toggleActiveParents = (parentId: string): void => {
+    const toggleableParents: NodeListOf<HTMLElement> = document.querySelectorAll(`a[href='#${parentId}']`);
+    [...toggleableParents].forEach((tp: HTMLElement) => tp.click());
   }
 }
