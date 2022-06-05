@@ -42,9 +42,7 @@ export default class extends Controller {
   }
 
   private getActiveNavitems = (items: NodeListOf<HTMLElement>): HTMLElement[] => {
-    return [...items].filter((el: HTMLElement): boolean => {
-      return window.location.pathname === el.dataset.url;
-    });
+    return [...items].filter((el: HTMLElement): boolean => window.location.pathname === el.dataset.url);
   }
 
   private resetNavItems = (items: NodeListOf<HTMLElement>): void => {
