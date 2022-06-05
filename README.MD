@@ -1,6 +1,6 @@
-# TTS Web Starter Kit
+# Hiro
 
-TTS WSK is, as the name suggests, a starter kit to get you up and running with a static site generated from from Nunjucks templates and Sass. This can be use useful when you you want to build UI kits, websites or static component libraries. It is currently bundled with Bootstrap 5 but this can easily be replaced by any other framework of your choice, or just removed.
+Hiro is a UI kit
 
 ## Installation
 
@@ -8,13 +8,13 @@ Clone the repo by running one of the following commands:
 
 ```bash
 # Through SSH
-git clone git@github.com:ttsftwr/tts-web-starter-kit.git
+git clone git@github.com:thabotitus/hiro.git
 
 # Through https
-git clone https://github.com/ttsftwr/tts-web-starter-kit.git
+git clone https://github.com/thabotitus/hiro.git
 
 # Through Github CLI
-gh repo clone ttsftwr/tts-web-starter-kit
+gh repo clone thabotitus/hiro
 ```
 
 ### Install dependencies
